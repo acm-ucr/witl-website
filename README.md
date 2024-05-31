@@ -11,7 +11,7 @@
 
 ## Figma
 
-[WITL Figma Design File](UPLOADED LATER)
+[WITL Figma Design File] (UPLOADED LATER)
 
 ## Node.js
 
