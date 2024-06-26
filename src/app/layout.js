@@ -2,11 +2,13 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Junge } from "next/font/google";
-import { marcellusSC } from "next/font/google";
-import { libreCaslonText } from "next/font/google";
 import { Marcellus } from "next/font/google";
+// eslint-disable-next-line camelcase
+import { Marcellus_SC } from "next/font/google";
+// eslint-disable-next-line camelcase
+import { Libre_Caslon_Text } from "next/font/google";
 
-/* Fonts */
+// eslint-disable-next-line no-unused-vars
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -14,6 +16,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+// eslint-disable-next-line no-unused-vars
 const junge = Junge({
   subsets: ["latin"],
   display: "swap",
@@ -21,20 +24,23 @@ const junge = Junge({
   variable: "--font-junge",
 });
 
-const marcellussc = marcellusSC({
+// eslint-disable-next-line no-unused-vars
+const marcellussc = Marcellus_SC({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
   variable: "--font-marcellus-sc",
 });
 
-const libreCaslonTextFont = libreCaslonText({
+// eslint-disable-next-line no-unused-vars
+const libreCaslonTextFont = Libre_Caslon_Text({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
   variable: "--font-libre-caslon-text",
 });
 
+// eslint-disable-next-line no-unused-vars
 const marcellus = Marcellus({
   subsets: ["latin"],
   display: "swap",
