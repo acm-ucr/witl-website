@@ -1,5 +1,10 @@
+import Navigation from "@/components/Navigation";
 const Home = () => {
-  return <>Hello World</>;
+  return (
+    <>
+      <Navigation />
+    </>
+  );
 };
 
 export default Home;
