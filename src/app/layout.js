@@ -6,6 +6,7 @@ import { marcellusSC } from "next/font/google";
 import { libreCaslonText } from "next/font/google";
 import { Marcellus } from "next/font/google";
 
+/* Fonts */
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
