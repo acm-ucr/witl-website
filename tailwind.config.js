@@ -8,12 +8,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      color: {
+      colors: {
         witl: {
-          "pink-100": "#F8DFDF",
-          "purple-100": "#572B6C",
-          "purple-200": "#D0BCE0",
-          "yellow-100": "#FFF6EB",
+          "black-100": "#000000",
+          "white-100": "#FFFFFF",
+          "purple-100": "#F5E1FF",
+          "purple-200": "BA8CD0",
+          "purple-300": "2E0044",
         },
       },
     },
