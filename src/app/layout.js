@@ -36,7 +36,7 @@ const marcellus = Marcellus({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
-  variable: "--font-libre-caslon-text",
+  variable: "--font-marcellus",
 });
 
 export const metadata = {
