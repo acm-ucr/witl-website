@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-inter: "Inter", sans-serif;
+  --font-junge: "Junge", serif;
+  --font-marcellus-sc: "Marcellus SC", serif;
+  --font-libre-caslon-text: "Libre Caslon Text", serif;
+  --font-marcellus: "Marcellus", serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-junge {
+  font-family: var(--font-junge);
+}
+
+.font-marcellus-sc {
+  font-family: var(--font-marcellus-sc);
+}
+
+.font-libre-caslon-text {
+  font-family: var(--font-libre-caslon-text);
+}
+
+.font-marcellus {
+  font-family: var(--font-marcellus);
+}
