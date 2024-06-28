@@ -1,20 +1,11 @@
 /* eslint-disable new-cap */
 import "./globals.css";
-import { Inter } from "next/font/google";
 import { Junge } from "next/font/google";
 import { Marcellus } from "next/font/google";
 // eslint-disable-next-line camelcase
 import { Marcellus_SC } from "next/font/google";
 // eslint-disable-next-line camelcase
 import { Libre_Caslon_Text } from "next/font/google";
-
-// eslint-disable-next-line no-unused-vars
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-  variable: "--font-inter",
-});
 
 // eslint-disable-next-line no-unused-vars
 const junge = Junge({
@@ -58,7 +49,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${junge.className} ${marcellussc.variable} ${libreCaslonTextFont.variable} ${marcellus.variable} ${inter.variable}`}
+        className={`${junge.className} ${marcellussc.variable} ${libreCaslonTextFont.variable} ${marcellus.variable}`}
       >
         {children}
       </body>
