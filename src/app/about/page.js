@@ -1,4 +1,10 @@
+import OurMission from "@/components/OurMission";
+
 const Page = () => {
-  return <div>Hello World</div>;
+  return (
+    <div>
+      <OurMission />
+    </div>
+  );
 };
 export default Page;
