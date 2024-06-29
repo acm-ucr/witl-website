@@ -18,9 +18,9 @@ module.exports = {
         },
       },
     },
-    backgroundColor: theme => ({
-      "purplecustom": "#2E0144",
-    })
+    backgroundColor: (theme) => ({
+      purplecustom: "#2E0144",
+    }),
   },
   plugins: [],
 };

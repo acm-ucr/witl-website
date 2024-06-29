@@ -1,4 +1,4 @@
-import "@/app/layout.js"
+import "@/app/layout.js";
 
 const About = () => {
   return (
@@ -7,11 +7,11 @@ const About = () => {
         <div className="mb-9 text-9xl text-center text-purple-100">
           <p>ABOUT</p>
         </div>
-        <div className="mb-9 text-9xl text-center text-purple-100" >
+        <div className="mb-9 text-9xl text-center text-purple-100">
           <p>US</p>
         </div>
       </div>
     </div>
-  )
+  );
 };
 export default About;
