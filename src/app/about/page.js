@@ -1,4 +1,4 @@
-import OurMission from "@/components/OurMission";
+import OurMission from "@/components/about/OurMission";
 
 const Page = () => {
   return (
