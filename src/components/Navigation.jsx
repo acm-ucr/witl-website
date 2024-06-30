@@ -41,7 +41,7 @@ const Navigation = () => {
       <div
         className={
           mobile
-            ? "md:hidden transition ease-in flex flex-col items-center bg-witl-purple-300 space-y-2 py-2"
+            ? "md:hidden flex flex-col items-center bg-witl-purple-300 space-y-2 py-2"
             : "hidden"
         }
       >
