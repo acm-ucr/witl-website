@@ -53,6 +53,7 @@ export default function RootLayout({ children }) {
         className={`${junge.className} ${marcellussc.variable} ${libreCaslonTextFont.variable} ${marcellus.variable}`}
       >
         <Navigation>{children}</Navigation>
+        {children}
       </body>
     </html>
   );
