@@ -1,7 +1,7 @@
 export const items = [
   {
     name: "About Us",
-    link: "aboutus",
+    link: "about",
   },
   {
     name: "Events",

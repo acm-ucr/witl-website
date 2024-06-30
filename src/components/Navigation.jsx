@@ -14,14 +14,20 @@ const Navigation = () => {
   return (
     <div className="sticky top-0">
       <div className="w-screen bg-witl-purple-300 flex items-center justify-between py-[1%] px-[2%] border-b-2 border-witl-white-100">
-        <Link className="flex flex-row space-x-2" href="/">
+        <Link className="flex flex-row space-x-4" href="/">
           <Image src={Logo} alt="WITL Icon" />
-          <div className="text-witl-white-100">
+          <div className="hidden md:flex md:flex-col text-witl-white-100">
             <div className="text-2xl">WOMXN IN THE LAW</div>
             <div>EST. 2022</div>
           </div>
         </Link>
-        <div className="hidden md:flex space-x-4">
+
+        <div className="md:hidden flex flex-col items-center text-witl-white-100">
+          <div className="text-xl">WOMXN IN THE LAW</div>
+          <div>EST. 2022</div>
+        </div>
+
+        <div className="hidden md:flex space-x-16">
           {items.map((item, index) => (
             <Link
               href={item.link}
