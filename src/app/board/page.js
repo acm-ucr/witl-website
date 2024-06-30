@@ -1,4 +1,10 @@
+import Board from "@/components/board/Board";
+
 const Page = () => {
-  return <div>Hello World</div>;
+  return (
+    <div>
+      <Board />
+    </div>
+  );
 };
 export default Page;
