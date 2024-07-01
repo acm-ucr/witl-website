@@ -11,7 +11,7 @@
 
 ## Figma
 
-[WITL Figma Design File] https://www.figma.com/design/lpnjmTOG9uRO3Q0zHbjgsD/ACM-x-WITL?node-id=0-1&t=J7As1uSKchpmuTSs-0
+[WITL Figma Design File](https://www.figma.com/design/lpnjmTOG9uRO3Q0zHbjgsD/ACM-x-WITL?node-id=0-1&t=J7As1uSKchpmuTSs-0)
 
 ## Node.js
 
