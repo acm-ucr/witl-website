@@ -3,7 +3,9 @@ import Link from "next/link";
 const NotFound = () => {
   return (
     <div className="bg-witl-purple-400 min-h-screen font-marcellus-sc">
-      404 Page Not Found
+      <div className="bg-witl-purple-300 w-min">
+        <p>404</p>
+      </div>
       <div className="flex flex-col items-center justify-center rounded-2xl">
         <Link
           href="/"
