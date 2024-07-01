@@ -27,7 +27,7 @@ const Navigation = () => {
           <div>EST. 2022</div>
         </div>
 
-        <div className="hidden md:flex space-x-16">
+        <div className="hidden md:flex space-x-8">
           {items.map((item, index) => (
             <Link
               href={item.link}
