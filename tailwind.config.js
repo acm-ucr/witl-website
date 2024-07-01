@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        "9xl": "10rem",
+      },
       colors: {
         witl: {
           "black-100": "#000000",
