@@ -1,11 +1,10 @@
-import "@/app/layout.js";
 import About from "@/components/about.jsx";
 
-const AboutPage = () => {
+const Page = () => {
   return (
     <div>
       <About />
     </div>
   );
 };
-export default AboutPage;
+export default Page;
