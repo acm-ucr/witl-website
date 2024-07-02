@@ -1,5 +1,6 @@
 /* eslint-disable new-cap */
 import "./globals.css";
+import Navigation from "@/components/Navigation";
 import { Junge } from "next/font/google";
 import { Marcellus } from "next/font/google";
 // eslint-disable-next-line camelcase
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${junge.className} ${marcellussc.variable} ${libreCaslonTextFont.variable} ${marcellus.variable}`}
       >
+        <Navigation>{children}</Navigation>
         {children}
       </body>
     </html>
