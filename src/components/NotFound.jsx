@@ -6,7 +6,7 @@ const NotFound = () => {
       404 Page Not Found
       <p
         className="text-witl-white-100 text-4xl mb-8 flex flex-col items-center justify-center"
-        style={{ paddingBottom: "70px" }}
+        style={{ paddingBottom: "60px" }}
       >
         Adjective Adjective Adjective
       </p>
