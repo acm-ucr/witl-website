@@ -12,6 +12,10 @@ const NotFound = () => {
       >
         <p>404</p>
       </div>
+      <p className="text-witl-white-100 text-4xl mb-8 flex flex-col items-center justify-center pb-16 pt-5">
+        Adjective Adjective Adjective
+      </p>
+
       <div className="flex flex-col items-center justify-center rounded-2xl">
         <Link
           href="/"
