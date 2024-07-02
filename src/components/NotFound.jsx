@@ -8,7 +8,7 @@ const NotFound = () => {
       </div>
       <div
         className="flex flex-col bg-witl-purple-300 w-7/12 px-36 py-6
-      rounded-2xl text-witl-purple-100 text-9xl font-libre-caslon-text items-center justify-center"
+      rounded-2xl text-witl-purple-100 text-9xl font-libre-caslon-text text-center"
       >
         <p>404</p>
       </div>
