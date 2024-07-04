@@ -9,8 +9,12 @@ import Image from "next/image";
 
 const CoreValues = () => {
   return (
-    <div>
+    <div className="w-screen h-screen relative">
       <div>
+        <Image
+          src={Passion}
+          className="absolute bottom-[48%] left-[57%] w-1/4 h-auto"
+        />
         <Image
           src={Innovation}
           className="absolute bottom-[30%] left-[8%] w-1/4 h-auto"
@@ -18,10 +22,6 @@ const CoreValues = () => {
         <Image
           src={Integrity}
           className="absolute bottom-[13%] left-[25%] w-1/4 h-auto"
-        />
-        <Image
-          src={Passion}
-          className="absolute bottom-[48%] left-[57%] w-1/4 h-auto"
         />
         <Image
           src={Professionalism}
