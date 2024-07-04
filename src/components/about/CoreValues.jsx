@@ -14,30 +14,37 @@ const CoreValues = () => {
         <Image
           src={Passion}
           className="absolute bottom-[48%] left-[57%] w-1/4 h-auto"
+          alt="passion"
         />
         <Image
           src={Innovation}
           className="absolute bottom-[30%] left-[8%] w-1/4 h-auto"
+          alt="innovation"
         />
         <Image
           src={Integrity}
           className="absolute bottom-[13%] left-[25%] w-1/4 h-auto"
+          alt="integrity"
         />
         <Image
           src={Professionalism}
           className="absolute bottom-[30%] left-[41%] w-1/4 h-auto"
+          alt="professionalism"
         />
         <Image
           src={Service}
           className="absolute bottom-[13%] left-[57%] w-1/4 h-auto"
+          alt="service"
         />
         <Image
           src={Growth}
           className="absolute bottom-[-5%] left-[41%] w-1/4 h-auto"
+          alt="growth"
         />
         <Image
           src={Knowledge}
           className="absolute bottom-[-4%] left-[73%] w-1/4 h-auto"
+          alt="knowledge"
         />
       </div>
       <div className="absolute bottom-[10%]">
