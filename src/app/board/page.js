@@ -2,7 +2,9 @@ import Board from "@/components/board/Board";
 
 const Page = () => {
   return (
-    <div></div>
+    <div>
+      <Board />
+    </div>
   );
 };
 export default Page;
