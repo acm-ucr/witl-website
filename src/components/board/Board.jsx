@@ -1,4 +1,11 @@
+import OurAlumni from "./OurAlumni";
+
 const Board = () => {
-  return <div></div>;
+  return (
+    <div>
+      <OurAlumni />
+    </div>
+  );
 };
 export default Board;
+  
