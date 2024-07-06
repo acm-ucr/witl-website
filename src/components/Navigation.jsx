@@ -12,7 +12,7 @@ const Navigation = () => {
     setMobile(!mobile);
   };
   return (
-    <div className="sticky top-0">
+    <div className="fixed top-0">
       <div className="w-screen bg-witl-purple-300 flex items-center justify-between py-[1%] px-[2%] border-b-2 border-witl-white-100">
         <Link className="flex flex-row space-x-4" href="/">
           <Image src={Logo} alt="WITL Icon" />
