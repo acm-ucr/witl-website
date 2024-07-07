@@ -28,7 +28,7 @@ const OurAlumni = () => {
         <Image src={Six} alt="Alumni 6" />
       </div>
       <div className="col-span-2 bg-witl-purple-400 mx-4 place-content-center">
-        <div className="text-right text-witl-white-100 text-[120px]">
+        <div className="text-right text-witl-white-100 text-[120px] pr-4">
           Our
           <br />
           Alumni
