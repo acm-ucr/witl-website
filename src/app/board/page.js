@@ -1,4 +1,4 @@
-import Board from "@/components/board/Board";
+import Board from "@/components/board/BoardHeader";
 
 const Page = () => {
   return (
