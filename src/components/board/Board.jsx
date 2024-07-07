@@ -1,14 +1,23 @@
-import Image from "next/image";
-import BoardIMG from "@/public/board/Exec_Board.webp";
+import BoardCard from "./BoardCard";
+import { BoardItems } from "@/data/board.js";
+import OurAlumni from "./OurAlumni";
 
 const Board = () => {
   return (
-    <div className="bg-witl-purple-300 flex flex-col pb-40">
-      <Image src={BoardIMG} alt="Board" className="self-end mr-10 mt-10" />
-      <p className="text-witl-purple-100 w-min text-8xl absolute z-0 top-[60%] left-[9%]">
-        EXECUTIVE BOARD
-      </p>
-    </div>
+    <>
+      <div className="grid grid-cols-3 gap-2">
+        {BoardItems.map((CARD, index) => (
+          <BoardCard
+            name={CARD.name}
+            position={CARD.position}
+            image={CARD.image}
+            linkedIn={CARD.linkedIn}
+            key={index}
+          />
+        ))}
+      </div>
+      <OurAlumni />
+    </>
   );
 };
 export default Board;
