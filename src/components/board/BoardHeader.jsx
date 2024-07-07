@@ -1,7 +1,7 @@
 import Image from "next/image";
 import BoardIMG from "@/public/board/Exec_Board.webp";
 
-const Board = () => {
+const BoardHeader = () => {
   return (
     <div className="bg-witl-purple-300 flex flex-col pb-40">
       <Image src={BoardIMG} alt="Board" className="self-end mr-10 mt-10" />
@@ -11,4 +11,4 @@ const Board = () => {
     </div>
   );
 };
-export default Board;
+export default BoardHeader;
