@@ -1,48 +1,38 @@
 import Link from "next/link";
 import Image from "next/image";
+import FellowshipImage from "@/public/images/fellowship.webp";
+import NetworkDinner from "@/public/images/networkDinner.webp";
+import GroupPhoto from "@/public/images/groupPhoto.webp";
 
 const Resources = () => {
   return (
     <div className="bg-witl-purple-300 min-h-screen flex items-center justify-center">
-      <div className="m-32 bg-white rounded">
+      <div className="w-10/12 bg-white rounded flex flex-col items-center justify-center">
         <div className=" text-2xl text-witl-black font-marcellus flex flex-col justify-center items-center">
           <Link
             href="https://www.instagram.com/p/C1vm4lJL716/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
             target="_blank"
-            rel="noopener noreferrer"
             className="text-witl-black"
           >
             What can I do with LeGAL Rewards?
           </Link>
         </div>
-        <div className="m-16 grid grid-cols-3 border 2 border-white gap-10">
-          <div className=" bg-witl-purple-200 flex items-center justify-center">
-            <Image
-              src="/images/fellowship.webp"
-              alt="fellowship"
-              width={500}
-              height={500}
-              className="object-contain"
-            />
-          </div>
-          <div>
-            <Image
-              src="/images/networkDinner.webp"
-              alt="network dinner"
-              width={500}
-              height={500}
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <Image
-              src="/images/groupPhoto.webp"
-              alt="group photo"
-              width={500}
-              height={500}
-              className="object-cover"
-            />
-          </div>
+        <div className="grid md:grid-cols-3 border 2 border-white my-4 gap-4">
+          <Image
+            src={FellowshipImage}
+            alt="fellowship"
+            className="object-contain pl-4"
+          />
+          <Image
+            src={NetworkDinner}
+            alt="network dinner"
+            className="object-cover p-1"
+          />
+          <Image
+            src={GroupPhoto}
+            alt="group photo"
+            className="object-cover pr-4"
+          />
         </div>
       </div>
     </div>
