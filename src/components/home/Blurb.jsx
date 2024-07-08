@@ -7,16 +7,36 @@ const Blurb = () => {
   return (
     <div className="bg-witl-purple-300 min-h-screen flex justify-center items-center">
       <div className="bg-witl-white-100 rounded-3xl">
-        <div className="grid grid-flow-col grid-cols-3 grid-rows-2 content-stretch">
-          <div className="col-span-1">
-            <Image src={teamphoto1} alt="teamphoto1" className="scale-[90%]" />
+        <div className="grid grid-flow-row-dense grid-cols-6">
+          <div className="col-span-6 md:col-span-3 place-items-stretch justify-start m-2 ">
+            {" "}
+            <Image
+              src={teamphoto1}
+              alt="teamphoto1"
+              className="w-full h-full object-cover rounded-3xl"
+            />{" "}
           </div>
-          <div>
-            <Image src={teamphoto2} alt="teamphoto2" className="scale-[80%]" />
+          <div className="col-span-6 md:col-span-3 place-items-stretch justify-start">
+            <div className="flex flex-col tracking-widest">
+              <div className="font-marcellus-sc text-9xl">Womxn in</div>
+              <div className="font-marcellus-sc text-9xl">the Law</div>
+            </div>
           </div>
-          <div className="col-span-3">hello world</div>
-          <div className="col-span-3">
-            <Image src={teamphoto3} alt="teamphoto3" className="scale-[80%] " />
+          <div className="col-span-6 md:col-span-2 place-items-stretch justify-start m-2">
+            {" "}
+            <Image
+              src={teamphoto2}
+              alt="teamphoto2"
+              className="w-full h-full object-cover rounded-3xl"
+            />{" "}
+          </div>
+          <div className="col-span-6 md:col-span-4 place-items-stretch justify-start m-2">
+            {" "}
+            <Image
+              src={teamphoto3}
+              alt="teamphoto3"
+              className="w-full h-full object-cover rounded-3xl"
+            />{" "}
           </div>
         </div>
       </div>
