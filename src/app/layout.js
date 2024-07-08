@@ -1,4 +1,5 @@
 /* eslint-disable new-cap */
+import Footer from "@/components/Footer";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import { Junge } from "next/font/google";
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
       >
         <Navigation>{children}</Navigation>
         {children}
+        <Footer />
       </body>
     </html>
   );
