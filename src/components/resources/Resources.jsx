@@ -21,12 +21,12 @@ const Resources = () => {
           <Image
             src={FellowshipImage}
             alt="fellowship"
-            className="object-contain pl-4"
+            className="object-cover pl-4"
           />
           <Image
             src={NetworkDinner}
             alt="network dinner"
-            className="object-cover p-1"
+            className="object-cover pl-2 pr-[0.4rem]"
           />
           <Image
             src={GroupPhoto}
