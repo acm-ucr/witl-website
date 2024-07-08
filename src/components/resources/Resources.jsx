@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const Page = () => {
+const Resources = () => {
   return (
     <div className="bg-witl-purple-300 min-h-screen flex items-center justify-center">
       <div className="m-32 bg-white rounded">
@@ -48,4 +48,4 @@ const Page = () => {
     </div>
   );
 };
-export default Page;
+export default Resources;
