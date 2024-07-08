@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import FellowshipImage from "@/public/images/fellowship.webp";
-import NetworkDinner from "@/public/images/networkDinner.webp";
-import GroupPhoto from "@/public/images/groupPhoto.webp";
+import FellowshipImage from "@/public/resources/fellowship.webp";
+import NetworkDinner from "@/public/resources/networkDinner.webp";
+import GroupPhoto from "@/public/resources/groupPhoto.webp";
 
 const Resources = () => {
   return (
