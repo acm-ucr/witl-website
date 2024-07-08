@@ -1,8 +1,7 @@
-import Sponsors from "@/components/home/Sponsors";
 const Home = () => {
   return (
     <div>
-      <Sponsors />
+      <p>Hello World</p>
     </div>
   );
 };
