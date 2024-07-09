@@ -7,9 +7,9 @@ const BoardHeader = () => {
       <Image
         src={BoardIMG}
         alt="Board"
-        className="self-end mr-[3%] mt-[3%] w-[60%]"
+        className="self-end mr-[5%] mt-[5%] w-[50%]"
       />
-      <p className="text-witl-purple-100 w-min absolute text-9xl leading-none z-0 top-[58%] left-[10%]">
+      <p className="text-witl-purple-100 w-min absolute text-8xl leading-none z-0 top-[45%] left-[14%]">
         EXECUTIVE BOARD
       </p>
     </div>
