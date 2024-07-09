@@ -1,5 +1,5 @@
 "use client";
-import Logo from "@/public/images/WITL-logo.webp";
+import Logo from "@/public/WITL-logo.webp";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
