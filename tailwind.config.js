@@ -10,11 +10,7 @@ module.exports = {
     extend: {
       fontSize: {
         "9xl": "10rem",
-<<<<<<< HEAD
         "10xl": "14rem",
-=======
-        "10xl": "13rem",
->>>>>>> origin/cathy/sponsors2
       },
       colors: {
         witl: {
