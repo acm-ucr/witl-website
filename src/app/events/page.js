@@ -1,4 +1,10 @@
+import EventsHeader from "@/components/events/EventsHeader";
+
 const Page = () => {
-  return <div>Hello World</div>;
+  return (
+    <div className="h-screen">
+      <EventsHeader />
+    </div>
+  );
 };
 export default Page;
