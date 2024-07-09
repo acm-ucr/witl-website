@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontSize: {
         "9xl": "10rem",
+        "10xl": "14rem",
       },
       colors: {
         witl: {
