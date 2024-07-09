@@ -6,9 +6,9 @@ import teamphoto3 from "@/public/home/teamphoto3.webp";
 const Blurb = () => {
   return (
     <div className="bg-witl-purple-300 min-h-screen flex justify-center items-center">
-      <div className="bg-witl-white-100 rounded-[10rem] scale-50">
-        <div className="grid grid-flow-row-dense grid-cols-6 mt-40 mb-32 mx-20">
-          <div className="col-span-6 md:col-span-3 place-items-stretch justify-start m-20 mr-32 ">
+      <div className="bg-witl-white-100 rounded-[6rem] scale-50">
+        <div className="grid grid-flow-row-dense grid-cols-6 ">
+          <div className="col-span-6 md:col-span-3 place-items-stretch justify-start m-10 mt-28">
             {" "}
             <Image
               src={teamphoto1}
@@ -18,28 +18,30 @@ const Blurb = () => {
           </div>
           <div className="col-span-6 md:col-span-3 place-items-stretch justify-start">
             <div className="flex flex-col tracking-widest">
-              <div className="font-marcellus-sc text-10xl mt-20 leading-none">
+              <div className="flex flex-col tracking-wide font-marcellus-sc text-8xl mt-28 ml-6 leading-none">
                 Womxn in
               </div>
-              <div className="font-marcellus-sc text-10xl leading-none">
+              <div className="flex flex-col tracking-wide font-marcellus-sc text-8xl ml-6 leading-none">
                 the Law
               </div>
-              <p className="text-right text-6xl mr-24 leading-tight">stands</p>
-              <p className="text-right text-6xl mr-24 leading-tight">
+              <p className="text-right text-3xl mr-32 mt-8 leading-tight tracking-tight">
+                stands
+              </p>
+              <p className="text-right text-3xl mr-32 leading-tight tracking-tight">
                 as an organization catered to the{" "}
               </p>
-              <p className="text-right text-6xl mr-24 leading-tight">
+              <p className="text-right text-3xl mr-32 leading-tight tracking-tight">
                 diverse spectrum of womxn who are
               </p>
-              <p className="text-right text-6xl mr-24 leading-tight">
+              <p className="text-right text-3xl mr-32 leading-tight tracking-tight">
                 embarking on journeys in law
               </p>
-              <p className="text-right text-6xl mr-24 mb-40 leading-tight">
+              <p className="text-right text-3xl mr-32 mb-20 leading-tight tracking-tight">
                 school or within the legal field.
               </p>
             </div>
           </div>
-          <div className="col-span-6 md:col-span-2 place-items-stretch justify-start m-20">
+          <div className="col-span-6 md:col-span-2 place-items-stretch justify-start m-10 mb-20">
             {" "}
             <Image
               src={teamphoto2}
@@ -47,7 +49,7 @@ const Blurb = () => {
               className="w-full h-full object-cover rounded-3xl"
             />{" "}
           </div>
-          <div className="col-span-6 md:col-span-4 place-items-stretch justify-start m-20">
+          <div className="col-span-6 md:col-span-4 place-items-stretch justify-start m-10 mb-20">
             {" "}
             <Image
               src={teamphoto3}
