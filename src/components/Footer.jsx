@@ -6,7 +6,7 @@ import { links } from "@/data/Footer";
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 w-screen p-3 flex items-center bg-witl-purple-300 justify-between">
+    <div className="bottom-0 p-3 flex items-center bg-witl-purple-300 justify-between">
       <div className="flex gap-8 justify-center items-center">
         {links.map((link, index) => (
           <Link key={index} href={"#"} target="_blank">
