@@ -3,9 +3,13 @@ import BoardIMG from "@/public/board/Exec_Board.webp";
 
 const BoardHeader = () => {
   return (
-    <div className="bg-witl-purple-300 flex flex-col pb-56">
-      <Image src={BoardIMG} alt="Board" className="self-end mr-10 mt-10" />
-      <p className="text-witl-purple-100 w-min text-8xl absolute z-0 top-[25%] left-[15%]">
+    <div className="bg-witl-purple-300 flex flex-col pb-[15%]">
+      <Image
+        src={BoardIMG}
+        alt="Board"
+        className="self-end mr-[5%] mt-[5%] w-[50%]"
+      />
+      <p className="text-witl-purple-100 w-min absolute text-8xl leading-none z-0 top-[32%] left-[12%]">
         EXECUTIVE BOARD
       </p>
     </div>
