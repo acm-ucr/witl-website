@@ -1,5 +1,5 @@
 "use client";
-import Logo from "@/public/images/WITL-logo.webp";
+import Logo from "@/public/WITL-logo.webp";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -12,7 +12,7 @@ const Navigation = () => {
     setMobile(!mobile);
   };
   return (
-    <div className="fixed top-0">
+    <div className="fixed top-0 z-50">
       <div className="w-screen bg-witl-purple-300 flex items-center justify-between py-[1%] px-[2%] border-b-2 border-witl-white-100">
         <Link className="flex flex-row space-x-4" href="/">
           <Image src={Logo} alt="WITL Icon" />
