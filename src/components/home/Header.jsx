@@ -4,7 +4,7 @@ import HeaderImg from "@/public/assets/mainHeader.webp";
 const Header = () => {
   return (
     <div className="bg-witl-purple-300 flex flex-col items-center">
-      <div className="text-witl-purple-100 w-[78%]">
+      <div className="text-witl-purple-100 w-[78%] mt-32">
         <div className="flex flex-row">
           <p className="text-[13rem] leading-tight">WOMXN</p>
           <div className="flex flex-col w-[25%] justify-end">
