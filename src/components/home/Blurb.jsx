@@ -20,23 +20,17 @@ const Blurb = () => {
             <div className="flex flex-col tracking-widest">
               <div className="flex flex-col tracking-wide font-marcellus-sc text-8xl mt-28 ml-6 leading-none">
                 Womxn in
-              </div>
-              <div className="flex flex-col tracking-wide font-marcellus-sc text-8xl ml-6 leading-none">
+                <br />
                 the Law
               </div>
               <p className="text-right text-3xl mr-32 mt-8 leading-tight tracking-tight">
                 stands
-              </p>
-              <p className="text-right text-3xl mr-32 leading-tight tracking-tight">
-                as an organization catered to the{" "}
-              </p>
-              <p className="text-right text-3xl mr-32 leading-tight tracking-tight">
+                <br />
+                as an organization catered to the <br />
                 diverse spectrum of womxn who are
-              </p>
-              <p className="text-right text-3xl mr-32 leading-tight tracking-tight">
+                <br />
                 embarking on journeys in law
-              </p>
-              <p className="text-right text-3xl mr-32 mb-20 leading-tight tracking-tight">
+                <br />
                 school or within the legal field.
               </p>
             </div>
