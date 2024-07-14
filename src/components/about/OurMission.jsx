@@ -3,7 +3,7 @@ import Image from "next/image";
 const OurMission = () => {
   return (
     <div>
-      <div className="flex items-center justify-center pb-2">
+      <div className="flex items-center justify-center pt-12 pb-2">
         <p className="m-auto p-auto text-7xl">Our Mission</p>
       </div>
       <div className="grid grid-cols-2 bg-witl-purple-300 rounded-2xl text-witl-purple-100 w-fit ml-24 mr-24">
