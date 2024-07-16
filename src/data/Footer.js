@@ -1,28 +1,26 @@
-import bookmark from "@/public/assets/bookmark.svg";
-import discord from "@/public/assets/discord.svg";
-import instagram from "@/public/assets/instagram.svg";
-import linkedin from "@/public/assets/linkedin.svg";
-import email from "@/public/assets/email.svg";
+import { BsSubstack } from "react-icons/bs";
+import { FaDiscord, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { MdMail } from "react-icons/md";
 
 export const links = [
   {
-    icon: instagram,
-    link: "",
+    icon: <FaInstagram />,
+    link: "https://www.instagram.com/ucrwitl/",
   },
   {
-    icon: linkedin,
-    link: "",
+    icon: <FaLinkedin />,
+    link: "https://www.linkedin.com/company/ucr-womxn-in-the-law/",
   },
   {
-    icon: email,
-    link: "",
+    icon: <MdMail />,
+    link: "mailto:ucrwitl@gmail.com",
   },
   {
-    icon: discord,
-    link: "",
+    icon: <FaDiscord />,
+    link: "https://discord.gg/6W8t7a3G58",
   },
   {
-    icon: bookmark,
-    link: "",
+    icon: <BsSubstack />,
+    link: "https://ucrwitl.substack.com/",
   },
 ];
