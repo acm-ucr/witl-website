@@ -10,6 +10,9 @@ const About = () => {
         <div className="mb-1 text-9xl text-center text-witl-purple-100 z-10">
           <p>US</p>
         </div>
+        <div className="absolute z-50 top-28 left-[48%]">
+          <p className="text-witl-purple-100 text-xs">WITL</p>
+        </div>
       </div>
       <AboutUsGroups />
     </div>
