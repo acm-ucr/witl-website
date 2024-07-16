@@ -6,8 +6,8 @@ import { links } from "@/data/Footer";
 
 const Footer = () => {
   return (
-    <div className="bottom-0 p-3 flex items-center bg-witl-purple-300 justify-between">
-      <div className="flex gap-10 justify-center items-center ml-2">
+    <div className="p-3 flex items-center bg-witl-purple-300 justify-between">
+      <div className="flex gap-8 justify-center items-center">
         {links.map((link, index) => (
           <Link
             key={index}
