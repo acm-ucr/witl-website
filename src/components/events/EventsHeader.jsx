@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="bg-witl-purple-300 h-3/5 relative">
+    <div className="bg-witl-purple-300 h-3/5 relative mt-[5%]">
       <Image
         src={networkingdinner}
         alt="networking dinner"

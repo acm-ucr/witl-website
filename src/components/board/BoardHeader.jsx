@@ -3,7 +3,7 @@ import BoardIMG from "@/public/board/Exec_Board.webp";
 
 const BoardHeader = () => {
   return (
-    <div className="bg-witl-purple-300 flex flex-col pb-[15%]">
+    <div className="bg-witl-purple-300 flex flex-col pb-[15%] mt-[5%]">
       <Image
         src={BoardIMG}
         alt="Board"
