@@ -23,7 +23,7 @@ const Blurb = () => {
                 <br />
                 the Law
               </div>
-              <p className="text-right text-md md:text-xl lg:text-2xl mr-8 md:mr-16 lg:mr-32 mt-4 lg:mt-8 leading-tight tracking-tight">
+              <p className="text-right text-md md:text-xl lg:text-2xl mr-8 md:mr-14 lg:mr-20 mt-4 lg:mt-8 leading-tight tracking-tight">
                 stands
                 <br />
                 as an organization catered to the <br />
