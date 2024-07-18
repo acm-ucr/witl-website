@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const CoreValues = () => {
   return (
-    <div className="w-screen h-screen relative">
+    <div className="w-[100%] h-screen relative">
       <div>
         <Image
           src={Passion}
