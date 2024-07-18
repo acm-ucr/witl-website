@@ -13,7 +13,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "moment": "^2.30.1",
+    "framer": "^2.4.1",
+    "motion": "^10.18.0",
     "next": "^14.0.4",
     "react": "^18.2.0",
     "react-big-calendar": "^1.13.1",
