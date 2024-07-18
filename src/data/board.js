@@ -1,4 +1,4 @@
-import Ashley from "@/public/board/Ashley.webp";
+import Ashleyy from "@/public/board/Ashley.webp";
 import Leanna from "@/public/board/Leanna.webp";
 import Priyanka from "@/public/board/Priyanka.webp";
 import Dominion from "@/public/board/Dominion.webp";
@@ -12,7 +12,7 @@ export const BoardItems = [
   {
     name: "Ashley Tsai",
     position: "President",
-    image: Ashley,
+    image: Ashleyy,
     linkedIn: "https://www.linkedin.com/in/ashleytsaijx",
   },
   {
