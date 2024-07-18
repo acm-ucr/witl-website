@@ -1,12 +1,12 @@
-import Ashley from "@/public/board/Ashley.webp";
-import Leanna from "@/public/board/Leanna.webp";
+import Ashley from "@/public/board/Ashley1.webp";
+import Leanna from "@/public/board/Leanna1.webp";
 import Priyanka from "@/public/board/Priyanka.webp";
 import Dominion from "@/public/board/Dominion.webp";
 import Lamerot from "@/public/board/Lamerot.webp";
 import Eva from "@/public/board/Eva.webp";
 import Valeria from "@/public/board/Valeria.webp";
-import Andrea from "@/public/board/Andrea.webp";
-import Emma from "@/public/board/Emma.webp";
+import Andrea from "@/public/board/Andrea1.webp";
+import Emma from "@/public/board/Emma1.webp";
 
 export const BoardItems = [
   {
