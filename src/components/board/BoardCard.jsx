@@ -8,7 +8,7 @@ const BoardCard = ({ image, name, position, linkedIn }) => {
     <div className="space-y-3">
       <motion.div
         whileHover={{ scale: 1.05 }}
-        className="flex justify-center w-[80%] aspect-[1/1] mx-[10%]"
+        className="flex justify-center w-[80%] aspect-[1/1] mx-[10%] my-[5%]"
       >
         <Link href={linkedIn} className="inline-block">
           <Image src={image} alt="picture of person" />
