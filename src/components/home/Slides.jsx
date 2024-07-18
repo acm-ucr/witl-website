@@ -213,10 +213,9 @@ const Slides = () => {
         ref={card8}
         className="bg-witl-purple-300 opacity-[0%] w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[26%] right-[10%]"
       ></div>
-      <motion.div
+      <div
         ref={card3}
         className="bg-witl-purple-300 w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[32%] left-[16%]"
-        whileHover={{ y: "-5%", type: "bounce" }}
         onClick={prevSlide}
       >
         <SlideCard
@@ -224,11 +223,10 @@ const Slides = () => {
           description={SlideItems[leftInd].description}
           year={SlideItems[leftInd].year}
         />
-      </motion.div>
-      <motion.div
+      </div>
+      <div
         ref={card5}
         className="bg-witl-purple-300 w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[32%] right-[16%]"
-        whileHover={{ y: "-5%", type: "bounce" }}
         onClick={nextSlide}
       >
         <SlideCard
@@ -236,18 +234,17 @@ const Slides = () => {
           description={SlideItems[rightInd].description}
           year={SlideItems[rightInd].year}
         />
-      </motion.div>
-      <motion.div
+      </div>
+      <div
         ref={card4}
         className="bg-witl-purple-400 w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[40%] right-[38.5%]"
-        whileHover={{ y: "-5%", type: "bounce" }}
       >
         <SlideCard
           image={SlideItems[currInd].image}
           description={SlideItems[currInd].description}
           year={SlideItems[currInd].year}
         />
-      </motion.div>
+      </div>
 
       <div className="absolute w-[33%] bottom-[28%] left-[46%] grid grid-cols-10">
         {SlideItems.map((ITEMS, index) => (
