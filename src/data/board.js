@@ -1,4 +1,3 @@
-
 import Ashley from "@/public/board/Ashley1.webp";
 import Leanna from "@/public/board/Leanna1.webp";
 import Priyanka from "@/public/board/Priyanka.webp";
@@ -8,7 +7,6 @@ import Eva from "@/public/board/Eva.webp";
 import Valeria from "@/public/board/Valeria.webp";
 import Andrea from "@/public/board/Andrea1.webp";
 import Emma from "@/public/board/Emma1.webp";
-
 
 export const BoardItems = [
   {

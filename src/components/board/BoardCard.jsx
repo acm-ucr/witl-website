@@ -1,4 +1,3 @@
-
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -6,7 +5,6 @@ import Link from "next/link";
 
 const BoardCard = ({ image, name, position, linkedIn }) => {
   return (
-
     <div className="space-y-3">
       <motion.div
         whileHover={{ scale: 1.05 }}
@@ -19,7 +17,6 @@ const BoardCard = ({ image, name, position, linkedIn }) => {
       <div className="space-y-0.5">
         <p className="text-4xl flex justify-center">{name}</p>
         <p className="text-2xl flex justify-center">{position}</p>
-
       </div>
     </div>
   );

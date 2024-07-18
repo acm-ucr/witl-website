@@ -3,7 +3,6 @@ import { BoardItems } from "@/data/board.js";
 
 const Board = () => {
   return (
-
     <>
       <div className="grid grid-cols-3 gap-2 mt-[5%] mb-[25%]">
         {BoardItems.map((CARD, index) => (
@@ -17,7 +16,6 @@ const Board = () => {
         ))}
       </div>
     </>
-
   );
 };
 export default Board;
