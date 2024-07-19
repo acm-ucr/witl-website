@@ -249,6 +249,7 @@ const Slides = () => {
       <div className="absolute w-[33%] bottom-[28%] left-[46%] grid grid-cols-10">
         {SlideItems.map((ITEMS, index) => (
           <motion.div
+            className="w-fit aspect-[1/1]"
             whileHover={{ scale: 1.4, x: "10%" }}
             onClick={() => goToSlide(index)}
             key={index}
