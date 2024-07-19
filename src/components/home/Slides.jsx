@@ -188,7 +188,7 @@ const Slides = () => {
   };
 
   return (
-    <div className="h-screen relative mb-[3%]">
+    <div className="min-h-[570px] md:h-1/2 lg:h-screen flex relative mb-[3%]">
       <div
         ref={card0}
         className="bg-witl-purple-300 opacity-[0%] w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[26%] left-[10%]"
@@ -259,21 +259,25 @@ const Slides = () => {
         ))}
       </div>
 
-      <p className="text-7xl absolute bottom-[15%] left-[1%]">HIGHLIGHTED</p>
-      <p className="text-8xl absolute -bottom-[7%] left-[1%]">EVENTS</p>
-      <p className="text-4xl font-bold absolute bottom-[19%] right-[1%]">
+      <p className="text-5xl lg:text-7xl absolute bottom-[15%] left-[1%]">
+        HIGHLIGHTED
+      </p>
+      <p className="text-[100px] lg:text-8xl absolute -bottom-[4%] md:-bottom-[9%] lg:-bottom-[4%] left-[1%]">
+        EVENTS
+      </p>
+      <p className="text-xl lg:text-4xl font-bold absolute bottom-[19%] right-[1%]">
         NETWORKING DINNERS
       </p>
-      <p className="text-4xl font-bold absolute bottom-[14.5%] right-[1%]">
+      <p className="text-xl lg:text-4xl font-bold absolute bottom-[13.5%] lg:bottom-[14.5%] right-[1%]">
         LAW SCHOOL TOURS
       </p>
-      <p className="text-4xl font-bold absolute bottom-[10%] right-[1%]">
+      <p className="text-xl lg:text-4xl font-bold absolute bottom-[8%] lg:bottom-[10%] right-[1%]">
         FELLOWSHIP PROGRAMS
       </p>
-      <p className="text-4xl font-bold absolute bottom-[5.5%] right-[1%]">
+      <p className="text-xl lg:text-4xl font-bold absolute bottom-[2.5%] lg:bottom-[5.5%] right-[1%]">
         SCHEDULED EVENTS
       </p>
-      <p className="text-4xl font-bold absolute bottom-[1%] right-[1%]">
+      <p className="text-xl lg:text-4xl font-bold absolute -bottom-[2.5%] lg:bottom-[1%] right-[1%]">
         AND MORE...
       </p>
     </div>
