@@ -190,7 +190,7 @@ const Slides = () => {
         />
       </div>
 
-      <div className="absolute w-[33%] bottom-[28%] left-[46%] grid grid-cols-10">
+      <div className="absolute w-[33%] bottom-[28%] left-[45%] lg:left-[46%] grid grid-cols-10">
         {SlideItems.map((ITEMS, index) => (
           <motion.div
             className="w-fit aspect-[1/1]"
