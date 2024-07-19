@@ -19,15 +19,7 @@ const Slides = () => {
   const [card7, animate7] = useAnimate();
   const [card8, animate8] = useAnimate();
 
-  const prevSlide = () => {
-    const isFirstSlide = currInd === 0;
-    const newInd = isFirstSlide ? SlideItems.length - 1 : currInd - 1;
-    const newLeftInd = newInd - 1 === -1 ? SlideItems.length - 1 : newInd - 1;
-    const newRightInd = newInd + 1 === SlideItems.length ? 0 : newInd + 1;
-    setCurrInd(newInd);
-    setleftInd(newLeftInd);
-    setRightInd(newRightInd);
-
+  const animSet1 = () => {
     animate1(card1.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
     animate2(
       card2.current,
@@ -62,15 +54,7 @@ const Slides = () => {
     animate8(card8.current, { opacity: [0.72, 0] }, { duration: 0.5 });
   };
 
-  const nextSlide = () => {
-    const isLastSlide = currInd === SlideItems.length - 1;
-    const newInd = isLastSlide ? 0 : currInd + 1;
-    const newLeftInd = newInd - 1 === -1 ? SlideItems.length - 1 : newInd - 1;
-    const newRightInd = newInd + 1 === SlideItems.length ? 0 : newInd + 1;
-    setCurrInd(newInd);
-    setleftInd(newLeftInd);
-    setRightInd(newRightInd);
-
+  const animSet2 = () => {
     animate0(card0.current, { opacity: [0.72, 0] }, { duration: 0.5 });
     animate1(
       card1.current,
@@ -105,6 +89,28 @@ const Slides = () => {
     animate7(card7.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
   };
 
+  const prevSlide = () => {
+    const isFirstSlide = currInd === 0;
+    const newInd = isFirstSlide ? SlideItems.length - 1 : currInd - 1;
+    const newLeftInd = newInd - 1 === -1 ? SlideItems.length - 1 : newInd - 1;
+    const newRightInd = newInd + 1 === SlideItems.length ? 0 : newInd + 1;
+    setCurrInd(newInd);
+    setleftInd(newLeftInd);
+    setRightInd(newRightInd);
+    animSet1();
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currInd === SlideItems.length - 1;
+    const newInd = isLastSlide ? 0 : currInd + 1;
+    const newLeftInd = newInd - 1 === -1 ? SlideItems.length - 1 : newInd - 1;
+    const newRightInd = newInd + 1 === SlideItems.length ? 0 : newInd + 1;
+    setCurrInd(newInd);
+    setleftInd(newLeftInd);
+    setRightInd(newRightInd);
+    animSet2();
+  };
+
   const goToSlide = (slideIdx) => {
     const newLeftInd =
       slideIdx - 1 === -1 ? SlideItems.length - 1 : slideIdx - 1;
@@ -119,71 +125,9 @@ const Slides = () => {
       Math.abs(prevInd + (Slides.length - slideIdx - 1)) >
       Math.abs(slideIdx - prevInd)
     ) {
-      animate0(card0.current, { opacity: [0.72, 0] }, { duration: 0.5 });
-      animate1(
-        card1.current,
-        { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate2(
-        card2.current,
-        { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate3(
-        card3.current,
-        { x: ["98%", "0%"], y: ["-28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate4(
-        card4.current,
-        { x: ["98%", "0%"], y: ["28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate5(
-        card5.current,
-        { x: ["13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate6(
-        card6.current,
-        { x: ["13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate7(card7.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
+      animSet2();
     } else {
-      animate1(card1.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
-      animate2(
-        card2.current,
-        { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate3(
-        card3.current,
-        { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate4(
-        card4.current,
-        { x: ["-98%", "0%"], y: ["28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate5(
-        card5.current,
-        { x: ["-98%", "0%"], y: ["-28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate6(
-        card6.current,
-        { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate7(
-        card7.current,
-        { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate8(card8.current, { opacity: [0.72, 0] }, { duration: 0.5 });
+      animSet1();
     }
   };
 
