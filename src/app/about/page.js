@@ -1,11 +1,11 @@
-import About from "@/components/about/about.jsx";
+import AboutHeader from "@/components/about/AboutHeader.jsx";
 import OurMission from "@/components/about/OurMission";
 import CoreValues from "@/components/about/CoreValues";
 
 const Page = () => {
   return (
     <div>
-      <About />
+      <AboutHeader />
       <OurMission />
       <CoreValues />
     </div>
