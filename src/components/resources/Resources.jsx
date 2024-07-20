@@ -8,7 +8,7 @@ const Resources = () => {
   return (
     <div className="bg-witl-purple-300 min-h-screen flex items-center justify-center">
       <div className="w-10/12 bg-white rounded flex flex-col items-center justify-center">
-        <div className=" text-2xl text-witl-black font-marcellus flex flex-col justify-center items-center">
+        <div className="text-lg md:text-2xl text-witl-black font-marcellus flex flex-col justify-center items-center mt-[25%] md:mt-[0%]">
           <Link
             href="https://www.instagram.com/p/C1vm4lJL716/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
             target="_blank"
@@ -21,7 +21,7 @@ const Resources = () => {
           <Image
             src={FellowshipImage}
             alt="fellowship"
-            className="object-cover pl-4"
+            className="object-cover pl-2 md:pl-4 pr-2 md:pr-0"
           />
           <Image
             src={NetworkDinner}
@@ -31,7 +31,7 @@ const Resources = () => {
           <Image
             src={GroupPhoto}
             alt="group photo"
-            className="object-cover pr-4"
+            className="object-cover pl-2 md:pl-0 pr-2 md:pr-4"
           />
         </div>
       </div>
