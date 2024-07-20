@@ -4,10 +4,10 @@ const About = () => {
   return (
     <div className="bg-witl-purple-300 min-h-screen flex flex-col rounded-b-[48px] items-center justify-center mt-[5%]">
       <div className="flex flex-col tracking-widest">
-        <div className="mb-1 text-9xl max-sm:text-8xl text-center text-witl-purple-100">
+        <div className="mb-1 text-7xl md:text-9xl text-center text-witl-purple-100">
           <p>ABOUT</p>
         </div>
-        <div className="mb-1 text-9xl max-sm:text-8xl max-sm:mb-16 text-center text-witl-purple-100 z-10">
+        <div className="mb-16 md:mb-1 text-7xl md:text-9xl text-center text-witl-purple-100 z-10">
           <p>US</p>
         </div>
       </div>
