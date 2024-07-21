@@ -1,7 +1,7 @@
-name: ACM UCR Website
+name: UCR WITL Website
 on:
   pull_request:
-    branches: [main, dev]
+    branches: [prod, dev]
   workflow_dispatch:
 
 jobs:
