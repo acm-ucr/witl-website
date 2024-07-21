@@ -20,7 +20,8 @@
     "react-big-calendar": "^1.13.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.4",
+    "source-map-generator": "^0.8.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
