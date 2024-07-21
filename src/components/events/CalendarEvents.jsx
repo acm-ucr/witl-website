@@ -56,7 +56,6 @@ const CalendarEvents = ({ events }) => {
         </div>
       </div>
     </div>
-    
   );
 };
 export default CalendarEvents;
