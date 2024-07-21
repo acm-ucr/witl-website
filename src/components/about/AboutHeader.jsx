@@ -10,7 +10,7 @@ const AboutHeader = () => {
         <div className="mb-16 md:mb-1 text-7xl md:text-9xl text-center text-witl-purple-100 z-10">
           <p>US</p>
         </div>
-        <div className="absolute top-[13%] left-[42.6%] md:top-[23%] md:left-[45.6%]">
+        <div className="absolute top-[13%] left-[42.6%] md:top-[21%] md:left-[45.3%]">
           <p className="text-witl-purple-100 text-[10px] md:text-xs">WITL</p>
         </div>
       </div>
