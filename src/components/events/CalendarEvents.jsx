@@ -11,7 +11,7 @@ const localizer = momentLocalizer(moment);
 const CalendarEvents = ({ events }) => {
   const [date, setDate] = useState(new Date());
   // const [selectedEvent, setSelectedEvent] = useState(null);
-  
+
   return (
     <div className="h-screen flex justify-center">
       <div className="w-[85%] font-marcellus-sc mb-[5%]">
