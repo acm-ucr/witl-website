@@ -15,8 +15,10 @@ const BoardCard = ({ image, name, position, linkedIn }) => {
         </Link>
       </motion.div>
       <div className="space-y-0.5">
-        <p className="text-xl flex justify-center md:text-4xl">{name}</p>
-        <p className="text-sm flex justify-center md:text-2xl">{position}</p>
+        <p className="text-[80%] flex justify-center md:text-4xl">{name}</p>
+        <p className="text-[40%] flex justify-center md:text-2xl ">
+          {position}
+        </p>
       </div>
     </div>
   );

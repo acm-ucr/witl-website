@@ -27,7 +27,7 @@ const OurAlumni = () => {
       <div className="place-content-center m-auto">
         <Image src={Six} alt="Alumni 6" />
       </div>
-      <div className="col-span-2 bg-witl-purple-400 mx-4 place-content-center">
+      <div className="col-span-2 bg-witl-purple-400 mx-0 place-content-center">
         <div className="text-right text-witl-white-100 text-[30px] md:text-[120px] pr-4">
           Our
           <br />
