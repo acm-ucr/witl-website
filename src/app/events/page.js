@@ -46,7 +46,7 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="h-screen">
+    <div>
       <EventsHeader />
       <EventDescriptions events={events} />
       <CalendarEvents events={events} />
