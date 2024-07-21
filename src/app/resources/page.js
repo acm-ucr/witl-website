@@ -1,3 +1,12 @@
 import Resources from "@/components/resources/Resources";
+import ResourcesHeader from "@/components/resources/ResourcesHeader";
 
-export default Resources;
+const Page =()=>{
+    return (
+        <div>
+            <ResourcesHeader/>
+            <Resources/>
+        </div>
+    );
+};
+export default Page;
