@@ -8,7 +8,7 @@ import Six from "@/public/board/six.webp";
 
 const OurAlumni = () => {
   return (
-    <div className="grid grid-rows-2 grid-cols-4 gap-4 mx-20 m-4">
+    <div className="grid grid-cols-4 gap-4 mx-50 m-4">
       <div className="place-content-center m-auto">
         <Image src={One} alt="Alumni 1" />
       </div>
@@ -27,8 +27,8 @@ const OurAlumni = () => {
       <div className="place-content-center m-auto">
         <Image src={Six} alt="Alumni 6" />
       </div>
-      <div className="col-span-2 bg-witl-purple-400 mx-4 place-content-center">
-        <div className="text-right text-witl-white-100 text-[120px] pr-4">
+      <div className="col-span-2 bg-witl-purple-400 mx-0 place-content-center">
+        <div className="text-right text-witl-white-100 text-[30px] md:text-[120px] pr-4">
           Our
           <br />
           Alumni
