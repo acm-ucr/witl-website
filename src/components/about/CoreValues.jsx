@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const CoreValues = () => {
   return (
-    <div className="w-screen h-screen relative">
+    <div className="w-[100%] h-screen relative">
       <div>
         <Image
           src={Passion}
@@ -47,11 +47,11 @@ const CoreValues = () => {
           alt="knowledge"
         />
       </div>
-      <div className="absolute bottom-[10%]">
-        <p className="text-8xl pb-12 pl-20 md:scale-150 font-marcellus-sc">
+      <div className="absolute bottom-[4%]">
+        <p className="text-7xl pb-12 pl-20 md:scale-150 font-marcellus-sc">
           CORE
         </p>
-        <p className="text-8xl pl-20 md:scale-150 font-marcellus-sc">VALUES</p>
+        <p className="text-7xl pl-20 md:scale-150 font-marcellus-sc">VALUES</p>
       </div>
     </div>
   );

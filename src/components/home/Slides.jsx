@@ -19,15 +19,7 @@ const Slides = () => {
   const [card7, animate7] = useAnimate();
   const [card8, animate8] = useAnimate();
 
-  const prevSlide = () => {
-    const isFirstSlide = currInd === 0;
-    const newInd = isFirstSlide ? SlideItems.length - 1 : currInd - 1;
-    const newLeftInd = newInd - 1 === -1 ? SlideItems.length - 1 : newInd - 1;
-    const newRightInd = newInd + 1 === SlideItems.length ? 0 : newInd + 1;
-    setCurrInd(newInd);
-    setleftInd(newLeftInd);
-    setRightInd(newRightInd);
-
+  const animSet1 = () => {
     animate1(card1.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
     animate2(
       card2.current,
@@ -62,15 +54,7 @@ const Slides = () => {
     animate8(card8.current, { opacity: [0.72, 0] }, { duration: 0.5 });
   };
 
-  const nextSlide = () => {
-    const isLastSlide = currInd === SlideItems.length - 1;
-    const newInd = isLastSlide ? 0 : currInd + 1;
-    const newLeftInd = newInd - 1 === -1 ? SlideItems.length - 1 : newInd - 1;
-    const newRightInd = newInd + 1 === SlideItems.length ? 0 : newInd + 1;
-    setCurrInd(newInd);
-    setleftInd(newLeftInd);
-    setRightInd(newRightInd);
-
+  const animSet2 = () => {
     animate0(card0.current, { opacity: [0.72, 0] }, { duration: 0.5 });
     animate1(
       card1.current,
@@ -105,6 +89,28 @@ const Slides = () => {
     animate7(card7.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
   };
 
+  const prevSlide = () => {
+    const isFirstSlide = currInd === 0;
+    const newInd = isFirstSlide ? SlideItems.length - 1 : currInd - 1;
+    const newLeftInd = newInd - 1 === -1 ? SlideItems.length - 1 : newInd - 1;
+    const newRightInd = newInd + 1 === SlideItems.length ? 0 : newInd + 1;
+    setCurrInd(newInd);
+    setleftInd(newLeftInd);
+    setRightInd(newRightInd);
+    animSet1();
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currInd === SlideItems.length - 1;
+    const newInd = isLastSlide ? 0 : currInd + 1;
+    const newLeftInd = newInd - 1 === -1 ? SlideItems.length - 1 : newInd - 1;
+    const newRightInd = newInd + 1 === SlideItems.length ? 0 : newInd + 1;
+    setCurrInd(newInd);
+    setleftInd(newLeftInd);
+    setRightInd(newRightInd);
+    animSet2();
+  };
+
   const goToSlide = (slideIdx) => {
     const newLeftInd =
       slideIdx - 1 === -1 ? SlideItems.length - 1 : slideIdx - 1;
@@ -119,76 +125,14 @@ const Slides = () => {
       Math.abs(prevInd + (Slides.length - slideIdx - 1)) >
       Math.abs(slideIdx - prevInd)
     ) {
-      animate0(card0.current, { opacity: [0.72, 0] }, { duration: 0.5 });
-      animate1(
-        card1.current,
-        { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate2(
-        card2.current,
-        { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate3(
-        card3.current,
-        { x: ["98%", "0%"], y: ["-28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate4(
-        card4.current,
-        { x: ["98%", "0%"], y: ["28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate5(
-        card5.current,
-        { x: ["13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate6(
-        card6.current,
-        { x: ["13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate7(card7.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
+      animSet2();
     } else {
-      animate1(card1.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
-      animate2(
-        card2.current,
-        { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate3(
-        card3.current,
-        { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate4(
-        card4.current,
-        { x: ["-98%", "0%"], y: ["28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate5(
-        card5.current,
-        { x: ["-98%", "0%"], y: ["-28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate6(
-        card6.current,
-        { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate7(
-        card7.current,
-        { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate8(card8.current, { opacity: [0.72, 0] }, { duration: 0.5 });
+      animSet1();
     }
   };
 
   return (
-    <div className="h-screen relative">
+    <div className="min-h-[570px] md:h-1/2 lg:h-screen flex relative mb-[3%]">
       <div
         ref={card0}
         className="bg-witl-purple-300 opacity-[0%] w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[26%] left-[10%]"
@@ -246,9 +190,10 @@ const Slides = () => {
         />
       </div>
 
-      <div className="absolute w-[33%] bottom-[28%] left-[46%] grid grid-cols-10">
+      <div className="absolute w-[33%] bottom-[28%] left-[45%] lg:left-[46%] grid grid-cols-10">
         {SlideItems.map((ITEMS, index) => (
           <motion.div
+            className="w-fit aspect-[1/1]"
             whileHover={{ scale: 1.4, x: "10%" }}
             onClick={() => goToSlide(index)}
             key={index}
@@ -258,21 +203,25 @@ const Slides = () => {
         ))}
       </div>
 
-      <p className="text-7xl absolute bottom-[15%] left-2">HIGHLIGHTED</p>
-      <p className="text-9xl absolute -bottom-[5%] left-1">EVENTS</p>
-      <p className="text-4xl font-bold absolute bottom-[19%] right-1">
+      <p className="text-5xl lg:text-7xl absolute bottom-[15%] left-[1%]">
+        HIGHLIGHTED
+      </p>
+      <p className="text-[100px] lg:text-8xl absolute -bottom-[4%] md:-bottom-[9%] lg:-bottom-[4%] left-[1%]">
+        EVENTS
+      </p>
+      <p className="text-xl lg:text-4xl font-bold absolute bottom-[19%] right-[1%]">
         NETWORKING DINNERS
       </p>
-      <p className="text-4xl font-bold absolute bottom-[14.5%] right-1">
+      <p className="text-xl lg:text-4xl font-bold absolute bottom-[13.5%] lg:bottom-[14.5%] right-[1%]">
         LAW SCHOOL TOURS
       </p>
-      <p className="text-4xl font-bold absolute bottom-[10%] right-1">
+      <p className="text-xl lg:text-4xl font-bold absolute bottom-[8%] lg:bottom-[10%] right-[1%]">
         FELLOWSHIP PROGRAMS
       </p>
-      <p className="text-4xl font-bold absolute bottom-[5.5%] right-1">
+      <p className="text-xl lg:text-4xl font-bold absolute bottom-[2.5%] lg:bottom-[5.5%] right-[1%]">
         SCHEDULED EVENTS
       </p>
-      <p className="text-4xl font-bold absolute bottom-[1%] right-1">
+      <p className="text-xl lg:text-4xl font-bold absolute -bottom-[2.5%] lg:bottom-[1%] right-[1%]">
         AND MORE...
       </p>
     </div>
