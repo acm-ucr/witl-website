@@ -21,7 +21,7 @@ const ResourcesHeader = () => {
           link={"https://www.linkedin.com/company/ucr-womxn-in-the-law/"}
         />
       </div>
-      <div className="">
+      <div>
         <TopResourcesBanner
           icon={<MdMail />}
           link={"mailto:ucrwitl@gmail.com"}
