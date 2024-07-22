@@ -15,7 +15,7 @@ const ResourcesHeader = () => {
           link={"https://www.instagram.com/ucrwitl/"}
         />
       </div>
-      <div className="">
+      <div>
         <BottomResourcesBanner
           icon={<FaLinkedin />}
           link={"https://www.linkedin.com/company/ucr-womxn-in-the-law/"}
