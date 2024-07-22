@@ -4,7 +4,6 @@ import Banner from "@/public/assets/banner.svg";
 
 const TopResourcesBanner = ({ icon, link }) => {
   return (
-    <div>
       <div className=" mt-[20%]">
         <Image src={Banner} className="absolute" alt="banner" />
 
