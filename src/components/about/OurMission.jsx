@@ -3,12 +3,13 @@ import Image from "next/image";
 const OurMission = () => {
   return (
     <div>
+      <meta name="viewport" content="user-scalable = yes"></meta>
       <div className="flex items-center justify-center pt-12 pb-2">
-        <p className="m-auto p-auto text-7xl">Our Mission</p>
+        <p className="m-auto p-auto text-5xl md:text-7xl">Our Mission</p>
       </div>
-      <div className="py-10">
-        <div className="grid grid-cols-2 bg-witl-purple-300 rounded-2xl text-witl-purple-100 w-fit ml-24 mr-24 ">
-          <div className="pl-11 pt-5 pb-5 text-2xl">
+      <div className="py-5 md:py-10">
+        <div className="grid grid-cols-3 bg-witl-purple-300 rounded-2xl text-witl-purple-100 w-fit ml-12 mr-12 md:ml-24 md:mr-24 ">
+          <div className="col-span-2 pl-5 pt-2 pb-2 pr-5 md:pl-11 md:pt-5 md:pb-5 text-xs md:text-2xl">
             <p>
               Womxn in the Law is UC Riverside’s undergraduate community
               passionate about law and the pursuit of justice. We aim to create
@@ -24,7 +25,7 @@ const OurMission = () => {
               rights issues. - Kimberlé Crenshaw
             </p>
           </div>
-          <div className="flex justify-end py-5 pr-7">
+          <div className="flex justify-end py-2 pr-5 md:py-5 md:pr-7">
             <Image src={Pic} alt="grouppic2" />
           </div>
         </div>
