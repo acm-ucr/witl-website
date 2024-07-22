@@ -8,7 +8,7 @@ import { MdMail } from "react-icons/md";
 
 const ResourcesHeader = () => {
   return (
-    <div className="relative grid grid-cols-5 bg-witl-purple-300 mt-[5%] h-[690px] ">
+    <div className="relative grid grid-cols-5 bg-witl-purple-300 mt-[5%]">
       <div className="">
         <TopResourcesBanner
           icon={<FaInstagram />}
