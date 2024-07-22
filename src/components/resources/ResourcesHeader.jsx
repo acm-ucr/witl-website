@@ -1,4 +1,3 @@
-import React from "react";
 import TopResourcesBanner from "./TopResourcesBanner";
 import BottomResourcesBanner from "./BottomResourcesBanner";
 
