@@ -45,9 +45,6 @@ const ResourcesHeader = () => {
       <p className="absolute text-[42px] bottom-0 text-witl-white-100 px-[25%] border-y-2">
         CHECKOUT OUR RESOURCE SHEET
       </p>
-      <p className="text-witl-purple-200 pl-[1%] mt-[185%]">
-        Join/LeGAL Rewards
-      </p>
     </div>
   );
 };
