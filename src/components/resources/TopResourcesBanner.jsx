@@ -15,7 +15,6 @@ const TopResourcesBanner = ({ icon, link }) => {
           {icon}
         </Link>
       </div>
-    </div>
   );
 };
 export default TopResourcesBanner;
