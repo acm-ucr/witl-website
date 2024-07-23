@@ -4,17 +4,17 @@ import Banner from "@/public/assets/banner.svg";
 
 const TopResourcesBanner = ({ icon, link }) => {
   return (
-      <div className=" mt-[20%]">
-        <Image src={Banner} className="absolute" alt="banner" />
+    <div className=" relative mt-[5%]">
+      <Image src={Banner} className="" alt="banner" width={400}/>
 
-        <Link
-          href={link}
-          target="_blank"
-          className="absolute text-witl-white-100 text-[100px] pt-[300px] px-10"
-        >
-          {icon}
-        </Link>
-      </div>
+      <Link
+        href={link}
+        target="_blank"
+        className="absolute text-center bottom-0 text-witl-white-100 text-9xl px-32 pb-[5%]"
+      >
+        {icon}
+      </Link>
+    </div>
   );
 };
 export default TopResourcesBanner;
