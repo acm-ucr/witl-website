@@ -9,12 +9,12 @@ const ResourcesHeader = () => {
   return (
     <div className=" relative bg-witl-purple-300 h-screen flex flex-col items-center justify-center mt-[5%]">
       <div className="grid grid-cols-5 gap-14 p-4">
-          <div>
-            <TopResourcesBanner
-                icon={<FaInstagram />}
-                link={"https://www.instagram.com/ucrwitl/"}
-            />
-          </div>
+        <div>
+          <TopResourcesBanner
+            icon={<FaInstagram />}
+            link={"https://www.instagram.com/ucrwitl/"}
+          />
+        </div>
         <div>
           <BottomResourcesBanner
             icon={<FaLinkedin />}
