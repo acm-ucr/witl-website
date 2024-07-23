@@ -8,8 +8,8 @@ const OurMission = () => {
         <p className="m-auto p-auto text-4xl md:text-7xl">Our Mission</p>
       </div>
       <div className="md:py-10">
-        <div className="grid grid-cols-3 bg-witl-purple-300 rounded-2xl text-witl-purple-100 w-fit ml-10 mr-10 md:ml-24 md:mr-24 ">
-          <div className="col-span-2 pl-4 pt-4 pb-4 pr-6 md:pl-11 md:pt-5 md:pb-5 text-xs md:text-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 bg-witl-purple-300 rounded-2xl text-witl-purple-100 w-fit ml-4 mr-4 md:ml-24 md:mr-24 ">
+          <div className="md:col-span-2 pl-4 pt-4 pb-4 pr-6 md:pl-11 md:pt-5 md:pb-5 text-sm md:text-2xl text-center md:text-left">
             <p>
               Womxn in the Law is UC Riverside’s undergraduate community
               passionate about law and the pursuit of justice. We aim to create
@@ -25,8 +25,8 @@ const OurMission = () => {
               rights issues. - Kimberlé Crenshaw
             </p>
           </div>
-          <div className="flex justify-end py-6 pr-4 md:py-5 md:pr-7">
-            <Image src={Pic} alt="grouppic2" className="scale-110" />
+          <div className="flex justify-center items-center py-4 px-4 md:py-5 md:pr-7">
+            <Image src={Pic} alt="grouppic2" className="scale-100" />
           </div>
         </div>
       </div>
