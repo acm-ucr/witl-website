@@ -3,30 +3,25 @@ import Image from "next/image";
 const OurMission = () => {
   return (
     <div>
-      <meta name="viewport" content="user-scalable = yes"></meta>
-      <div className="flex items-center justify-center pt-12 pb-2">
+      <div className="flex items-center justify-center py-8 md:py-12">
         <p className="m-auto p-auto text-4xl md:text-7xl">Our Mission</p>
       </div>
-      <div className="md:py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 bg-witl-purple-300 rounded-2xl text-witl-purple-100 w-fit ml-4 mr-4 md:ml-24 md:mr-24 ">
-          <div className="md:col-span-2 pl-4 pt-4 pb-4 pr-6 md:pl-11 md:pt-5 md:pb-5 text-sm md:text-2xl text-center md:text-left">
-            <p>
-              Womxn in the Law is UC Riverside’s undergraduate community
-              passionate about law and the pursuit of justice. We aim to create
-              a supportive community and network for diverse womxn pursuing
-              legal careers. In creating a supportive community, establishing a
-              robust network of legal professionals, judges, law school faculty,
-              and accomplished attorneys, Womxn in the Law amplifies the needs
-              of UCR’s most disadvantaged student population.
-            </p>
-            <p>
-              The X in womxn honors women’s intersecting identities, as women in
-              America are impacted by a multitude of social justice and human
-              rights issues. - Kimberlé Crenshaw
-            </p>
+      <div className="md:py-10 flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-witl-purple-300 rounded-2xl text-witl-purple-100 w-10/12 2xl:w-8/12">
+          <div className="pl-4 py-4 pr-6 md:pl-11 md:pt-5 md:pb-5 text-sm md:text-2xl text-center md:text-left">
+            Womxn in the Law is UC Riverside’s undergraduate community
+            passionate about law and the pursuit of justice. We aim to create a
+            supportive community and network for diverse womxn pursuing legal
+            careers. In creating a supportive community, establishing a robust
+            network of legal professionals, judges, law school faculty, and
+            accomplished attorneys, Womxn in the Law amplifies the needs of
+            UCR’s most disadvantaged student population. <br />
+            The X in womxn honors women’s intersecting identities, as women in
+            America are impacted by a multitude of social justice and human
+            rights issues. - Kimberlé Crenshaw
           </div>
-          <div className="flex justify-center items-center py-4 px-4 md:py-5 md:pr-7">
-            <Image src={Pic} alt="grouppic2" className="scale-100" />
+          <div className="flex justify-center items-center p-8">
+            <Image src={Pic} alt="grouppic2" />
           </div>
         </div>
       </div>
