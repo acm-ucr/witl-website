@@ -206,7 +206,7 @@ const Slides = () => {
       <p className="text-5xl lg:text-7xl absolute bottom-[15%] left-[1%]">
         HIGHLIGHTED
       </p>
-      <p className="text-[100px] lg:text-8xl absolute -bottom-[4%] md:-bottom-[9%] lg:-bottom-[4%] left-[1%]">
+      <p className="text-[90px] lg:text-8xl absolute -bottom-[4%] md:-bottom-[9%] lg:-bottom-[4%] left-[1%]">
         EVENTS
       </p>
       <p className="text-xl lg:text-4xl font-bold absolute bottom-[19%] right-[1%]">
