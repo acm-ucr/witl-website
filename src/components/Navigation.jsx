@@ -32,7 +32,7 @@ const Navigation = () => {
             <Link
               href={item.link}
               key={index}
-              className="text-witl-white-100 text-3xl"
+              className="text-witl-white-100 text-3xl hover:text-witl-purple-100"
             >
               {item.name}
             </Link>
@@ -55,7 +55,7 @@ const Navigation = () => {
           <Link
             href={item.link}
             key={index}
-            className="text-2xl text-witl-white-100"
+            className="text-2xl text-witl-white-100 hover:text-witl-purple-100"
           >
             {item.name}
           </Link>
