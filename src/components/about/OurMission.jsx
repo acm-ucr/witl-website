@@ -3,7 +3,7 @@ import Image from "next/image";
 const OurMission = () => {
   return (
     <div className="py-[7vh]">
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center pb-[2vh]">
         <p className="m-auto p-auto text-6xl md:text-7xl lg:text-[7vw]">
           Our Mission
         </p>
