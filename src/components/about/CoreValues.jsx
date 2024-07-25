@@ -39,7 +39,7 @@ const CoreValues = () => {
           className={
             shiftPoint
               ? "absolute bottom-[10%] right-[2%] w-1/2 h-auto"
-              : "absolute bottom-[49%] left-[57%] w-1/4 h-auto"
+              : "absolute bottom-[50%] left-[57%] w-1/4 h-auto"
           }
           alt="passion"
         />
@@ -65,8 +65,8 @@ const CoreValues = () => {
           src={Professionalism}
           className={
             shiftPoint
-              ? "absolute bottom-[66.7%] right-[2%] w-1/2 h-auto"
-              : "absolute bottom-[31%] left-[41%] w-1/4 h-auto"
+              ? "absolute bottom-[66%] -right-[3%] w-1/2 h-auto"
+              : "absolute bottom-[30.5%] left-[43.5%] w-1/4 h-auto"
           }
           alt="professionalism"
         />
@@ -130,14 +130,14 @@ const CoreValues = () => {
         className={
           shiftPoint
             ? "absolute -bottom-[1%] leading-snug"
-            : "absolute bottom-0"
+            : "absolute -bottom-[2.5%]"
         }
       >
         <p
           className={
             shiftPoint
               ? "text-[17vw] pl-[2%] leading-[75%] font-marcellus-sc"
-              : "text-[8vw] pl-[2%] leading-[75%] font-marcellus-sc"
+              : "text-[8vw] pl-[11%] leading-[75%] font-marcellus-sc"
           }
         >
           CORE
@@ -146,7 +146,7 @@ const CoreValues = () => {
           className={
             shiftPoint
               ? "text-[17vw] pl-[2%] font-marcellus-sc"
-              : "text-[8vw] pl-[2%] font-marcellus-sc"
+              : "text-[8vw] pl-[12%] font-marcellus-sc"
           }
         >
           VALUES
