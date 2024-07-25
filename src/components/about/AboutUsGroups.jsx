@@ -187,7 +187,11 @@ const AboutUsGroups = () => {
               onClick={() => goToSlide(index)}
               key={index}
             >
-              <RxDotFilled size="30px" color="#F3D8FF" />
+              {index === currInd ? (
+                <RxDotFilled size="30px" color="#FFFFFF" />
+              ) : (
+                <RxDotFilled size="30px" color="#F3D8FF" />
+              )}
             </motion.div>
           ))}
         </div>
