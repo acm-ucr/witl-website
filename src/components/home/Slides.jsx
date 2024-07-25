@@ -198,7 +198,11 @@ const Slides = () => {
             onClick={() => goToSlide(index)}
             key={index}
           >
-            <RxDotFilled size="30px" color="#F3D8FF" />
+            {index === currInd ? (
+              <RxDotFilled size="30px" color="#000000" />
+            ) : (
+              <RxDotFilled size="30px" color="#F3D8FF" />
+            )}
           </motion.div>
         ))}
       </div>
