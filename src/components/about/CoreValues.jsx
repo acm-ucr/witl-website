@@ -129,7 +129,7 @@ const CoreValues = () => {
       <div
         className={
           shiftPoint
-            ? "absolute bottom-[4%] leading-snug"
+            ? "absolute -bottom-[1%] leading-snug"
             : "absolute bottom-[4%]"
         }
       >
