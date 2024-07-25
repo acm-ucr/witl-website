@@ -130,14 +130,14 @@ const CoreValues = () => {
         className={
           shiftPoint
             ? "absolute -bottom-[1%] leading-snug"
-            : "absolute bottom-[4%]"
+            : "absolute bottom-0"
         }
       >
         <p
           className={
             shiftPoint
               ? "text-[17vw] pl-[2%] leading-[75%] font-marcellus-sc"
-              : "text-[4.5vw] pl-[2%] leading-[75%] md:pl-[35%] md:leading-[225%] md:pb-[2%] md:scale-[200%] lg:leading-[250%] font-marcellus-sc"
+              : "text-[8vw] pl-[2%] leading-[75%] font-marcellus-sc"
           }
         >
           CORE
@@ -146,7 +146,7 @@ const CoreValues = () => {
           className={
             shiftPoint
               ? "text-[17vw] pl-[2%] font-marcellus-sc"
-              : "text-[4.5vw] pl-[2%] md:pl-[35%] md:scale-[200%] font-marcellus-sc"
+              : "text-[8vw] pl-[2%] font-marcellus-sc"
           }
         >
           VALUES
