@@ -21,11 +21,7 @@ const Sponsors = () => {
             HQR INC.
           </div>
         </div>
-        <div className="border-witl-purple-400 border-b-[21px] ">
-          <div className="text-witl-purple-400 text-sm mb-1 font-Junge">
-            Events
-          </div>
-        </div>
+        <div className="border-witl-purple-400 border-b-[21px] pt-[2%]"></div>
       </div>
     </div>
   );
