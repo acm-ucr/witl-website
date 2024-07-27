@@ -13,7 +13,7 @@ const Footer = () => {
             key={index}
             href={link.link}
             target="_blank"
-            className="text-witl-white-100 text-xl md:text-4xl hover:text-witl-purple-100"
+            className="text-witl-white-100 text-xl md:text-4xl hover:text-witl-purple-100 hover:scale-110"
           >
             {link.icon}
           </Link>
