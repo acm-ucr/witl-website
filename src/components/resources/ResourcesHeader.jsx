@@ -7,8 +7,8 @@ import { MdMail } from "react-icons/md";
 
 const ResourcesHeader = () => {
   return (
-    <div className="bg-witl-purple-300 h-screen flex flex-col items-center justify-center mt-[5%]">
-      <div className="grid grid-cols-5 gap-4 md:gap-8 mt-[10%] w-10/12">
+    <div className="bg-witl-purple-300 h-[300px] md:h-screen flex flex-col items-center justify-center mt-[5%]">
+      <div className="grid grid-cols-5 gap-4 md:gap-8 mt-[20%] md:mt-[0%] w-10/12">
         <div>
           <TopResourcesBanner
             icon={<FaInstagram />}
@@ -40,7 +40,7 @@ const ResourcesHeader = () => {
           />
         </div>
       </div>
-      <div className="absolute text-[25px] md:text-[85px] lg:text-[100px] w-[70%] text-center text-witl-white-100 bg-witl-purple-300 mb-[18%] mt-[10%] ">
+      <div className="absolute text-[25px] md:text-[85px] lg:text-[100px] w-[70%] text-center text-witl-white-100 bg-witl-purple-300 mt-[5%] md:mb-[22%]">
         <p>RESOURCES</p>
       </div>
       <p className="text-center text-xs md:text-2xl text-witl-white-100  border-y-2 w-full mt-[3%]">
