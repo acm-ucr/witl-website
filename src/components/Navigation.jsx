@@ -14,7 +14,7 @@ const Navigation = () => {
   return (
     <div className="fixed top-0 z-50">
       <div className="w-screen bg-witl-purple-300 flex items-center justify-between py-[1%] px-[2%] border-b-2 border-witl-white-100">
-        <Link className="flex flex-row space-x-4 p-2" href="/">
+        <Link className="flex flex-row space-x-4 py-2" href="/">
           <Image src={Logo} alt="WITL Icon" />
           <div className="hidden md:flex md:flex-col text-witl-white-100">
             <div className="text-2xl">WOMXN IN THE LAW</div>
