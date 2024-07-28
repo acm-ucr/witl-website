@@ -1,0 +1,33 @@
+.rbc-month-view {
+  border: 5px solid #2e0044;
+}
+
+.rbc-header {
+  border-bottom: 1px solid #2e0044;
+  border-top: 3px solid #2e0044;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.rbc-row > *:not(:last-child) {
+  border-right: 2px solid #2e0044;
+}
+
+.rbc-date-cell {
+  border-right: none !important;
+}
+.rbc-date-cell button {
+  font-family: "Junge";
+}
+
+.rbc-row-bg {
+  border-top: 2px solid #2e0044;
+}
+
+.rbc-row-bg > *:not(:last-child) {
+  border-right: 2px solid #2e0044;
+}
+
+.rbc-now button {
+  color: white;
+}

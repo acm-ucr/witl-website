@@ -1,7 +1,3 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-
 import TopResourcesBanner from "./TopResourcesBanner";
 import BottomResourcesBanner from "./BottomResourcesBanner";
 
@@ -9,51 +5,49 @@ import { BsSubstack } from "react-icons/bs";
 import { FaDiscord, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 
-
-const ResourcesHeader=()=>{
-    return (
-        <div className="relative grid grid-cols-5 bg-witl-purple-300 mt-[5%] h-[690px] ">
-            <div className="">
-                <TopResourcesBanner
-                    icon={<FaInstagram />}
-                    link={"https://www.instagram.com/ucrwitl/"}
-                />
-            </div>
-            <div className="">
-                <BottomResourcesBanner
-                    icon={<FaLinkedin />}
-                    link={"https://www.linkedin.com/company/ucr-womxn-in-the-law/"}
-                />
-            </div>
-            <div className="">
-                <TopResourcesBanner
-                    icon={<MdMail />}
-                    link={"mailto:ucrwitl@gmail.com"}
-                />
-            </div>
-            <div>
-                <BottomResourcesBanner
-                    icon={<FaDiscord />}
-                 link={"https://discord.gg/6W8t7a3G58"}
-                />
-            </div>
-            <div>
-                <TopResourcesBanner
-                 icon={<BsSubstack />}
-                 link={"https://ucrwitl.substack.com/"}
-                />
-            </div>
-            <p className="text-[139px] text-witl-white-100 bg-witl-purple-300 absolute px-[10%] mt-[8%] mx-[12%] ">
-                RESOURCES   
-            </p>
-            <p className="absolute text-[42px] bottom-0 text-witl-white-100 px-[25%] border-y-2">
-                CHECKOUT OUR RESOURCE SHEET
-            </p>
-            <p className="text-witl-purple-200 pl-[1%] mt-[185%]">
-                Join/LeGAL Rewards
-            </p>
+const ResourcesHeader = () => {
+  return (
+    <div className="bg-witl-purple-300 h-[300px] md:h-screen flex flex-col items-center justify-center mt-[5%]">
+      <div className="grid grid-cols-5 gap-4 md:gap-8 mt-[20%] md:mt-[0%] w-10/12">
+        <div>
+          <TopResourcesBanner
+            icon={<FaInstagram />}
+            link={"https://www.instagram.com/ucrwitl/"}
+          />
         </div>
-    );
+        <div>
+          <BottomResourcesBanner
+            icon={<FaLinkedin />}
+            link={"https://www.linkedin.com/company/ucr-womxn-in-the-law/"}
+          />
+        </div>
+        <div>
+          <TopResourcesBanner
+            icon={<MdMail />}
+            link={"mailto:ucrwitl@gmail.com"}
+          />
+        </div>
+        <div>
+          <BottomResourcesBanner
+            icon={<FaDiscord />}
+            link={"https://discord.gg/6W8t7a3G58"}
+          />
+        </div>
+        <div>
+          <TopResourcesBanner
+            icon={<BsSubstack />}
+            link={"https://ucrwitl.substack.com/"}
+          />
+        </div>
+      </div>
+      <div className="absolute text-[25px] md:text-[85px] lg:text-[100px] 2xl:text-[150px] w-[70%] text-center text-witl-white-100 bg-witl-purple-300 mt-[5%] md:mb-[22%]">
+        <p>RESOURCES</p>
+      </div>
+      <p className="text-center text-xs md:text-2xl text-witl-white-100  border-y-2 w-full mt-[3%]">
+        CHECKOUT OUR RESOURCE SHEET
+      </p>
+    </div>
+  );
 };
 
-export default ResourcesHeader
+export default ResourcesHeader;

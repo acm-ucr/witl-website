@@ -1,28 +1,20 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Banner from "@/public/assets/banner.svg"
-
+import Banner from "@/public/assets/banner.svg";
 
 const BottomResourcesBanner = ({ icon, link }) => {
-    return (
-      <div>
-        <div className=" mx-[20%] mt-[50%] ">
-                <Image
-                    src={Banner}
-                    className="absolute"
-                    alt="banner"
-                />
-                
-                <Link
-                    href={link}
-                    target="_blank"
-                    className="absolute text-witl-white-100  text-[100px] pt-[210px] px-10"
-                >
-                    {icon}
-                </Link>
-            </div>
-      </div>
-    );
-  };
-  export default BottomResourcesBanner;
+  return (
+    <div className=" relative mt-[45%] ">
+      <Image src={Banner} className="lg:w-[300px]" alt="banner" />
+
+      <Link
+        href={link}
+        target="_blank"
+        className="absolute bottom-0 text-witl-white-100  text-[30px] md:text-6xl lg:text-[100px] left-1/2 transform -translate-x-1/2 pb-[45%]"
+      >
+        {icon}
+      </Link>
+    </div>
+  );
+};
+export default BottomResourcesBanner;
