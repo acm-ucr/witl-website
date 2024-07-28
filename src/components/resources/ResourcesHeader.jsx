@@ -40,7 +40,7 @@ const ResourcesHeader = () => {
           />
         </div>
       </div>
-      <div className="absolute text-[25px] md:text-[85px] lg:text-[100px] w-[70%] text-center text-witl-white-100 bg-witl-purple-300 mt-[5%] md:mb-[22%]">
+      <div className="absolute text-[25px] md:text-[85px] lg:text-[100px] 2xl:text-[150px] w-[70%] text-center text-witl-white-100 bg-witl-purple-300 mt-[5%] md:mb-[22%]">
         <p>RESOURCES</p>
       </div>
       <p className="text-center text-xs md:text-2xl text-witl-white-100  border-y-2 w-full mt-[3%]">
