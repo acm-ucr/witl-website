@@ -5,50 +5,59 @@ import teamphoto3 from "@/public/home/teamphoto3.webp";
 
 const Blurb = () => {
   return (
-    <div className="bg-witl-purple-300 min-h-[700px] max-h-screen flex justify-center items-center">
-      <div className="bg-witl-white-100 rounded-[6rem] scale-75 lg:scale-50 md:-my-[10%]">
-        <div className="grid grid-flow-row-dense grid-cols-6 ">
-          <div className="col-span-3 place-items-stretch justify-start m-5 md:m-10 mt-14 md:mt-28 max-h-96 max-w-screen">
+    <div className="bg-witl-purple-300 md:min-h-[1200px] max-h-screen flex justify-center items-center">
+      <div className="bg-witl-white-100 rounded-[2rem] md:rounded-[6rem] scale-90 md:scale-60 md:p-0 md:pb-10 md:-my-[10%]">
+        <div className="grid grid-flow-row-dense grid-cols-6">
+          <div className="col-span-3 place-items-stretch justify-start m-5 md:m-10 mt-10 md:mt-28 max-h-96 max-w-screen">
             {" "}
             <Image
               src={teamphoto1}
               alt="teamphoto1"
-              className="w-full h-full object-cover rounded-3xl"
+              className="w-full h-auto object-cover rounded md:rounded-3xl"
             />{" "}
           </div>
           <div className="col-span-3 place-items-stretch justify-start max-h-96 max-w-screen">
-            <div className="flex flex-col tracking-widest">
-              <div className="flex flex-col tracking-wide font-marcellus-sc text-4xl md:text-6xl lg:text-8xl mt-28 ml-6 leading-none">
+            <div className="flex flex-col">
+              <div className="flex flex-col tracking-tighter font-marcellus-sc text-2xl md:text-8xl md:ml-4 mt-10 md:mt-0 md:pt-24 leading-none">
                 Womxn in
-                <br />
+                <break />
                 the Law
               </div>
-              <p className="text-right text-md md:text-xl lg:text-2xl mr-8 md:mr-14 lg:mr-20 mt-4 lg:mt-8 leading-tight tracking-tight">
-                stands
-                <br />
-                as an organization catered to the <br />
-                diverse spectrum of womxn who are
-                <br />
-                embarking on journeys in law
-                <br />
-                school or within the legal field.
+              <p className="text-right tracking-tighter md:tracking-wide text-xs md:text-4xl mr-6 md:mr-8 md:pl-10 md:pr-20 md:pt-10 leading-tight">
+                <span className="block md:hidden">
+                  stands
+                  <br />
+                  as an organization catered to the diverse spectrum of womxn
+                  who are embarking on journeys in law school or within the
+                  legal field
+                </span>
+                <span className="hidden md:block">
+                  stands
+                  <br />
+                  as an organization catered to the <br />
+                  diverse spectrum of womxn who are
+                  <br />
+                  embarking on journeys in law
+                  <br />
+                  school or within the legal field.
+                </span>
               </p>
             </div>
           </div>
-          <div className="col-span-2 place-items-stretch justify-start m-5 md:m-10 mb-10 md:mb-20 max-h-96 max-w-screen">
+          <div className="col-span-2 place-items-stretch justify-start m-5 md:m-10 md:pt-4 mb-10 md:mb-20 mt-0 md:mt-40 max-h-96 max-w-screen">
             {" "}
             <Image
               src={teamphoto2}
               alt="teamphoto2"
-              className="w-full h-full object-cover rounded-3xl"
+              className="w-full h-auto md:h-full object-cover rounded md:rounded-3xl mt-0 md:mt-10"
             />{" "}
           </div>
-          <div className="col-span-4 place-items-stretch justify-start m-5 md:m-10 my-10 md:mb-20 max-h-96 max-w-screen">
+          <div className="col-span-4 place-items-stretch justify-start m-5 md:m-10 md:pt-4 mb-10 md:mb-20 mt-0 md:mt-40 max-h-96 max-w-screen">
             {" "}
             <Image
               src={teamphoto3}
               alt="teamphoto3"
-              className="w-full h-full md:h-full object-cover rounded-3xl"
+              className="w-full h-auto md:h-full object-cover rounded md:rounded-3xl mt-0 md:mt-10"
             />{" "}
           </div>
         </div>
