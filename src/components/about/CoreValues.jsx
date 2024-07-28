@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import Growth from "@/public/about/corevalues/grow.svg";
 import Innovation from "@/public/about/corevalues/innovation.svg";
 import Integrity from "@/public/about/corevalues/integrity.svg";
@@ -5,53 +7,150 @@ import Knowledge from "@/public/about/corevalues/knowledge.svg";
 import Passion from "@/public/about/corevalues/passion.svg";
 import Professionalism from "@/public/about/corevalues/professionalism.svg";
 import Service from "@/public/about/corevalues/service.svg";
+import Hexagon from "@/public/about/corevalues/hexagon.svg";
 import Image from "next/image";
 
 const CoreValues = () => {
+  const [shiftPoint, setShiftPoint] = useState();
+
+  useEffect(() => {
+    const shiftCheck = () => {
+      setShiftPoint(window.innerHeight / window.innerWidth >= 1.2);
+    };
+
+    shiftCheck();
+    window.addEventListener("resize", shiftCheck);
+    return () => {
+      window.removeEventListener("resize", shiftCheck);
+    };
+  }, []);
+
   return (
-    <div className="w-[100%] h-screen relative">
+    <div
+      className={
+        shiftPoint
+          ? "w-[100%] aspect-[1/2] relative overflow-clip"
+          : "w-[100%] aspect-[2/1] relative"
+      }
+    >
       <div>
         <Image
           src={Passion}
-          className="absolute bottom-[48%] left-[57%] w-1/4 h-auto"
+          className={
+            shiftPoint
+              ? "absolute bottom-[10%] right-[2%] w-1/2 h-auto"
+              : "absolute bottom-[50%] left-[57%] w-1/4 h-auto"
+          }
           alt="passion"
         />
         <Image
           src={Innovation}
-          className="absolute bottom-[30%] left-[8%] w-1/4 h-auto"
+          className={
+            shiftPoint
+              ? "absolute bottom-[57.5%] right-[37%] w-1/2 h-auto"
+              : "absolute bottom-[31%] left-[8%] w-1/4 h-auto"
+          }
           alt="innovation"
         />
         <Image
           src={Integrity}
-          className="absolute bottom-[13%] left-[25%] w-1/4 h-auto"
+          className={
+            shiftPoint
+              ? "absolute bottom-[48%] right-[2%] w-1/2 h-auto"
+              : "absolute bottom-[13%] left-[25%] w-1/4 h-auto"
+          }
           alt="integrity"
         />
         <Image
           src={Professionalism}
-          className="absolute bottom-[30%] left-[41%] w-1/4 h-auto"
+          className={
+            shiftPoint
+              ? "absolute bottom-[66%] -right-[3%] w-1/2 h-auto"
+              : "absolute bottom-[30.5%] left-[43.5%] w-1/4 h-auto"
+          }
           alt="professionalism"
         />
         <Image
           src={Service}
-          className="absolute bottom-[13%] left-[57%] w-1/4 h-auto"
+          className={
+            shiftPoint
+              ? "absolute bottom-[38.5%] right-[35%] w-1/2 h-auto"
+              : "absolute bottom-[13%] left-[57%] w-1/4 h-auto"
+          }
           alt="service"
         />
         <Image
           src={Growth}
-          className="absolute bottom-[-5%] left-[41%] w-1/4 h-auto"
+          className={
+            shiftPoint
+              ? "absolute bottom-[19.5%] right-[35%] w-1/2 h-auto"
+              : "absolute bottom-[-5%] left-[41%] w-1/4 h-auto"
+          }
           alt="growth"
         />
         <Image
           src={Knowledge}
-          className="absolute bottom-[-4%] left-[73%] w-1/4 h-auto"
+          className={
+            shiftPoint
+              ? "absolute bottom-[29%] right-[2%] w-1/2 h-auto"
+              : "absolute bottom-[-5%] left-[73%] w-1/4 h-auto"
+          }
           alt="knowledge"
         />
+
+        <Image
+          src={Hexagon}
+          className={
+            shiftPoint
+              ? "absolute bottom-[4%] -right-[26%] w-[40%] h-auto"
+              : "hidden"
+          }
+          alt="decor hex"
+        />
+        <Image
+          src={Hexagon}
+          className={
+            shiftPoint
+              ? "absolute bottom-[60.5%] -right-[26%] w-[40%] h-auto"
+              : "hidden"
+          }
+          alt="decor hex"
+        />
+        <Image
+          src={Hexagon}
+          className={
+            shiftPoint
+              ? "absolute bottom-[69.8%] right-[72%] w-[40%] h-auto"
+              : "hidden"
+          }
+          alt="decor hex"
+        />
       </div>
-      <div className="absolute bottom-[4%]">
-        <p className="text-7xl pb-12 pl-20 md:scale-150 font-marcellus-sc">
+      <div
+        className={
+          shiftPoint
+            ? "absolute -bottom-[1%] leading-snug"
+            : "absolute -bottom-[2.5%]"
+        }
+      >
+        <p
+          className={
+            shiftPoint
+              ? "text-[17vw] pl-[2%] leading-[75%] font-marcellus-sc"
+              : "text-[8vw] pl-[11%] leading-[75%] font-marcellus-sc"
+          }
+        >
           CORE
         </p>
-        <p className="text-7xl pl-20 md:scale-150 font-marcellus-sc">VALUES</p>
+        <p
+          className={
+            shiftPoint
+              ? "text-[17vw] pl-[2%] font-marcellus-sc"
+              : "text-[8vw] pl-[12%] font-marcellus-sc"
+          }
+        >
+          VALUES
+        </p>
       </div>
     </div>
   );
