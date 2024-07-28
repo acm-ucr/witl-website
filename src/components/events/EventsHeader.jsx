@@ -4,14 +4,13 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="bg-witl-purple-300 h-3/5 relative mt-[5%]">
+    <div className="bg-witl-purple-300 flex justify-end relative mt-[5%] py-[10%]">
       <Image
         src={networkingdinner}
         alt="networking dinner"
-        className="absolute right-0 top-[10%] my-auto"
-        width={1000}
+        className="mr-0 w-[70%] h-auto object-cover"
       />
-      <p className="text-9xl text-witl-purple-100 absolute bottom-0 p-[1%]">
+      <p className="text-9xl text-witl-purple-100 absolute left-[4%] bottom-0 p-[1%]">
         EVENTS
       </p>
     </div>

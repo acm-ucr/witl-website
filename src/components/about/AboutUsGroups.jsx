@@ -179,7 +179,7 @@ const AboutUsGroups = () => {
         <Image src={aboutItems[rightInd]} alt="group pic" />
       </div>
       <div className="absolute w-[30%] lg:w-[20%] aspect-[3/5] left-[50%] mx-[-15%] lg:mx-[-10%]">
-        <div className="relative w-[50%] -bottom-[100%] left-[53%] -mx-[25%] grid grid-cols-3">
+        <div className="relative w-[50%] -bottom-[100%] left-[55%] -mx-[25%] grid grid-cols-3">
           {aboutItems.map((ITEMS, index) => (
             <motion.div
               className="w-fit aspect-[1/1]"
@@ -187,7 +187,11 @@ const AboutUsGroups = () => {
               onClick={() => goToSlide(index)}
               key={index}
             >
-              <RxDotFilled size="30px" color="#F3D8FF" />
+              {index === currInd ? (
+                <RxDotFilled size="30px" color="#FFFFFF" />
+              ) : (
+                <RxDotFilled size="30px" color="#F3D8FF" />
+              )}
             </motion.div>
           ))}
         </div>
