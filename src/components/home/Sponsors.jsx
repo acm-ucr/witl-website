@@ -8,16 +8,16 @@ const Sponsors = () => {
         </div>
       </div>
       <div className="absolute top-[20%] right-[0%] bg-witl-purple-400 text-witl-white-100 font-libre-caslon-text font-bold text-[49.37px] w-[55%]">
-        <div className="pl-[3%] text-sm lg:text-5xl md:text-2xl">
+        <div className="pl-[3%] py-3 text-sm lg:text-5xl md:text-2xl">
           BLUEPRINT TEST PREP
         </div>
       </div>
       <div className="flex flex-col bg-witl-purple-300 text-[49.37px] text-white font-bold">
-        <div className="w-1/2 bg-witl-purple-400 mb-6 mt-4 font-libre-caslon-text text-right pr-5 text-sm lg:text-5xl md:text-2xl">
+        <div className="w-1/2 bg-witl-purple-400 mb-6 mt-4 py-3 font-libre-caslon-text text-right pr-5 text-sm lg:text-5xl md:text-2xl">
           BEST BEST KRIEGER
         </div>
         <div className="flex justify-end">
-          <div className="w-1/3 bg-witl-purple-400 font-libre-caslon-text pl-[2%] text-left text-sm lg:text-5xl md:text-2xl">
+          <div className="w-1/3 bg-witl-purple-400 py-3 font-libre-caslon-text pl-[2%] text-left text-sm lg:text-5xl md:text-2xl">
             HQR INC.
           </div>
         </div>
