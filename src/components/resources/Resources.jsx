@@ -8,16 +8,16 @@ const Resources = () => {
   return (
     <div className="bg-witl-purple-300 min-h-screen flex items-center justify-center">
       <div className="w-10/12 bg-white rounded flex flex-col items-center justify-center">
-        <div className="h-[200px] relative w-[80%]">
+        <div className="md:h-[200px] h-[100px] relative w-[80%]">
           <div className="bg-witl-purple-200 absolute top-[50%] h-[20%] left-[10%] w-[110%]"></div>
         </div>
-        <p className="text-7xl font-serif text-witl-black my-5">
+        <p className="md:text-7xl text-3xl font-serif text-witl-black my-5">
           LEGAL REWARDS
         </p>
-        <div className="bg-witl-purple-300 text-white font-marcellus rounded-lg w-1/4 text-center text-4xl py-4 mb-4">
+        <div className="bg-witl-purple-300 text-white font-marcellus rounded-xl md:w-1/4 w-1/2 text-center text-2xl py-4 mb-4">
           UPDATES
         </div>
-        <div className="text-lg md:text-2xl text-witl-black font-marcellus flex flex-col justify-center items-center mt-[25%] md:mt-[0%]">
+        <div className="text-lg md:text-2xl text-witl-black font-marcellus flex flex-col justify-center items-center md:mt-[0%]">
           <Link
             href="https://www.instagram.com/p/C1vm4lJL716/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
             target="_blank"
