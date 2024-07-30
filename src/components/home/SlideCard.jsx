@@ -6,9 +6,9 @@ const SlideCard = ({ image, description, year }) => {
       <Image
         src={image}
         alt="picture of event"
-        className="relative left-[10%] w-[80%] aspect-[10/7] top-[5%]"
+        className="relative left-[10%] w-[80%] aspect-[10/7] top-[7%] md:top-[5%]"
       />
-      <p className="relative text-[40%] md:text-l lg:text-xl text-white text-wrap text-center font-type-junge top-[10%]">
+      <p className="relative text-[45%] md:text-l lg:text-xl text-white text-wrap text-center font-type-junge top-[10%]">
         {description}
       </p>
       <p className="absolute text-sm md:text-l lg:text-xl text-white text-center font-type-junge  top-[80%] md:top-[85%] left-[50%] -mx-4">
