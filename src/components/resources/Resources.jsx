@@ -8,7 +8,7 @@ const Resources = () => {
   return (
     <div className="bg-witl-purple-300 min-h-screen flex items-center justify-center">
       <div className="w-10/12 bg-white rounded flex flex-col items-center justify-center">
-        <div className="md:h-[200px] h-[100px] relative w-[80%]">
+        <div className="md:h-[200px] h-[40px] relative w-[80%]">
           <div className="bg-witl-purple-200 absolute top-[50%] h-[20%] left-[10%] w-[110%]"></div>
         </div>
         <p className="md:text-7xl text-3xl font-serif text-witl-black my-5">
