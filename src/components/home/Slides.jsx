@@ -139,19 +139,19 @@ const Slides = () => {
       ></div>
       <div
         ref={card1}
-        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] left-[10%]"
+        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] left-[6%] md:left-[10%]"
       ></div>
       <div
         ref={card2}
-        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[34%] md:bottom-[29%] left-[13%]"
+        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[34%] md:bottom-[29%] left-[9%] md:left-[13%]"
       ></div>
       <div
         ref={card6}
-        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[34%] md:bottom-[29%] right-[13%]"
+        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[34%] md:bottom-[29%] right-[9%] md:right-[13%]"
       ></div>
       <div
         ref={card7}
-        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] right-[10%]"
+        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] right-[6%] md:right-[10%]"
       ></div>
       <div
         ref={card8}
@@ -159,7 +159,7 @@ const Slides = () => {
       ></div>
       <div
         ref={card3}
-        className="bg-witl-purple-300 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[37%] md:bottom-[32%] left-[16%]"
+        className="bg-witl-purple-300 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[37%] md:bottom-[32%] left-[12%] md:left-[16%]"
         onClick={prevSlide}
       >
         <SlideCard
@@ -170,7 +170,8 @@ const Slides = () => {
       </div>
       <div
         ref={card5}
-        className="bg-witl-purple-300 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[37%] md:bottom-[32%] right-[16%]"
+        // className="bg-witl-purple-300 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[37%] md:bottom-[32%] right-[16%]"
+        className="bg-witl-purple-300 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[37%] md:bottom-[32%] right-[12%] md:right-[16%]"
         onClick={nextSlide}
       >
         <SlideCard
@@ -206,10 +207,10 @@ const Slides = () => {
         ))}
       </div>
 
-      <p className="text-[120%] md:text-7xl absolute bottom-[12%] left-[4%] absolute md:bottom-[15%]  md:left-[2%]">
+      <p className="text-[120%] md:text-7xl absolute bottom-[12%] left-[4%] absolute md:bottom-[10%] lg:bottom-[10%] md:left-[2%]">
         HIGHLIGHTED
       </p>
-      <p className="text-[250%] md:text-8xl absolute -bottom-[3%] md:absolute -bottom-[3%] md:-bottom-[12%] lg:-bottom-4%] left-[3%] md:left-[1%]">
+      <p className="text-[250%] md:text-8xl absolute -bottom-[3%] md:absolute -bottom-[3%] md:-bottom-[12%] lg:-bottom-[10%] left-[3%] md:left-[1%]">
         EVENTS
       </p>
       <div className="text-sm ">
