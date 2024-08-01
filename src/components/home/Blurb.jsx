@@ -20,7 +20,7 @@ const Blurb = () => {
             <div className="flex flex-col">
               <div className="flex flex-col tracking-tighter font-marcellus-sc text-2xl md:text-8xl md:ml-4 mt-10 md:mt-0 md:pt-24 leading-none">
                 Womxn in
-                <break />
+                <br />
                 the Law
               </div>
               <p className="text-right tracking-tighter md:tracking-wide text-xs md:text-4xl mr-6 md:mr-8 md:pl-10 md:pr-20 md:pt-10 leading-tight">
