@@ -6,8 +6,8 @@ import GroupPhoto from "@/public/resources/groupPhoto.webp";
 
 const Resources = () => {
   return (
-    <div className="bg-witl-purple-300 min-h-screen flex items-center justify-center">
-      <div className="w-10/12 bg-white rounded flex flex-col items-center justify-center">
+    <div className="bg-witl-purple-300 min-h-screen flex items-start justify-center">
+      <div className="w-10/12 bg-white flex flex-col items-center justify-center">
         <div className="md:h-[200px] h-[40px] relative w-[80%]">
           <div className="bg-witl-purple-200 absolute md:top-[50%] top-[55%] h-[20%] left-[10%] w-[110%]"></div>
         </div>
