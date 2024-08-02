@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Growth from "@/public/about/corevalues/grow.svg";
 import Innovation from "@/public/about/corevalues/innovation.svg";
 import Integrity from "@/public/about/corevalues/integrity.svg";
@@ -12,8 +13,12 @@ import Image from "next/image";
 
 const CoreValues = () => {
   const [shiftPoint, setShiftPoint] = useState();
+  const dropVariant = {
+    initial: { opacity: "0" },
+    animate: { y: ["-20%", "0%"], opacity: ["0%", "50%", "100%"] },
+  };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const shiftCheck = () => {
       setShiftPoint(window.innerHeight / window.innerWidth >= 1.2);
     };
@@ -34,69 +39,111 @@ const CoreValues = () => {
       }
     >
       <div>
-        <Image
-          src={Passion}
+        <motion.div
+          variants={dropVariant}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.5, delay: 0.4 }}
           className={
             shiftPoint
               ? "absolute bottom-[10%] right-[2%] w-1/2 h-auto"
               : "absolute bottom-[50%] left-[57%] w-1/4 h-auto"
           }
-          alt="passion"
-        />
-        <Image
-          src={Innovation}
+        >
+          <Image src={Passion} className="w-[100%] h-auto" alt="passion" />
+        </motion.div>
+
+        <motion.div
+          variants={dropVariant}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.5, delay: 0 }}
           className={
             shiftPoint
               ? "absolute bottom-[57.5%] right-[37%] w-1/2 h-auto"
               : "absolute bottom-[31%] left-[8%] w-1/4 h-auto"
           }
-          alt="innovation"
-        />
-        <Image
-          src={Integrity}
+        >
+          <Image
+            src={Innovation}
+            className="w-[100%] h-auto"
+            alt="innovation"
+          />
+        </motion.div>
+
+        <motion.div
+          variants={dropVariant}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.5, delay: 0.1 }}
           className={
             shiftPoint
               ? "absolute bottom-[48%] right-[2%] w-1/2 h-auto"
               : "absolute bottom-[13%] left-[25%] w-1/4 h-auto"
           }
-          alt="integrity"
-        />
-        <Image
-          src={Professionalism}
+        >
+          <Image src={Integrity} className="w-[100%] h-auto" alt="integrity" />
+        </motion.div>
+
+        <motion.div
+          variants={dropVariant}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.5, delay: 0.2 }}
           className={
             shiftPoint
               ? "absolute bottom-[66%] -right-[3%] w-1/2 h-auto"
               : "absolute bottom-[30.5%] left-[43.5%] w-1/4 h-auto"
           }
-          alt="professionalism"
-        />
-        <Image
-          src={Service}
+        >
+          <Image
+            src={Professionalism}
+            className="w-[100%] h-auto"
+            alt="professionalism"
+          />
+        </motion.div>
+
+        <motion.div
+          variants={dropVariant}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.5, delay: 0.5 }}
           className={
             shiftPoint
               ? "absolute bottom-[38.5%] right-[35%] w-1/2 h-auto"
               : "absolute bottom-[13%] left-[57%] w-1/4 h-auto"
           }
-          alt="service"
-        />
-        <Image
-          src={Growth}
+        >
+          <Image src={Service} className="w-[100%] h-auto" alt="service" />
+        </motion.div>
+
+        <motion.div
+          variants={dropVariant}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.5, delay: 0.3 }}
           className={
             shiftPoint
               ? "absolute bottom-[19.5%] right-[35%] w-1/2 h-auto"
-              : "absolute bottom-[-5%] left-[41%] w-1/4 h-auto"
+              : "absolute -bottom-[5%] left-[41%] w-1/4 h-auto"
           }
-          alt="growth"
-        />
-        <Image
-          src={Knowledge}
+        >
+          <Image src={Growth} className="w-[100%] h-auto" alt="growth" />
+        </motion.div>
+
+        <motion.div
+          variants={dropVariant}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.5, delay: 0.6 }}
           className={
             shiftPoint
               ? "absolute bottom-[29%] right-[2%] w-1/2 h-auto"
-              : "absolute bottom-[-5%] left-[73%] w-1/4 h-auto"
+              : "absolute -bottom-[5%] left-[73%] w-1/4 h-auto"
           }
-          alt="knowledge"
-        />
+        >
+          <Image src={Knowledge} className="w-[100%] h-auto" alt="knowledge" />
+        </motion.div>
 
         <Image
           src={Hexagon}
@@ -133,7 +180,10 @@ const CoreValues = () => {
             : "absolute -bottom-[2.5%]"
         }
       >
-        <p
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ x: ["-20%", "0%"], opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0 }}
           className={
             shiftPoint
               ? "text-[17vw] pl-[2%] leading-[75%] font-marcellus-sc"
@@ -141,8 +191,11 @@ const CoreValues = () => {
           }
         >
           CORE
-        </p>
-        <p
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ x: ["-20%", "0%"], opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className={
             shiftPoint
               ? "text-[17vw] pl-[2%] font-marcellus-sc"
@@ -150,7 +203,7 @@ const CoreValues = () => {
           }
         >
           VALUES
-        </p>
+        </motion.p>
       </div>
     </div>
   );
