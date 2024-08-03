@@ -89,11 +89,11 @@ const CoreValues = () => {
           variants={dropVariant}
           initial="initial"
           animate="animate"
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: shiftPoint ? 0 : 0.2 }}
           className={
             shiftPoint
               ? "absolute bottom-[66%] -right-[3%] w-1/2 h-auto"
-              : "absolute bottom-[30.5%] left-[43.5%] w-1/4 h-auto"
+              : "absolute bottom-[30%] left-[43.5%] w-1/4 h-auto"
           }
         >
           <Image
