@@ -1,3 +1,5 @@
+const { transform } = require("next/dist/build/swc");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -25,6 +27,20 @@ module.exports = {
           "purple-500": "#F3D8FF",
           "purple-600": "#D0BCE0",
         },
+      },
+      keyframes: {
+        collapse: {
+          // "0%": { transform: "scaleY(100%)" },
+          "100%": { transform: "scaleY(0%)" },
+        },
+        expand: {
+          "0%": { transform: "scaleY(0%)" },
+          // "100%": { transform: "scaleY(100%)" },
+        },
+      },
+      animation: {
+        collapse: "collapse 0.4s ease-in-out forwards",
+        expand: "expand 0.4s ease-in-out forwards",
       },
     },
   },
