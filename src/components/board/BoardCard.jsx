@@ -4,7 +4,7 @@ import Link from "next/link";
 const BoardCard = ({ image, name, position, linkedIn }) => {
   return (
     <div>
-      <div className="hover:scale-105 flex justify-center mx-[10%] my-[5%]">
+      <div className="hover:scale-105 transition ease-in-out duration-300 flex justify-center mx-[10%] my-[5%]">
         <Link href={linkedIn} className="inline-block">
           <Image src={image} alt="picture of person" />
         </Link>
