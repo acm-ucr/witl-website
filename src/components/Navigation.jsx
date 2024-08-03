@@ -7,9 +7,12 @@ import { items } from "@/data/Nav.js";
 import { FaBars } from "react-icons/fa";
 
 const Navigation = () => {
-  const [mobile, setMobile] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(true);
+  const [animation, setAnimation] = useState("hidden");
   const handleMobileMenu = () => {
-    setMobile(!mobile);
+    setShowMobileMenu(!showMobileMenu);
+    if (showMobileMenu) setAnimation("animate-expand");
+    else setAnimation("animate-collapse");
   };
   return (
     <div className="fixed top-0 z-50">
@@ -45,17 +48,14 @@ const Navigation = () => {
 
       {/* mobile menu */}
       <div
-        className={
-          mobile
-            ? "md:hidden flex flex-col items-center bg-witl-purple-300 space-y-2 py-2"
-            : "hidden"
-        }
+        className={`${animation} origin-top flex flex-col items-center bg-witl-purple-300 space-y-2 py-4 md:hidden`}
       >
         {items.map((item, index) => (
           <Link
             href={item.link}
             key={index}
             className="text-2xl text-witl-white-100 hover:text-witl-purple-100"
+            onClick={handleMobileMenu}
           >
             {item.name}
           </Link>
