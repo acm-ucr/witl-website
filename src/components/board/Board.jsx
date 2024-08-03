@@ -10,7 +10,7 @@ const Board = () => {
         {BoardItems.map((CARD, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: -100 }}
+            initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.4, type: "tween", duration: 1 }}
           >
