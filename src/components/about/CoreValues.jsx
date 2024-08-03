@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import Growth from "@/public/about/corevalues/grow.svg";
 import Innovation from "@/public/about/corevalues/innovation.svg";
 import Integrity from "@/public/about/corevalues/integrity.svg";
@@ -13,7 +13,7 @@ import Image from "next/image";
 const CoreValues = () => {
   const [shiftPoint, setShiftPoint] = useState();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const shiftCheck = () => {
       setShiftPoint(window.innerHeight / window.innerWidth >= 1.2);
     };

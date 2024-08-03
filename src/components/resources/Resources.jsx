@@ -30,8 +30,8 @@ const leftToRight = {
 
 const Resources = () => {
   return (
-    <div className="bg-witl-purple-300 min-h-screen flex items-center justify-center">
-      <div className="w-10/12 bg-white rounded flex flex-col items-center justify-center">
+    <div className="bg-witl-purple-300 min-h-screen flex items-start justify-center">
+      <div className="w-10/12 bg-white flex flex-col items-center justify-center">
         <motion.div
           variants={leftToRight}
           initial="start"
