@@ -10,7 +10,7 @@ const Header = () => {
         alt="networking dinner"
         className="w-[70%] h-auto pt-16 md:pt-0 object-cover"
       />
-      <p className="text-witl-purple-100 text-5xl md:text-9xl absolute left-[4%] bottom-1 md:bottom-24 p-[1%]">
+      <p className="text-witl-purple-100 text-5xl md:text-9xl absolute left-[4%] top-[65%] md:top-[50%] p-[1%]">
         EVENTS
       </p>
     </div>
