@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Board = () => {
   return (
     <>
-      <div className="grid grid-cols-3 gap-2 mt-[5%] mb-[25%]">
+      <div className="grid grid-cols-3 gap-2 mt-[5%] mb-[16%]">
         {BoardItems.map((CARD, index) => (
           <motion.div
             key={index}
