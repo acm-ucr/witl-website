@@ -13,7 +13,7 @@ const Header = () => {
             </p>
             <div className="flex flex-col">
               <p className="lg:text-6xl mb-[3%] text-2xl md:text-3xl">IN THE</p>
-              <p className="mb-[15%] text-[0.6rem] lg:text-sm md:text-[1rem]">
+              <p className="mb-[15%] text-[0.6rem] lg:text-[25px] md:text-[1rem]">
                 University of California, Riverside&apos;s undergraduate
                 community passionate about law and the pursuit of justice.
               </p>
