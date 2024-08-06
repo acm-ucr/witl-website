@@ -5,7 +5,7 @@ import HeaderImgMobile from "@/public/assets/logo-transparent.webp";
 const Header = () => {
   return (
     <>
-      <div className="bg-witl-purple-300 hidden md:flex flex-col items-center">
+      <div className="bg-witl-purple-300 hidden md:flex flex-col items-center pb-0 md:pb-4 2xl:pb-16">
         <div className="text-witl-purple-100 w-[90%] lg:w-[80%] lg:mt-[10%] mt-[22%]">
           <div className="flex flex-row items-center justify-between">
             <p className="lg:text-[13rem] leading-tight text-6xl md:text-7xl">
