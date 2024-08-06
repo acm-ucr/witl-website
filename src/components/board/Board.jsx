@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 const Board = () => {
   return (
     <>
-      <div className="grid grid-cols-3 gap-2 mt-[5%] mb-[25%]">
+      <div className="grid grid-cols-3 gap-2 mt-[5%] mb-[16%]">
         {BoardItems.map((CARD, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: -50 }}
+            initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.4, type: "tween", duration: 1 }}
+            transition={{ delay: index * 0.4, type: "tween", duration: 0.75 }}
           >
             <BoardCard
               name={CARD.name}
