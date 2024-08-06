@@ -16,7 +16,7 @@ const ResourcesHeader = () => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0 }}
         >
           <TopResourcesBanner
             icon={<FaInstagram />}
@@ -26,7 +26,7 @@ const ResourcesHeader = () => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <BottomResourcesBanner
             icon={<FaLinkedin />}
@@ -36,7 +36,7 @@ const ResourcesHeader = () => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1 }}
         >
           <TopResourcesBanner
             icon={<MdMail />}
@@ -46,7 +46,7 @@ const ResourcesHeader = () => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
         >
           <BottomResourcesBanner
             icon={<FaDiscord />}
@@ -56,7 +56,7 @@ const ResourcesHeader = () => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 2 }}
         >
           <TopResourcesBanner
             icon={<BsSubstack />}
@@ -67,7 +67,7 @@ const ResourcesHeader = () => {
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.5, delay: 2.5 }}
         className="absolute text-[25px] md:text-[85px] lg:text-[100px] 2xl:text-[150px] w-[70%] text-center text-witl-white-100 bg-witl-purple-300 mt-[5%] md:mb-[22%]"
       >
         <p>RESOURCES</p>
