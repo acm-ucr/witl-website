@@ -131,8 +131,53 @@ const Slides = () => {
     }
   };
 
+  const animate = {
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        when: "beforeChildren",
+        staggerChildren: 0.6,
+      },
+    },
+    hidden: {
+      y: -20,
+      opacity: 0,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
+  const animateX = {
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
+    hidden: {
+      x: -15,
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        when: "afterChildren",
+      },
+    },
+  };
+
   return (
-    <div className="min-h-[280px] md:min-h-[770px] lg:min-h-[570px] md:h-1/2 lg:h-screen flex relative mb-[3%]">
+    <motion.div
+      className="min-h-[280px] md:min-h-[770px] lg:min-h-[570px] md:h-1/2 lg:h-screen flex relative mb-[3%]"
+      variants={animate}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      initial="hidden"
+      whileInView="visible"
+    >
       <div
         ref={card0}
         className="bg-witl-purple-300 opacity-[0%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] left-[10%]"
@@ -206,30 +251,53 @@ const Slides = () => {
         ))}
       </div>
 
-      <p className="text-[120%] md:text-7xl absolute bottom-[12%] left-[4%] absolute md:bottom-[10%] lg:bottom-[10%] md:left-[2%]">
-        HIGHLIGHTED
-      </p>
-      <p className="text-[250%] md:text-8xl absolute -bottom-[3%] md:absolute -bottom-[3%] md:-bottom-[12%] lg:-bottom-[10%] left-[3%] md:left-[1%]">
-        EVENTS
-      </p>
+      <motion.div variants={animate}>
+        <p
+          className="text-[120%] md:text-7xl bottom-[12%] left-[4%] absolute md:bottom-[10%] lg:bottom-[10%] md:left-[2%]"
+          variants={animate}
+        >
+          HIGHLIGHTED
+        </p>
+        <p
+          className="text-[250%] md:text-8xl absolute md:absolute -bottom-[3%] md:-bottom-[12%] lg:-bottom-[10%] left-[3%] md:left-[1%]"
+          variants={animate}
+        >
+          EVENTS
+        </p>
+      </motion.div>
       <div className="text-sm ">
-        <p className="md:text-xl lg:text-4xl font-bold absolute bottom-[19%] right-[1%]">
+        <motion.p
+          className="md:text-xl lg:text-4xl font-bold absolute bottom-[19%] right-[1%]"
+          variants={animateX}
+        >
           NETWORKING DINNERS
-        </p>
-        <p className="md:text-xl lg:text-4xl font-bold absolute bottom-[14%] md:bottom-[13.5%] lg:bottom-[14.5%] right-[1%]">
+        </motion.p>
+        <motion.p
+          className="md:text-xl lg:text-4xl font-bold absolute bottom-[14%] md:bottom-[13.5%] lg:bottom-[14.5%] right-[1%]"
+          variants={animateX}
+        >
           LAW SCHOOL TOURS
-        </p>
-        <p className="md:text-xl lg:text-4xl font-bold absolute bottom-[9%] md:bottom-[8%] lg:bottom-[10%] right-[1%]">
+        </motion.p>
+        <motion.p
+          className="md:text-xl lg:text-4xl font-bold absolute bottom-[9%] md:bottom-[8%] lg:bottom-[10%] right-[1%]"
+          variants={animateX}
+        >
           FELLOWSHIP PROGRAMS
-        </p>
-        <p className="md:text-xl lg:text-4xl font-bold absolute bottom-[4%] md:bottom-[2.5%] lg:bottom-[5.5%] right-[1%]">
+        </motion.p>
+        <motion.p
+          className="md:text-xl lg:text-4xl font-bold absolute bottom-[4%] md:bottom-[2.5%] lg:bottom-[5.5%] right-[1%]"
+          variants={animateX}
+        >
           SCHEDULED EVENTS
-        </p>
-        <p className="md:text-xl lg:text-4xl font-bold absolute -bottom-[1.5%] lg:bottom-[1%] right-[1%]">
+        </motion.p>
+        <motion.p
+          className="md:text-xl lg:text-4xl font-bold absolute -bottom-[1.5%] lg:bottom-[1%] right-[1%]"
+          variants={animateX}
+        >
           AND MORE...
-        </p>
+        </motion.p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
