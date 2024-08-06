@@ -155,16 +155,16 @@ const Slides = () => {
       x: 0,
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 0.3,
         when: "beforeChildren",
-        staggerChildren: 0.6,
+        staggerChildren: 0.3,
       },
     },
     hidden: {
       x: -15,
       opacity: 0,
       transition: {
-        duration: 1,
+        duration: 0.5,
         when: "afterChildren",
       },
     },
