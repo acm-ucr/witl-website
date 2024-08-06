@@ -132,34 +132,34 @@ const Slides = () => {
   };
 
   return (
-    <div className="min-h-[570px] md:h-1/2 lg:h-screen flex relative mb-[3%]">
+    <div className="min-h-[280px] md:min-h-[770px] lg:min-h-[570px] md:h-1/2 lg:h-screen flex relative mb-[3%]">
       <div
         ref={card0}
-        className="bg-witl-purple-300 opacity-[0%] w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[26%] left-[10%]"
+        className="bg-witl-purple-300 opacity-[0%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] left-[10%]"
       ></div>
       <div
         ref={card1}
-        className="bg-witl-purple-300 opacity-[72%] w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[26%] left-[10%]"
+        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] left-[6%] md:left-[10%]"
       ></div>
       <div
         ref={card2}
-        className="bg-witl-purple-300 opacity-[72%] w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[29%] left-[13%]"
+        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[34%] md:bottom-[29%] left-[9%] md:left-[13%]"
       ></div>
       <div
         ref={card6}
-        className="bg-witl-purple-300 opacity-[72%] w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[29%] right-[13%]"
+        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[34%] md:bottom-[29%] right-[9%] md:right-[13%]"
       ></div>
       <div
         ref={card7}
-        className="bg-witl-purple-300 opacity-[72%] w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[26%] right-[10%]"
+        className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] right-[6%] md:right-[10%]"
       ></div>
       <div
         ref={card8}
-        className="bg-witl-purple-300 opacity-[0%] w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[26%] right-[10%]"
+        className="bg-witl-purple-300 opacity-[0%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] right-[10%]"
       ></div>
       <div
         ref={card3}
-        className="bg-witl-purple-300 w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[32%] left-[16%]"
+        className="bg-witl-purple-300 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[37%] md:bottom-[32%] left-[12%] md:left-[16%]"
         onClick={prevSlide}
       >
         <SlideCard
@@ -170,7 +170,7 @@ const Slides = () => {
       </div>
       <div
         ref={card5}
-        className="bg-witl-purple-300 w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[32%] right-[16%]"
+        className="bg-witl-purple-300 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[37%] md:bottom-[32%] right-[12%] md:right-[16%]"
         onClick={nextSlide}
       >
         <SlideCard
@@ -181,7 +181,7 @@ const Slides = () => {
       </div>
       <div
         ref={card4}
-        className="bg-witl-purple-400 w-[23%] aspect-[9/10] rounded-3xl absolute bottom-[40%] right-[38.5%]"
+        className="bg-witl-purple-400 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[45%] md:bottom-[40%] right-[37%] md:right-[38.5%]"
       >
         <SlideCard
           image={SlideItems[currInd].image}
@@ -189,8 +189,7 @@ const Slides = () => {
           year={SlideItems[currInd].year}
         />
       </div>
-
-      <div className="absolute w-[33%] bottom-[28%] left-[45%] lg:left-[46%] grid grid-cols-10">
+      <div className="absolute w-[33%] bottom-[28%] left-[43.5%] md:left-[45%] lg:left-[46%] grid grid-cols-10">
         {SlideItems.map((ITEMS, index) => (
           <motion.div
             className="w-fit aspect-[1/1]"
@@ -207,27 +206,29 @@ const Slides = () => {
         ))}
       </div>
 
-      <p className="text-5xl lg:text-7xl absolute bottom-[15%] left-[1%]">
+      <p className="text-[120%] md:text-7xl absolute bottom-[12%] left-[4%] absolute md:bottom-[10%] lg:bottom-[10%] md:left-[2%]">
         HIGHLIGHTED
       </p>
-      <p className="text-[90px] lg:text-8xl absolute -bottom-[4%] md:-bottom-[9%] lg:-bottom-[4%] left-[1%]">
+      <p className="text-[250%] md:text-8xl absolute -bottom-[3%] md:absolute -bottom-[3%] md:-bottom-[12%] lg:-bottom-[10%] left-[3%] md:left-[1%]">
         EVENTS
       </p>
-      <p className="text-xl lg:text-4xl font-bold absolute bottom-[19%] right-[1%]">
-        NETWORKING DINNERS
-      </p>
-      <p className="text-xl lg:text-4xl font-bold absolute bottom-[13.5%] lg:bottom-[14.5%] right-[1%]">
-        LAW SCHOOL TOURS
-      </p>
-      <p className="text-xl lg:text-4xl font-bold absolute bottom-[8%] lg:bottom-[10%] right-[1%]">
-        FELLOWSHIP PROGRAMS
-      </p>
-      <p className="text-xl lg:text-4xl font-bold absolute bottom-[2.5%] lg:bottom-[5.5%] right-[1%]">
-        SCHEDULED EVENTS
-      </p>
-      <p className="text-xl lg:text-4xl font-bold absolute -bottom-[2.5%] lg:bottom-[1%] right-[1%]">
-        AND MORE...
-      </p>
+      <div className="text-sm ">
+        <p className="md:text-xl lg:text-4xl font-bold absolute bottom-[19%] right-[1%]">
+          NETWORKING DINNERS
+        </p>
+        <p className="md:text-xl lg:text-4xl font-bold absolute bottom-[14%] md:bottom-[13.5%] lg:bottom-[14.5%] right-[1%]">
+          LAW SCHOOL TOURS
+        </p>
+        <p className="md:text-xl lg:text-4xl font-bold absolute bottom-[9%] md:bottom-[8%] lg:bottom-[10%] right-[1%]">
+          FELLOWSHIP PROGRAMS
+        </p>
+        <p className="md:text-xl lg:text-4xl font-bold absolute bottom-[4%] md:bottom-[2.5%] lg:bottom-[5.5%] right-[1%]">
+          SCHEDULED EVENTS
+        </p>
+        <p className="md:text-xl lg:text-4xl font-bold absolute -bottom-[1.5%] lg:bottom-[1%] right-[1%]">
+          AND MORE...
+        </p>
+      </div>
     </div>
   );
 };
