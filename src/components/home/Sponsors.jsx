@@ -1,6 +1,6 @@
 const Sponsors = () => {
   return (
-    <div className="relative bg-witl-purple-300 mt-[50%] w-[100%]">
+    <div className="relative bg-witl-purple-300 w-[100%]">
       <div className="text-witl-purple-200 pl-[15%] md:pl-[10%] flex flex-col items-start leading-tight pt-4 md:pt-0">
         <div className="lg:text-[8rem] mt-[10%] text-3xl md:text-6xl">OUR</div>
         <div className="lg:text-10xl text-5xl md:text-7xl">
