@@ -24,7 +24,7 @@ const Blurb = () => {
         initial="start"
         whileInView="end"
         transition={{ delay: 0.2 }}
-        className="bg-witl-white-100 rounded-[2rem] md:rounded-[6rem] scale-90 md:scale-60 md:p-0 md:pb-10 md:-my-[10%]"
+        className="bg-witl-white-100 rounded-[2rem] md:rounded-[6rem] scale-90 md:scale-60 md:p-0 md:pb-10 md:-my-[10%] w-10/12"
       >
         <div className="grid grid-flow-row-dense grid-cols-6">
           <motion.div
@@ -48,7 +48,7 @@ const Blurb = () => {
                 initial="start"
                 whileInView="end"
                 transition={{ delay: 0.25 }}
-                className="flex flex-col tracking-tighter font-marcellus-sc text-2xl md:text-8xl md:ml-4 mt-10 md:mt-0 md:pt-24 leading-none"
+                className="flex flex-col tracking-tighter font-marcellus-sc text-2xl md:text-[7rem] md:ml-4 mt-10 md:mt-0 md:pt-24 leading-none"
               >
                 Womxn in
                 <br />
@@ -86,7 +86,7 @@ const Blurb = () => {
             initial="start"
             whileInView="end"
             transition={{ delay: 0.35 }}
-            className="col-span-2 place-items-stretch justify-start m-5 md:m-10 md:pt-4 mb-10 md:mb-20 mt-0 md:mt-40 max-h-96 max-w-screen"
+            className="col-span-2 place-items-stretch justify-start m-5 md:m-10 md:pt-4 mb-4 md:mb-20 mt-0 md:mt-40 max-h-96 max-w-screen pt-2"
           >
             {" "}
             <Image
@@ -100,7 +100,7 @@ const Blurb = () => {
             initial="start"
             whileInView="end"
             transition={{ delay: 0.35 }}
-            className="col-span-4 place-items-stretch justify-start m-5 md:m-10 md:pt-4 mb-10 md:mb-20 mt-0 md:mt-40 max-h-96 max-w-screen"
+            className="col-span-4 place-items-stretch justify-start m-5 md:m-10 md:pt-4 mb-4 md:mb-20 mt-0 md:mt-40 max-h-96 max-w-screen pt-2"
           >
             {" "}
             <Image
