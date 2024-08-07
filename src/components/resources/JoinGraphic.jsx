@@ -1,8 +1,8 @@
 "use client";
+import { motion } from "framer-motion";
 import { useState, useLayoutEffect } from "react";
 import Image from "next/image";
 import JoinBox from "./JoinBox";
-import Line1 from "@/public/resources/joingraphic/line1.svg";
 import Line2 from "@/public/resources/joingraphic/line2.svg";
 import Line3 from "@/public/resources/joingraphic/line3.svg";
 import Line4 from "@/public/resources/joingraphic/line4.svg";
@@ -23,6 +23,30 @@ const JoinGraphic = () => {
     };
   }, []);
 
+  const shiftVariant = {
+    initial: { opacity: 0 },
+    leftShift: { x: ["-20%", "0%"], opacity: ["0%", "50%", "100%"] },
+  };
+
+  const popVariant = {
+    initial: { opacity: 0 },
+    popIn: { scale: ["100%", "110%", "100%"], opacity: ["0%", "50%", "100%"] },
+  };
+
+  const traceVariant = {
+    initial: {
+      pathLength: 0,
+      pathSpacing: 0,
+      opacity: 0,
+    },
+    trace: {
+      pathLength: 0.02,
+      pathSpacing: 0.02,
+      opacity: ["0%", "50%", "100%"],
+      transition: { duration: 1, delay: 0.5 },
+    },
+  };
+
   return (
     <div className="flex items-end justify-center bg-witl-purple-300">
       <div
@@ -32,7 +56,11 @@ const JoinGraphic = () => {
             : "relative w-10/12 aspect-[22/9] bg-white"
         }
       >
-        <p
+        <motion.p
+          variants={shiftVariant}
+          initial="initial"
+          whileInView="leftShift"
+          transition={{ duration: 0.5 }}
           className={
             shiftPoint
               ? "flex justify-center font-libre-caslon-text text-[7vw] px-[5%] py-[5%]"
@@ -40,14 +68,33 @@ const JoinGraphic = () => {
           }
         >
           HOW TO JOIN
-        </p>
-        <Image
-          src={Line1}
+        </motion.p>
+
+        <div
           className={
             shiftPoint ? "hidden" : "absolute top-[42%] left-[18%] w-[8%]"
           }
-          alt="line1"
-        />
+        >
+          <motion.svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 86 147"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-auto"
+          >
+            <motion.path
+              variants={traceVariant}
+              initial="initial"
+              whileInView="trace"
+              stroke="#6E3987"
+              strokeWidth={2}
+              strokeDasharray="4 4"
+              d="M26.0001 1.50002C36.6667 0.500019 79.8553 7.00003 84 29.5C87.5 48.5 82 58 61.5001 71C47.6491 79.7836 18.9999 85 8.50006 99.5C-4.20484 117.045 3.00006 130 8.50006 134.5C21.9999 145.545 29 141.667 36.4999 145.5"
+            />
+          </motion.svg>
+        </div>
+
         <Image
           src={Line2}
           className={
@@ -78,7 +125,11 @@ const JoinGraphic = () => {
           }
           alt="mobile line"
         />
-        <div
+        <motion.div
+          variants={popVariant}
+          initial="intitial"
+          whileInView="popIn"
+          transition={{ duration: 0.3 }}
           className={
             shiftPoint
               ? "absolute top-[12%] left-[21.3%] w-[75%]"
@@ -86,7 +137,7 @@ const JoinGraphic = () => {
           }
         >
           <JoinBox num="1" desc1="JOIN OUR HIGHLANDER LINK" />
-        </div>
+        </motion.div>
         <div
           className={
             shiftPoint
