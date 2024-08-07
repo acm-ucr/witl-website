@@ -1,12 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState, useLayoutEffect } from "react";
-import Image from "next/image";
 import JoinBox from "./JoinBox";
-import MobileLine from "@/public/resources/joingraphic/mobileline.svg";
 
 const JoinGraphic = () => {
   const [shiftPoint, setShiftPoint] = useState();
+  const mLines = [0, 1, 2, 3];
 
   useLayoutEffect(() => {
     const shiftCheck = () => {
@@ -59,6 +58,11 @@ const JoinGraphic = () => {
       pathSpacing: 0.015,
       opacity: ["0%", "50%", "100%"],
       transition: { duration: 1, delay: 3.5 },
+    },
+    mobileTrace: {
+      pathLength: 0.003,
+      pathSpacing: 0.003,
+      opacity: ["0%", "50%", "100%"],
     },
   };
 
@@ -175,13 +179,31 @@ const JoinGraphic = () => {
           </motion.svg>
         </div>
 
-        <Image
-          src={MobileLine}
-          className={
-            shiftPoint ? "absolute top-[13%] left-[49%] h-[100%]" : "hidden"
-          }
-          alt="mobile line"
-        />
+        <div className="absolute grid grid-rows-4 gap-[2%] top-[18%] left-[48%] w-[20%] h-[70%]">
+          {mLines.map((index) => (
+            <div
+              key={index}
+              className={shiftPoint ? "w-[15%] h-[15%]" : "hidden"}
+            >
+              <motion.svg
+                viewBox="0 0 4 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <motion.path
+                  variants={traceVariant}
+                  initial="initial"
+                  whileInView="mobileTrace"
+                  transition={{ duration: 1, delay: index + 0.5 }}
+                  stroke="#6E3987"
+                  strokeWidth={2}
+                  d="M2.13281 -1131.01L2.13281 40"
+                />
+              </motion.svg>
+            </div>
+          ))}
+        </div>
+
         <motion.div
           variants={popVariant}
           initial="intitial"
