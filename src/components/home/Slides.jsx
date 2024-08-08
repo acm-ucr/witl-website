@@ -1,6 +1,5 @@
 "use client";
 import SlideCard from "@/components/home/SlideCard";
-import { RxDotFilled } from "react-icons/rx";
 import { motion, useAnimate } from "framer-motion";
 import { useState } from "react";
 import { SlideItems } from "@/data/eventslides";
@@ -245,20 +244,40 @@ const Slides = () => {
           year={SlideItems[currInd].year}
         />
       </motion.div>
-      <div className="absolute w-[33%] bottom-[28%] left-[43.5%] md:left-[45%] lg:left-[46%] grid grid-cols-10">
+      <div className="absolute w-[6%] bottom-[18%] left-[47.5%] grid grid-cols-3 gap-[5%]">
         {SlideItems.map((ITEMS, index) => (
           <motion.div
-            className="w-fit aspect-[1/1]"
+            className="w-fit aspect-[1/1] flex items-center justify-center"
             whileInView={{ opacity: ["0%", "50%", "100%"] }}
-            whileHover={{ scale: 1.4, x: "10%" }}
             transition={{ duration: 0.5, delay: 0 + index / 10 }}
-            onClick={() => goToSlide(index)}
             key={index}
           >
             {index === currInd ? (
-              <RxDotFilled size="30px" color="#000000" />
+              <motion.svg
+                whileHover={{ scale: 1.4, x: "10%" }}
+                className="w-[120%] h-[120%]"
+              >
+                <motion.circle
+                  onClick={() => goToSlide(index)}
+                  cx="0.7vw"
+                  cy="0.7vw"
+                  r="0.7vw"
+                  fill="#000000"
+                />
+              </motion.svg>
             ) : (
-              <RxDotFilled size="30px" color="#F3D8FF" />
+              <motion.svg
+                whileHover={{ scale: 1.4, x: "10%" }}
+                className="w-[120%] h-[120%]"
+              >
+                <motion.circle
+                  onClick={() => goToSlide(index)}
+                  cx="0.7vw"
+                  cy="0.7vw"
+                  r="0.7vw"
+                  fill="#F3D8FF"
+                />
+              </motion.svg>
             )}
           </motion.div>
         ))}
