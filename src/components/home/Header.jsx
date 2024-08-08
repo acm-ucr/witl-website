@@ -83,7 +83,7 @@ const Header = () => {
         <div className="text-witl-purple-100 w-[90%] lg:w-[80%] lg:mt-[10%] mt-[22%]">
           <div className="flex flex-col items-center justify-between">
             <motion.p
-              className="pt-10 md:pt-0 lg:text-[13rem] leading-tight text-7xl"
+              className="pt-10 md:pt-0 text-[17vw] leading-tight text-7xl"
               variants={animations}
               initial="start"
               whileInView="end"
@@ -92,9 +92,9 @@ const Header = () => {
               WOMXN
             </motion.p>
             <div className="flex flex-row mx-10 mb-[15%]">
-              <div className="flex flex-col space-y-2 mr-[-15%]">
+              <div className="flex flex-col space-y-[5%] mr-[-15%]">
                 <motion.p
-                  className="lg:text-6xl mb-[3%] text-4xl md:text-5xl"
+                  className="text-[9.5vw]"
                   variants={animations}
                   initial="start"
                   whileInView="end"
@@ -103,7 +103,7 @@ const Header = () => {
                   IN THE
                 </motion.p>
                 <motion.p
-                  className="lg:text-[13rem] w-[30%] leading-none mt-[-1.5%] text-6xl md:text-7xl"
+                  className="text-[16vw] w-[30%] leading-none"
                   variants={animations}
                   initial="start"
                   whileInView="end"
@@ -112,7 +112,7 @@ const Header = () => {
                   LAW
                 </motion.p>
                 <motion.p
-                  className="text-[0.6rem] lg:text-sm md:text-[1rem] w-[70%]"
+                  className="text-[2.5vw] w-[70%] ml-[2%]"
                   variants={animations}
                   initial="start"
                   whileInView="end"
