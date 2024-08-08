@@ -41,14 +41,21 @@ const Header = () => {
                 IN THE
               </motion.p>
               <motion.p
-                className="mb-[15%] text-[0.6rem] lg:text-sm md:text-[1rem]"
+                className="lg:mb-[0%] mb-[15%] text-[0.6rem] lg:text-xs md:text-xs"
                 variants={animations}
                 initial="start"
                 whileInView="end"
                 transition={{ delay: 0.2 }}
               >
-                University of California, Riverside&apos;s undergraduate
-                community passionate about law and the pursuit of justice.
+                <div class="h-[3em] flex flex-col justify-between">
+                  <span class="block">
+                    University of California, Riverside&apos;s
+                  </span>
+                  <span class="block">undergraduate community passionate</span>
+                  <span class="block">
+                    about law and the pursuit of justice.
+                  </span>
+                </div>
               </motion.p>
             </div>
           </div>
