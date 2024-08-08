@@ -5,6 +5,34 @@ import { motion, useAnimate } from "framer-motion";
 import { useState } from "react";
 import { SlideItems } from "@/data/eventslides";
 
+const shiftVariant = {
+  initial: { opacity: "0" },
+  translucentFade: { opacity: ["0%", "50%", "72%"] },
+  fullShift1: {
+    x: ["-13%", "0%"],
+    y: ["11.4%", "0%"],
+    opacity: ["0%", "100%"],
+  },
+  fullShift2: { x: ["-98%", "0%"], y: ["28%", "0%"], opacity: ["0%", "100%"] },
+  fullShift3: { x: ["-98%", "0%"], y: ["-28%", "0%"], opacity: ["0%", "100%"] },
+  translucentShift1: {
+    x: ["-13%", "0%"],
+    y: ["11.4%", "0%"],
+    opacity: ["0%", "72%"],
+  },
+  translucentShift2: {
+    x: ["-13%", "0%"],
+    y: ["-11.4%", "0%"],
+    opacity: ["0%", "72%"],
+  },
+};
+
+const horShiftVariant = {
+  initial: { opacity: "0" },
+  leftShift: { x: ["-30%", "0%"], opacity: ["0%", "100%"] },
+  rightShift: { x: ["30%", "0%"], opacity: ["0%", "100%"] },
+};
+
 const Slides = () => {
   const [currInd, setCurrInd] = useState(0);
   const [leftInd, setleftInd] = useState(SlideItems.length - 1);
@@ -131,78 +159,53 @@ const Slides = () => {
     }
   };
 
-  const animate = {
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        when: "beforeChildren",
-        staggerChildren: 0.6,
-      },
-    },
-    hidden: {
-      y: -20,
-      opacity: 0,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
-
-  const animateX = {
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-        when: "beforeChildren",
-        staggerChildren: 0.3,
-      },
-    },
-    hidden: {
-      x: -15,
-      opacity: 0,
-      transition: {
-        duration: 0.5,
-        when: "afterChildren",
-      },
-    },
-  };
-
   return (
-    <motion.div
-      className="min-h-[280px] md:min-h-[770px] lg:min-h-[570px] md:h-1/2 lg:h-screen flex relative mb-[3%]"
-      variants={animate}
-      transition={{ duration: 0.7, ease: "easeOut" }}
-      initial="hidden"
-      whileInView="visible"
-    >
+    <div className="w-screen aspect-[3/2] flex relative mb-[3%]">
       <div
         ref={card0}
         className="bg-witl-purple-300 opacity-[0%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] left-[10%]"
       ></div>
-      <div
+      <motion.div
+        variants={shiftVariant}
+        initial="initial"
+        whileInView="translucentFade"
+        transition={{ duration: 0.5 }}
         ref={card1}
         className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] left-[6%] md:left-[10%]"
-      ></div>
-      <div
+      ></motion.div>
+      <motion.div
+        variants={shiftVariant}
+        initial="initial"
+        whileInView="translucentShift1"
+        transition={{ duration: 0.5 }}
         ref={card2}
         className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[34%] md:bottom-[29%] left-[9%] md:left-[13%]"
-      ></div>
-      <div
+      ></motion.div>
+      <motion.div
+        variants={shiftVariant}
+        initial="initial"
+        whileInView="translucentShift2"
+        transition={{ duration: 0.5 }}
         ref={card6}
         className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[34%] md:bottom-[29%] right-[9%] md:right-[13%]"
-      ></div>
-      <div
+      ></motion.div>
+      <motion.div
+        variants={shiftVariant}
+        initial="initial"
+        whileInView="translucentShift2"
+        transition={{ duration: 0.5 }}
         ref={card7}
         className="bg-witl-purple-300 opacity-[72%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] right-[6%] md:right-[10%]"
-      ></div>
+      ></motion.div>
       <div
         ref={card8}
         className="bg-witl-purple-300 opacity-[0%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] right-[10%]"
       ></div>
-      <div
+      <motion.div
+        variants={shiftVariant}
+        initial="initial"
+        whileInView="fullShift1"
+        transition={{ duration: 0.5 }}
         ref={card3}
         className="bg-witl-purple-300 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[37%] md:bottom-[32%] left-[12%] md:left-[16%]"
         onClick={prevSlide}
@@ -212,8 +215,12 @@ const Slides = () => {
           description={SlideItems[leftInd].description}
           year={SlideItems[leftInd].year}
         />
-      </div>
-      <div
+      </motion.div>
+      <motion.div
+        variants={shiftVariant}
+        initial="initial"
+        whileInView="fullShift3"
+        transition={{ duration: 0.5 }}
         ref={card5}
         className="bg-witl-purple-300 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[37%] md:bottom-[32%] right-[12%] md:right-[16%]"
         onClick={nextSlide}
@@ -223,8 +230,12 @@ const Slides = () => {
           description={SlideItems[rightInd].description}
           year={SlideItems[rightInd].year}
         />
-      </div>
-      <div
+      </motion.div>
+      <motion.div
+        variants={shiftVariant}
+        initial="initial"
+        whileInView="fullShift2"
+        transition={{ duration: 0.5 }}
         ref={card4}
         className="bg-witl-purple-400 w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[45%] md:bottom-[40%] right-[37%] md:right-[38.5%]"
       >
@@ -233,12 +244,14 @@ const Slides = () => {
           description={SlideItems[currInd].description}
           year={SlideItems[currInd].year}
         />
-      </div>
+      </motion.div>
       <div className="absolute w-[33%] bottom-[28%] left-[43.5%] md:left-[45%] lg:left-[46%] grid grid-cols-10">
         {SlideItems.map((ITEMS, index) => (
           <motion.div
             className="w-fit aspect-[1/1]"
+            whileInView={{ opacity: ["0%", "50%", "100%"] }}
             whileHover={{ scale: 1.4, x: "10%" }}
+            transition={{ duration: 0.5, delay: 0 + index / 10 }}
             onClick={() => goToSlide(index)}
             key={index}
           >
@@ -251,53 +264,72 @@ const Slides = () => {
         ))}
       </div>
 
-      <motion.div variants={animate}>
-        <p
-          className="text-[120%] md:text-7xl bottom-[12%] left-[4%] absolute md:bottom-[10%] lg:bottom-[10%] md:left-[2%]"
-          variants={animate}
-        >
-          HIGHLIGHTED
-        </p>
-        <p
-          className="text-[250%] md:text-8xl absolute md:absolute -bottom-[3%] md:-bottom-[12%] lg:-bottom-[10%] left-[3%] md:left-[1%]"
-          variants={animate}
-        >
-          EVENTS
-        </p>
-      </motion.div>
-      <div className="text-sm ">
+      <motion.p
+        variants={horShiftVariant}
+        initial="initial"
+        whileInView="leftShift"
+        transition={{ duration: 0.5 }}
+        className="text-[4vw] absolute bottom-[14%] left-[2%]"
+      >
+        HIGHLIGHTED
+      </motion.p>
+      <motion.p
+        variants={horShiftVariant}
+        initial="initial"
+        whileInView="leftShift"
+        transition={{ duration: 0.5 }}
+        className="text-[8.5vw] absolute -bottom-[1%] left-[2%]"
+      >
+        EVENTS
+      </motion.p>
+      <div className="text-[2vw] font-bold">
         <motion.p
-          className="md:text-xl lg:text-4xl font-bold absolute bottom-[19%] right-[1%]"
-          variants={animateX}
+          variants={horShiftVariant}
+          initial="initial"
+          whileInView="rightShift"
+          transition={{ duration: 0.5 }}
+          className="absolute bottom-[19%] right-[1%]"
         >
           NETWORKING DINNERS
         </motion.p>
         <motion.p
-          className="md:text-xl lg:text-4xl font-bold absolute bottom-[14%] md:bottom-[13.5%] lg:bottom-[14.5%] right-[1%]"
-          variants={animateX}
+          variants={horShiftVariant}
+          initial="initial"
+          whileInView="rightShift"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="absolute bottom-[14.5%] right-[1%]"
         >
           LAW SCHOOL TOURS
         </motion.p>
         <motion.p
-          className="md:text-xl lg:text-4xl font-bold absolute bottom-[9%] md:bottom-[8%] lg:bottom-[10%] right-[1%]"
-          variants={animateX}
+          variants={horShiftVariant}
+          initial="initial"
+          whileInView="rightShift"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="absolute bottom-[10%] right-[1%]"
         >
           FELLOWSHIP PROGRAMS
         </motion.p>
         <motion.p
-          className="md:text-xl lg:text-4xl font-bold absolute bottom-[4%] md:bottom-[2.5%] lg:bottom-[5.5%] right-[1%]"
-          variants={animateX}
+          variants={horShiftVariant}
+          initial="initial"
+          whileInView="rightShift"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="absolute bottom-[5.5%] right-[1%]"
         >
           SCHEDULED EVENTS
         </motion.p>
         <motion.p
-          className="md:text-xl lg:text-4xl font-bold absolute -bottom-[1.5%] lg:bottom-[1%] right-[1%]"
-          variants={animateX}
+          variants={horShiftVariant}
+          initial="initial"
+          whileInView="rightShift"
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="absolute bottom-[1%] right-[1%]"
         >
           AND MORE...
         </motion.p>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
