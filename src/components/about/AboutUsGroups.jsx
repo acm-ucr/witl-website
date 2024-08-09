@@ -146,38 +146,54 @@ const AboutUsGroups = () => {
 
   return (
     <div className="relative w-[100%] aspect-[4/3] mt-[-100px]">
-      <div
-        ref={im0}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[15%] left-[-5%] opacity-0"
+        ref={im0}
       >
         <Image src={aboutItems[rightInd]} alt="group pic" />
-      </div>
-      <div
-        ref={im4}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[15%] right-[-5%] opacity-0"
+        ref={im4}
       >
         <Image src={aboutItems[leftInd]} alt="group pic" />
-      </div>
-      <div
-        ref={im1}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[15%] left-[-5%]"
         onClick={prevSlide}
+        ref={im1}
       >
         <Image src={aboutItems[leftInd]} alt="group pic" />
-      </div>
-      <div
-        ref={im2}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] left-[50%] mx-[-15%] lg:mx-[-10%]"
+        ref={im2}
       >
         <Image src={aboutItems[currInd]} alt="group pic" />
-      </div>
-      <div
-        ref={im3}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[15%] right-[-5%]"
         onClick={nextSlide}
+        ref={im3}
       >
         <Image src={aboutItems[rightInd]} alt="group pic" />
-      </div>
+      </motion.div>
+
       <div className="absolute w-[30%] lg:w-[20%] aspect-[3/5] left-[50%] transform -translate-x-1/2 ">
         <div className="relative w-[50%] -bottom-[100%] left-[45%] md:left-[55%] -mx-[25%]  grid grid-cols-3">
           {aboutItems.map((ITEMS, index) => (
