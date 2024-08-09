@@ -83,7 +83,7 @@ const Header = () => {
         <div className="text-witl-purple-100 w-[90%] lg:w-[80%] lg:mt-[10%] mt-[22%]">
           <div className="flex flex-col items-center justify-between">
             <motion.p
-              className="pt-10 md:pt-0 text-[17vw] leading-tight text-7xl"
+              className="pt-10 md:pt-0 text-[20vw] leading-tight text-7xl"
               variants={animations}
               initial="start"
               whileInView="end"
@@ -91,10 +91,10 @@ const Header = () => {
             >
               WOMXN
             </motion.p>
-            <div className="flex flex-row mx-10 mb-[15%]">
-              <div className="flex flex-col space-y-[7%] mr-[-15%]">
+            <div className="flex flex-row mb-[15%]">
+              <div className="flex flex-col ml-[4.5vw]">
                 <motion.p
-                  className="text-[9.5vw]"
+                  className="mt-[1vh] text-[11.5vw]"
                   variants={animations}
                   initial="start"
                   whileInView="end"
@@ -103,7 +103,7 @@ const Header = () => {
                   IN THE
                 </motion.p>
                 <motion.p
-                  className="text-[16vw] w-[30%] leading-none"
+                  className="text-[18vw] w-[30%] leading-none"
                   variants={animations}
                   initial="start"
                   whileInView="end"
@@ -112,7 +112,7 @@ const Header = () => {
                   LAW
                 </motion.p>
                 <motion.p
-                  className="text-[2.5vw] w-[70%] ml-[2%]"
+                  className="text-[3.5vw] w-[40vw] ml-[4%] mt-[2.5vh] leading-none"
                   variants={animations}
                   initial="start"
                   whileInView="end"
@@ -123,12 +123,15 @@ const Header = () => {
                 </motion.p>
               </div>
               <motion.div
-                className="bg-witl-purple-100 w-full content-center"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <Image src={HeaderImgMobile} alt="Header Image" className="" />
+                <Image
+                  src={HeaderImgMobile}
+                  alt="Header Image"
+                  className="ml-[7vw] w-[35vw] aspect-[144/262]"
+                />
               </motion.div>
             </div>
           </div>
