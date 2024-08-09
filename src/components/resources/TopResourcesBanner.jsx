@@ -5,7 +5,7 @@ import Banner from "@/public/assets/banner.svg";
 const TopResourcesBanner = ({ icon, link }) => {
   return (
     <div className=" relative mt-[5%]">
-      <Image src={Banner} className="lg:w-[300px]" alt="banner" />
+      <Image src={Banner} className="w-[100%]" alt="banner" />
 
       <Link
         href={link}
