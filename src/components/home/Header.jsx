@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import HeaderImg from "@/public/assets/headerImg.webp";
-import HeaderImgMobile from "@/public/assets/logo-transparent.webp";
+import HeaderImgMobile from "@/public/assets/mobHeadImg.webp";
 import { motion } from "framer-motion";
 
 const animations = {
@@ -92,7 +92,7 @@ const Header = () => {
               WOMXN
             </motion.p>
             <div className="flex flex-row mx-10 mb-[15%]">
-              <div className="flex flex-col space-y-[5%] mr-[-15%]">
+              <div className="flex flex-col space-y-[7%] mr-[-15%]">
                 <motion.p
                   className="text-[9.5vw]"
                   variants={animations}
@@ -128,13 +128,7 @@ const Header = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="bg-witl-purple-100 w-full content-center">
-                  <Image
-                    src={HeaderImgMobile}
-                    alt="Header Image"
-                    className="mt-[-20%] m-auto"
-                  />
-                </div>
+                <Image src={HeaderImgMobile} alt="Header Image" className="" />
               </motion.div>
             </div>
           </div>
