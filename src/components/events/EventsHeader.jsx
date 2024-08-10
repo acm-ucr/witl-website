@@ -26,14 +26,14 @@ function Header() {
       >
         {" "}
         <Image
-          className="w-[70%] object-cover h-auto pt-16 md:pt-0"
+          className="w-[61.5%] object-cover h-auto pt-16 md:pt-0"
           src={networkingdinner}
           alt="networking dinner"
         />{" "}
       </motion.div>
 
       <motion.p
-        className="text-witl-purple-100 text-5xl md:text-9xl absolute left-[4%] top-[75%] md:top-[65%] p-[1%]"
+        className="text-witl-purple-100 text-5xl md:text-8xl absolute left-[4%] top-[75%] md:top-[64%] p-[1%]"
         variants={animation}
         transition={{ delay: 0.3 }}
         initial="hidden"
