@@ -24,7 +24,7 @@ const Blurb = () => {
         initial="start"
         whileInView="end"
         transition={{ delay: 0.2 }}
-        className="bg-witl-white-100 rounded-[2rem] md:rounded-[6rem] scale-90 md:scale-60 md:p-0 md:pb-10 md:-my-[10%] w-10/12"
+        className="bg-witl-white-100 rounded-[2rem] md:rounded-[6rem] md:scale-60 md:p-0 md:pb-10 md:-my-[10%] w-10/12"
       >
         <div className="grid grid-flow-row-dense grid-cols-6">
           <motion.div
@@ -38,7 +38,7 @@ const Blurb = () => {
             <Image
               src={teamphoto1}
               alt="teamphoto1"
-              className="w-full h-auto object-cover rounded md:rounded-3xl"
+              className="w-full h-auto object-cover rounded md:rounded-3xl scale-110 md:scale-100"
             />{" "}
           </motion.div>
           <div className="col-span-3 place-items-stretch justify-start max-h-96 max-w-screen">
@@ -48,7 +48,7 @@ const Blurb = () => {
                 initial="start"
                 whileInView="end"
                 transition={{ delay: 0.25 }}
-                className="flex flex-col tracking-tighter font-marcellus-sc text-2xl md:text-[7rem] md:ml-4 mt-10 md:mt-0 md:pt-24 leading-none"
+                className="flex flex-col tracking-tighter font-marcellus-sc text-2xl md:text-[8rem] md:ml-4 mt-8 md:mt-0 md:pt-24 leading-none"
               >
                 Womxn in
                 <br />
@@ -59,24 +59,12 @@ const Blurb = () => {
                 initial="start"
                 whileInView="end"
                 transition={{ delay: 0.3 }}
-                className="text-right tracking-tighter md:tracking-wide text-xs md:text-4xl mr-6 md:mr-8 md:pl-10 md:pr-20 md:pt-10 leading-tight"
+                className="text-right tracking-tighter md:tracking-wide text-xs md:text-4xl -mt-2 md:mt-0 mr-6 md:mr-8 md:pl-10 md:pr-20 leading-tight"
               >
-                <span className="block md:hidden">
-                  stands
-                  <br />
-                  as an organization catered to the diverse spectrum of womxn
-                  who are embarking on journeys in law school or within the
-                  legal field
-                </span>
-                <span className="hidden md:block">
-                  stands
-                  <br />
-                  as an organization catered to the <br />
-                  diverse spectrum of womxn who are
-                  <br />
-                  embarking on journeys in law
-                  <br />
-                  school or within the legal field.
+                <span>
+                  stands <br /> as an organization catered to the diverse
+                  spectrum of womxn who are embarking on journeys in law school
+                  or within the legal field.
                 </span>
               </motion.p>
             </div>
@@ -92,7 +80,7 @@ const Blurb = () => {
             <Image
               src={teamphoto2}
               alt="teamphoto2"
-              className="w-full h-auto md:h-full object-cover rounded md:rounded-3xl mt-0 md:mt-10"
+              className="w-full h-auto md:h-full object-cover rounded md:rounded-3xl mt-0 md:mt-10 scale-110 md:scale-100"
             />{" "}
           </motion.div>
           <motion.div
@@ -106,7 +94,7 @@ const Blurb = () => {
             <Image
               src={teamphoto3}
               alt="teamphoto3"
-              className="w-full h-auto md:h-full object-cover rounded md:rounded-3xl mt-0 md:mt-10"
+              className="w-full h-auto md:h-full object-cover rounded md:rounded-3xl mt-0 lg:mt-10 scale-110 md:scale-100"
             />{" "}
           </motion.div>
         </div>
