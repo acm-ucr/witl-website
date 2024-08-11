@@ -160,20 +160,20 @@ const AboutUsGroups = () => {
       </div>
       <div
         ref={im1}
-        className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[18%] md:top-[21%] lg:top-[20%] left-[-0%]"
+        className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[18%] md:top-[21%] lg:top-[20%] left-[-0%]" // left photo
         onClick={prevSlide}
       >
         <Image src={aboutItems[leftInd]} alt="group pic" />
       </div>
       <div
         ref={im2}
-        className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[3%] md:top-[6%] lg:top-[5%] left-[50%] mx-[-15%] lg:mx-[-10%] lg:mt-[1%]"
+        className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[3%] md:top-[6%] lg:top-[4%] xl:top-[5%] 2xl:top-[2%] left-[50%] mx-[-15%] lg:mx-[-10%] lg:mt-[1%]" // center photo
       >
         <Image src={aboutItems[currInd]} alt="group pic" />
       </div>
       <div
         ref={im3}
-        className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[18%] md:top-[21%] lg:top-[20%] right-[-0%]"
+        className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[18%] md:top-[21%] lg:top-[20%] right-[-0%]" // right photo
         onClick={nextSlide}
       >
         <Image src={aboutItems[rightInd]} alt="group pic" />
