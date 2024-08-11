@@ -59,7 +59,7 @@ const Sponsors = () => {
         </motion.div>
         <div className="flex justify-end">
           <motion.div
-            className="w-1/3 bg-witl-purple-400 py-1 md:py-3 font-libre-caslon-text pl-[2%] text-left text-sm lg:text-5xl md:text-2xl mr-4 md:mr-0 mt-[-5%] md:mt-[0]"
+            className="w-1/3 bg-witl-purple-400 py-1 md:py-3 font-libre-caslon-text pl-[2%] text-left text-sm lg:text-5xl md:text-2xl mt-[-3%] md:mt-[0]"
             variants={animations}
             initial="start"
             whileInView="end"
