@@ -11,8 +11,12 @@ const Board = () => {
           <motion.div
             key={index}
             initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.4, type: "tween", duration: 0.75 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: (index % 3) * 0.2,
+              type: "tween",
+              duration: 0.75,
+            }}
           >
             <BoardCard
               name={CARD.name}
