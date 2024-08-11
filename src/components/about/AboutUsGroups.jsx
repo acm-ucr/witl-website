@@ -199,6 +199,9 @@ const AboutUsGroups = () => {
           {aboutItems.map((ITEMS, index) => (
             <motion.div
               className="w-fit aspect-[1/1]"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
               whileHover={{ scale: 1.4, x: "10%" }}
               onClick={() => goToSlide(index)}
               key={index}
