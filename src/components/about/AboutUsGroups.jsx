@@ -169,9 +169,7 @@ const AboutUsGroups = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
         ref={im1}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[18%] md:top-[21%] lg:top-[20%] left-[-0%]" // left photo
-
         onClick={prevSlide}
-        ref={im1}
       >
         <Image src={aboutItems[leftInd]} alt="group pic" />
       </motion.div>
@@ -195,7 +193,7 @@ const AboutUsGroups = () => {
         <Image src={aboutItems[rightInd]} alt="group pic" />
       </motion.div>
 
-       <div className="relative w-[7vw] left-[50vw] -mx-[3.5vw] top-[80%] 2xl:top-[70%] grid grid-cols-3">
+      <div className="relative w-[7vw] left-[50vw] -mx-[3.5vw] top-[80%] 2xl:top-[70%] grid grid-cols-3">
         {aboutItems.map((ITEMS, index) => (
           <motion.div
             className="w-fit aspect-[1/1] flex items-center justify-center"
