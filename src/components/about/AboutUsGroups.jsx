@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { RxDotFilled } from "react-icons/rx";
 import { motion, useAnimate } from "framer-motion";
 import { useState } from "react";
 
@@ -178,23 +177,43 @@ const AboutUsGroups = () => {
       >
         <Image src={aboutItems[rightInd]} alt="group pic" />
       </div>
-      <div className="absolute w-[30%] lg:w-[20%] aspect-[3/5] left-[50%] transform -translate-x-1/2 ">
-        <div className="relative w-[50%] lg:w-[25%] -bottom-[105%] md:-bottom-[110%] lg:-bottom-[105%] left-[45%] md:left-[55%] lg:left-[60%] -mx-[25%] mt-[-10%] lg:mt-[0%] grid grid-cols-3">
-          {aboutItems.map((ITEMS, index) => (
-            <motion.div
-              className="w-fit aspect-[1/1]"
-              whileHover={{ scale: 1.4, x: "10%" }}
-              onClick={() => goToSlide(index)}
-              key={index}
-            >
-              {index === currInd ? (
-                <RxDotFilled size="30px" color="#FFFFFF" />
-              ) : (
-                <RxDotFilled size="30px" color="#F3D8FF" />
-              )}
-            </motion.div>
-          ))}
-        </div>
+      <div className="relative w-[7vw] left-[50vw] -mx-[3.5vw] top-[80%] 2xl:top-[70%] grid grid-cols-3">
+        {aboutItems.map((ITEMS, index) => (
+          <motion.div
+            className="w-fit aspect-[1/1] flex items-center justify-center"
+            whileInView={{ opacity: ["0%", "50%", "100%"] }}
+            transition={{ duration: 0.5, delay: 0 + index / 10 }}
+            key={index}
+          >
+            {index === currInd ? (
+              <motion.svg
+                whileHover={{ scale: 1.4, x: "10%" }}
+                className="w-[120%] h-[120%]"
+              >
+                <motion.circle
+                  onClick={() => goToSlide(index)}
+                  cx="0.7vw"
+                  cy="0.7vw"
+                  r="0.7vw"
+                  fill="#FFFFFF"
+                />
+              </motion.svg>
+            ) : (
+              <motion.svg
+                whileHover={{ scale: 1.4, x: "10%" }}
+                className="w-[120%] h-[120%]"
+              >
+                <motion.circle
+                  onClick={() => goToSlide(index)}
+                  cx="0.7vw"
+                  cy="0.7vw"
+                  r="0.7vw"
+                  fill="#F3D8FF"
+                />
+              </motion.svg>
+            )}
+          </motion.div>
+        ))}
       </div>
     </div>
   );

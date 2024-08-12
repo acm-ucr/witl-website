@@ -13,9 +13,16 @@ import Image from "next/image";
 
 const CoreValues = () => {
   const [shiftPoint, setShiftPoint] = useState();
+
   const dropVariant = {
     initial: { opacity: "0" },
     animate: { y: ["-20%", "0%"], opacity: ["0%", "50%", "100%"] },
+  };
+
+  const shiftVariant = {
+    initial: { opacity: "0" },
+    leftShift: { x: ["-20%", "0%"], opacity: ["0%", "50%", "100%"] },
+    rightShift: { x: ["20%", "0%"], opacity: ["0%", "50%", "100%"] },
   };
 
   useLayoutEffect(() => {
@@ -35,14 +42,14 @@ const CoreValues = () => {
       className={
         shiftPoint
           ? "w-[100%] aspect-[1/2] relative overflow-clip"
-          : "w-[100%] aspect-[2/1] relative"
+          : "w-[100%] aspect-[2/1] relative overflow-clip"
       }
     >
       <div>
         <motion.div
           variants={dropVariant}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           transition={{ duration: 0.5, delay: 0.4 }}
           className={
             shiftPoint
@@ -56,7 +63,7 @@ const CoreValues = () => {
         <motion.div
           variants={dropVariant}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           transition={{ duration: 0.5, delay: 0 }}
           className={
             shiftPoint
@@ -74,7 +81,7 @@ const CoreValues = () => {
         <motion.div
           variants={dropVariant}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           transition={{ duration: 0.5, delay: 0.1 }}
           className={
             shiftPoint
@@ -88,7 +95,7 @@ const CoreValues = () => {
         <motion.div
           variants={dropVariant}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           transition={{ duration: 0.5, delay: shiftPoint ? 0 : 0.2 }}
           className={
             shiftPoint
@@ -106,7 +113,7 @@ const CoreValues = () => {
         <motion.div
           variants={dropVariant}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           transition={{ duration: 0.5, delay: 0.5 }}
           className={
             shiftPoint
@@ -120,7 +127,7 @@ const CoreValues = () => {
         <motion.div
           variants={dropVariant}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           transition={{ duration: 0.5, delay: 0.3 }}
           className={
             shiftPoint
@@ -134,7 +141,7 @@ const CoreValues = () => {
         <motion.div
           variants={dropVariant}
           initial="initial"
-          animate="animate"
+          whileInView="animate"
           transition={{ duration: 0.5, delay: 0.6 }}
           className={
             shiftPoint
@@ -145,33 +152,47 @@ const CoreValues = () => {
           <Image src={Knowledge} className="w-[100%] h-auto" alt="knowledge" />
         </motion.div>
 
-        <Image
-          src={Hexagon}
+        <motion.div
+          variants={shiftVariant}
+          initial="initial"
+          whileInView="rightShift"
+          transition={{ duration: 0.5 }}
           className={
             shiftPoint
               ? "absolute bottom-[4%] -right-[26%] w-[40%] h-auto"
               : "hidden"
           }
-          alt="decor hex"
-        />
-        <Image
-          src={Hexagon}
+        >
+          <Image src={Hexagon} className="w-[100%] h-auto" alt="decor hex" />
+        </motion.div>
+
+        <motion.div
+          variants={shiftVariant}
+          initial="initial"
+          whileInView="rightShift"
+          transition={{ duration: 0.5 }}
           className={
             shiftPoint
               ? "absolute bottom-[60.5%] -right-[26%] w-[40%] h-auto"
               : "hidden"
           }
-          alt="decor hex"
-        />
-        <Image
-          src={Hexagon}
+        >
+          <Image src={Hexagon} className="w-[100%] h-auto" alt="decor hex" />
+        </motion.div>
+
+        <motion.div
+          variants={shiftVariant}
+          initial="initial"
+          whileInView="leftShift"
+          transition={{ duration: 0.5 }}
           className={
             shiftPoint
               ? "absolute bottom-[69.8%] right-[72%] w-[40%] h-auto"
               : "hidden"
           }
-          alt="decor hex"
-        />
+        >
+          <Image src={Hexagon} className="w-[100%] h-auto" alt="decor hex" />
+        </motion.div>
       </div>
       <div
         className={
@@ -182,7 +203,7 @@ const CoreValues = () => {
       >
         <motion.p
           initial={{ opacity: 0 }}
-          animate={{ x: ["-20%", "0%"], opacity: 1 }}
+          whileInView={{ x: ["-20%", "0%"], opacity: 1 }}
           transition={{ duration: 0.5, delay: 0 }}
           className={
             shiftPoint
@@ -194,7 +215,7 @@ const CoreValues = () => {
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}
-          animate={{ x: ["-20%", "0%"], opacity: 1 }}
+          whileInView={{ x: ["-20%", "0%"], opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className={
             shiftPoint
