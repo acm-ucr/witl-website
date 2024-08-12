@@ -17,7 +17,7 @@ const animation = {
 const OurAlumni = () => {
   return (
     <div className="flex justify-center">
-      <div className="grid grid-cols-4 gap-[1vw] m-4 w-[90%]">
+      <div className="grid grid-cols-4 gap-[3vw] m-4 w-[90%]">
         <motion.div
           variants={animation}
           transition={{ delay: 0.1 }}
