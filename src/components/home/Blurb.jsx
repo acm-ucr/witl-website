@@ -16,6 +16,8 @@ const animate = {
   },
 };
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>;
+
 const Blurb = () => {
   return (
     <div className="bg-witl-purple-300 md:min-h-[1200px] max-h-screen flex justify-center items-center">
@@ -38,7 +40,7 @@ const Blurb = () => {
             <Image
               src={teamphoto1}
               alt="teamphoto1"
-              className="w-full h-auto object-cover rounded md:rounded-3xl scale-110 md:scale-100"
+              className="w-full h-auto 3xl:h-[50vh] 4xl:h-[40vh] object-cover rounded md:rounded-3xl scale-110 md:scale-100"
             />{" "}
           </motion.div>
           <div className="col-span-3 place-items-stretch justify-start max-h-96 max-w-screen">
@@ -59,7 +61,7 @@ const Blurb = () => {
                 initial="start"
                 whileInView="end"
                 transition={{ delay: 0.3 }}
-                className="text-right tracking-tighter md:tracking-wide text-xs md:text-4xl -mt-2 md:-mt-14 mr-6 md:mr-8 md:pl-10 md:pr-20 leading-tight md:leading-normal"
+                className="text-right tracking-tighter md:tracking-wide text-xs 2xl:text-[2.5rem] -mt-2 md:-mt-14 mr-6 md:mr-8 md:pl-10 md:pr-20 leading-tight lg:leading-normal"
               >
                 <span>
                   stands <br /> as an organization catered to the diverse

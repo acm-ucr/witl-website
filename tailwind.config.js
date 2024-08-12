@@ -42,6 +42,11 @@ module.exports = {
         collapse: "collapse 0.4s ease-in-out forwards",
         expand: "expand 0.4s ease-in-out forwards",
       },
+      screens: {
+        "3xl": "1920px",
+        "4xl": "2560px",
+        "5xl": "3840px",
+      },
     },
   },
   plugins: [],
