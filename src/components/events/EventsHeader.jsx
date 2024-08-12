@@ -16,7 +16,7 @@ const animationImage = {
 
 function Header() {
   return (
-    <div className="bg-witl-purple-300 relative mt-[5%] py-[5%]">
+    <div className="bg-witl-purple-300 relative mt-[5%] pt-[5%] pb-[7%]">
       <motion.div
         className="flex justify-end"
         variants={animationImage}
@@ -24,16 +24,14 @@ function Header() {
         initial="hidden"
         whileInView="show"
       >
-        {" "}
         <Image
-          className="w-[70%] object-cover h-auto pt-16 md:pt-0"
+          className="w-[60%] object-cover pt-16 md:pt-0"
           src={networkingdinner}
           alt="networking dinner"
-        />{" "}
+        />
       </motion.div>
-
       <motion.p
-        className="text-witl-purple-100 text-5xl md:text-9xl absolute left-[4%] top-[75%] md:top-[65%] p-[1%]"
+        className="text-witl-purple-100 text-[12vw] absolute left-[4%] top-[69%] md:top-[56%]"
         variants={animation}
         transition={{ delay: 0.3 }}
         initial="hidden"
