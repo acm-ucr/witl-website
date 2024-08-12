@@ -59,7 +59,7 @@ const Blurb = () => {
                 initial="start"
                 whileInView="end"
                 transition={{ delay: 0.3 }}
-                className="text-right tracking-tighter md:tracking-wide text-xs md:text-4xl -mt-2 md:mt-0 mr-6 md:mr-8 md:pl-10 md:pr-20 leading-tight"
+                className="text-right tracking-tighter md:tracking-wide text-xs md:text-4xl -mt-2 md:-mt-14 mr-6 md:mr-8 md:pl-10 md:pr-20 leading-tight md:leading-normal"
               >
                 <span>
                   stands <br /> as an organization catered to the diverse
