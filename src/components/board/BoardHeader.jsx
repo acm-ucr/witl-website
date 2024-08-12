@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import BoardIMG from "@/public/board/Exec_Board.webp";
+import BoardIMG from "@/public/board/boardheaderpic.webp";
 import { motion } from "framer-motion";
 
 const animation = {
