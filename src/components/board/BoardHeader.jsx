@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import BoardIMG from "@/public/board/Exec_Board.webp";
+import BoardIMG from "@/public/board/boardheaderpic.webp";
 import { motion } from "framer-motion";
 
 const animation = {
@@ -15,7 +15,7 @@ const animationImage = {
 
 const BoardHeader = () => {
   return (
-    <div className="bg-witl-purple-300 flex flex-col pb-[15%] mt-[5%]">
+    <div className="bg-witl-purple-300 flex flex-col pb-[15%] mt-[7%] md:mt-[5%]">
       <motion.div
         className="flex justify-end"
         variants={animationImage}
