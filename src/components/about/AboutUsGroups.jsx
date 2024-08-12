@@ -145,24 +145,18 @@ const AboutUsGroups = () => {
 
   return (
     <div className="relative w-[100%] aspect-[4/3] mt-[-100px]">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+      <div
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[15%] left-[-5%] opacity-0"
         ref={im0}
       >
         <Image src={aboutItems[rightInd]} alt="group pic" />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+      </div>
+      <div
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[15%] right-[-5%] opacity-0"
         ref={im4}
       >
         <Image src={aboutItems[leftInd]} alt="group pic" />
-      </motion.div>
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
