@@ -146,37 +146,47 @@ const AboutUsGroups = () => {
   return (
     <div className="relative w-[100%] aspect-[4/3] mt-[-100px]">
       <div
-        ref={im0}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[15%] left-[-5%] opacity-0"
+        ref={im0}
       >
         <Image src={aboutItems[rightInd]} alt="group pic" />
       </div>
       <div
-        ref={im4}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[15%] right-[-5%] opacity-0"
+        ref={im4}
       >
         <Image src={aboutItems[leftInd]} alt="group pic" />
       </div>
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         ref={im1}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[18%] md:top-[21%] lg:top-[20%] left-[-0%]" // left photo
         onClick={prevSlide}
       >
         <Image src={aboutItems[leftInd]} alt="group pic" />
-      </div>
-      <div
-        ref={im2}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[3%] md:top-[6%] lg:top-[4%] xl:top-[5%] 2xl:top-[2%] left-[50%] mx-[-15%] lg:mx-[-10%] lg:mt-[1%]" // center photo
+        ref={im2}
       >
         <Image src={aboutItems[currInd]} alt="group pic" />
-      </div>
-      <div
-        ref={im3}
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[18%] md:top-[21%] lg:top-[20%] right-[-0%]" // right photo
         onClick={nextSlide}
+        ref={im3}
       >
         <Image src={aboutItems[rightInd]} alt="group pic" />
-      </div>
+      </motion.div>
+
       <div className="relative w-[7vw] left-[50vw] -mx-[3.5vw] top-[80%] 2xl:top-[70%] grid grid-cols-3">
         {aboutItems.map((ITEMS, index) => (
           <motion.div
