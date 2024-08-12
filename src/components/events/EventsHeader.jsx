@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import networkingdinner from "@/public/images/networkingdinner.webp";
+import networkingdinner from "@/public/assets/networkingdinner.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
