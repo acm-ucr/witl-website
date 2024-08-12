@@ -4,7 +4,7 @@ import AboutUsGroups from "./AboutUsGroups";
 
 const AboutHeader = () => {
   return (
-    <div className="bg-witl-purple-300 max-w-screen aspect-[3/4] lg:aspect-[3/2] flex flex-col rounded-b-[48px] items-center justify-center mt-[5%] overflow-clip">
+    <div className="bg-witl-purple-300 max-w-screen aspect-[3/4] lg:aspect-[4/3] flex flex-col rounded-b-[48px] items-center justify-center mt-[5%] overflow-clip">
       <div className="relative flex flex-col tracking-widest mt-[5%]">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
