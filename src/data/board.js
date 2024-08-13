@@ -1,4 +1,4 @@
-import Ashley from "@/public/board/AshleyTsai.webp";
+import Ashley from "@/public/board/Ashley.webp";
 import Leanna from "@/public/board/Leanna1.webp";
 import Priyanka from "@/public/board/Priyanka.webp";
 import Dominion from "@/public/board/Dominion.webp";
