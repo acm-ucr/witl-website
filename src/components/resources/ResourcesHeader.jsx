@@ -77,7 +77,7 @@ const ResourcesHeader = () => {
       <Link
         href="https://airtable.com/app8y5MagB2qSjFad/tblr8HSGgPsQhDrzP/viwCtSFJpoeP5wF9s?blocks=hide"
         target="_blank"
-        className="text-center text-xs md:text-2xl text-witl-white-100 border-y-2 w-full mt-[3%] hover:underline"
+        className="text-center text-xs md:text-2xl text-witl-white-100 border-y-2 w-full mt-[10%] md:mt-[3%] hover:underline"
       >
         CHECKOUT OUR RESOURCE SHEET
       </Link>
