@@ -25,13 +25,13 @@ function Header() {
         whileInView="show"
       >
         <Image
-          className="w-[60%] object-cover pt-16 md:pt-0"
+          className="w-[60.3%] object-cover pt-16 md:pt-0"
           src={networkingdinner}
           alt="networking dinner"
         />
       </motion.div>
       <motion.p
-        className="text-witl-purple-100 text-[12vw] absolute left-[4%] top-[69%] md:top-[56%]"
+        className="text-witl-purple-100 text-[12vw] absolute left-[4%] top-[69%] md:top-[53.5%]"
         variants={animation}
         transition={{ delay: 0.3 }}
         initial="hidden"
