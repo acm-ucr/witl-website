@@ -8,6 +8,7 @@ import BottomResourcesBanner from "./BottomResourcesBanner";
 import { BsSubstack } from "react-icons/bs";
 import { FaDiscord, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
+import Link from "next/link";
 
 const ResourcesHeader = () => {
   return (
@@ -73,9 +74,13 @@ const ResourcesHeader = () => {
         <p>RESOURCES</p>
       </motion.div>
 
-      <p className="text-center text-xs md:text-2xl text-witl-white-100  border-y-2 w-full mt-[3%]">
+      <Link
+        href="https://airtable.com/app8y5MagB2qSjFad/tblr8HSGgPsQhDrzP/viwCtSFJpoeP5wF9s?blocks=hide"
+        target="_blank"
+        className="text-center text-xs md:text-2xl text-witl-white-100 border-y-2 w-full mt-[3%] hover:underline"
+      >
         CHECKOUT OUR RESOURCE SHEET
-      </p>
+      </Link>
     </div>
   );
 };
