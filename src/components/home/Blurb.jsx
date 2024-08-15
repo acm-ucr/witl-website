@@ -24,7 +24,7 @@ const Blurb = () => {
         initial="start"
         whileInView="end"
         transition={{ delay: 0.2 }}
-        className="bg-witl-white-100 rounded-[2rem] md:rounded-[6rem] md:scale-60 md:p-0 md:pb-10 w-10/12 4xl:pb-40"
+        className="bg-witl-white-100 rounded-[2rem] md:rounded-[6rem] md:scale-60 md:p-0 md:pb-10 lg:pb-0 w-10/12 4xl:pb-40"
       >
         <div className="grid grid-flow-row-dense grid-cols-6">
           <motion.div
