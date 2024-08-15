@@ -15,7 +15,7 @@ const Board = () => {
             transition={{
               delay: (index % 3) * 0.2,
               type: "tween",
-              duration: 0.75,
+              duration: 0.5,
             }}
           >
             <BoardCard
