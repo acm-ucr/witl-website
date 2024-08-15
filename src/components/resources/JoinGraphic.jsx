@@ -71,7 +71,7 @@ const JoinGraphic = () => {
       <div
         className={
           shiftPoint
-            ? "relative w-10/12 aspect-[5/11] mt-[20%] bg-white"
+            ? "relative w-10/12 aspect-[5/11] mt-[10%] bg-white"
             : "relative w-10/12 aspect-[22/9] bg-white"
         }
       >
