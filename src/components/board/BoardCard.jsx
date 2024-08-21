@@ -12,9 +12,7 @@ const BoardCard = ({ image, name, position, linkedIn }) => {
       <p className="text-[90%] text-center flex justify-center md:text-4xl">
         {name}
       </p>
-      <p className="text-[60%] text-center flex justify-center md:text-2xl">
-        {position}
-      </p>
+      <p className="text-[75%] text-center md:text-2xl">{position}</p>
     </div>
   );
 };
