@@ -41,7 +41,7 @@ const OurMission = () => {
             initial="start"
             whileInView="end"
             transition={{ delay: 0.45 }}
-            className="flex items-center md:items-start p-[5%] md:pl-[5%] md:pt-[6%] text-[3vw] md:text-[1.8vw] lg:test-[1.86vw] 2xl:text-[1.47vw] leading-[120%] text-center md:text-left md:w-[105%]"
+            className="flex items-center md:items-start px-[5%] pt-[5%] md:p-[5%] text-[3vw] md:text-[1.8vw] lg:test-[1.86vw] 2xl:text-[1.47vw] leading-[120%] text-center md:text-left md:w-[105%]"
           >
             Womxn in the Law is UC Riverside’s undergraduate community
             passionate about law and the pursuit of justice. We aim to create a
