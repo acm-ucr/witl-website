@@ -59,7 +59,7 @@ const OurMission = () => {
             initial="start"
             whileInView="end"
             transition={{ delay: 0.45 }}
-            className="flex justify-center items-center md:items-start p-[5%] md:pb-[7%] md:ml-[15%] md:w-[85%]"
+            className="flex justify-center items-center md:items-start p-[5%] md:ml-[15%] md:w-[85%]"
           >
             <Image src={Pic} alt="grouppic2" />
           </motion.div>
