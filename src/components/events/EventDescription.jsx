@@ -18,7 +18,7 @@ const EventDescription = ({ event }) => {
           </div>
           <p className="-rotate-90 text-3xl text-witl-purple-500">MORE</p>
         </div>
-        <div className="w-full border-t-[2px] w-[90%] mt-1 mb-4 border-black"></div>
+        <div className="border-t-[2px] w-[90%] mt-1 mb-4 border-black"></div>
       </div>
     </div>
   );
