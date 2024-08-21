@@ -2,7 +2,7 @@ import { BsSubstack } from "react-icons/bs";
 import { FaDiscord, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 
-export const links = [
+export const footerLinks = [
   {
     icon: <FaInstagram />,
     link: "https://www.instagram.com/ucrwitl/",

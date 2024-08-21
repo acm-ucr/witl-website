@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 import logo from "@/public/assets/logo.webp";
 import Link from "next/link";
-import { links } from "@/data/footer";
+import { footerLinks } from "@/data/footer.js";
 
 const Footer = () => {
   return (
     <div className="p-3 flex items-center bg-witl-purple-300 justify-between">
       <div className="flex gap-4 md:gap-8 justify-center items-center">
-        {links.map((link, index) => (
+        {footerLinks.map((link, index) => (
           <Link
             key={index}
             href={link.link}
