@@ -9,10 +9,10 @@ const BoardCard = ({ image, name, position, linkedIn }) => {
           <Image src={image} alt="picture of person" />
         </Link>
       </div>
-      <p className="text-[80%] text-center flex justify-center md:text-4xl">
+      <p className="text-[90%] text-center flex justify-center md:text-4xl">
         {name}
       </p>
-      <p className="text-[40%] text-center flex justify-center md:text-2xl ">
+      <p className="text-[60%] text-center flex justify-center md:text-2xl">
         {position}
       </p>
     </div>
