@@ -146,13 +146,13 @@ const AboutUsGroups = () => {
   return (
     <div className="relative w-[100%] aspect-[4/3] mt-[-100px]">
       <div
-        className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[15%] left-[-5%] opacity-0"
+        className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[18%] md:top-[21%] lg:top-[20%] left-[-5%] opacity-0"
         ref={im0}
       >
         <Image src={aboutItems[rightInd]} alt="group pic" />
       </div>
       <div
-        className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[15%] right-[-5%] opacity-0"
+        className="absolute w-[30%] lg:w-[20%] aspect-[3/5] top-[18%] md:top-[21%] lg:top-[20%] right-[-5%] opacity-0"
         ref={im4}
       >
         <Image src={aboutItems[leftInd]} alt="group pic" />

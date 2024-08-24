@@ -55,9 +55,16 @@ const Resources = () => {
           initial="start"
           whileInView="end"
           transition={{ delay: 0.2 }}
-          className="bg-witl-purple-300 text-white font-marcellus rounded-xl md:w-1/4 w-1/2 text-center text-2xl py-4 mb-4"
+          className="bg-witl-purple-300 text-white font-marcellus rounded-xl md:w-1/4 w-1/2 text-center text-2xl py-4 mb-4 hover:underline"
         >
-          UPDATES
+          <Link
+            href={
+              "https://docs.google.com/spreadsheets/d/1HZp6TgDrWFIjEVY21RpXMgdMnGkAjG2DsXxfySBSy84/edit?usp=sharing"
+            }
+            target="_blank"
+          >
+            UPDATES
+          </Link>
         </motion.div>
         <motion.div
           variants={animate}
@@ -69,7 +76,7 @@ const Resources = () => {
           <Link
             href="https://www.instagram.com/p/C1vm4lJL716/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D"
             target="_blank"
-            className="text-witl-black"
+            className="text-witl-black underline"
           >
             What can I do with LeGAL Rewards?
           </Link>
