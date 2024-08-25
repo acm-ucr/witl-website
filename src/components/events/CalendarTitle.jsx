@@ -1,6 +1,6 @@
 const CalendarTitle = () => {
   return (
-    <div className="font-marcellus-sc text-7xl md:text-8xl lg:text-9xl leading-none ml-[3%]">
+    <div className="flex justify-center md:justify-start font-marcellus-sc text-7xl md:text-8xl lg:text-9xl leading-none mr-[2%] md:mr-[0%] md:ml-[3%]">
       Calendar
     </div>
   );

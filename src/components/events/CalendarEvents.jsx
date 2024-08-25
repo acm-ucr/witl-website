@@ -6,18 +6,19 @@ import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import CustomToolbar from "./CustomToolbar";
 import CustomEvent from "./CustomEvent";
+import Modal from "./Modal";
 import "./index.css";
 const localizer = momentLocalizer(moment);
 
 const CalendarEvents = ({ events }) => {
   const [date, setDate] = useState(new Date());
-  // const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   return (
     <div>
       <CalendarTitle />
-      <div className="h-screen flex justify-center">
-        <div className="w-[85%] font-marcellus-sc mb-[5%]">
+      <div className="h-[50vh] md:h-screen flex justify-center">
+        <div className="w-[90%] md:w-[85%] font-marcellus-sc mb-[5%]">
           <Calendar
             className="text-3xl"
             localizer={localizer}
@@ -28,7 +29,7 @@ const CalendarEvents = ({ events }) => {
             events={events}
             defaultView="month"
             views={["month"]}
-            // onSelectEvent={(event) => setSelectedEvent(event)}
+            onSelectEvent={(event) => setSelectedEvent(event)}
             components={{
               toolbar: CustomToolbar,
               event: CustomEvent,
@@ -54,6 +55,9 @@ const CalendarEvents = ({ events }) => {
             }}
           />
         </div>
+        {selectedEvent && (
+          <Modal event={selectedEvent} setEvent={setSelectedEvent} />
+        )}
       </div>
     </div>
   );
