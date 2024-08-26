@@ -51,6 +51,34 @@ const Page = () => {
             location: "WCH",
             allDay: false,
             summary: "pain",
+            source: "cnn.com",
+          },
+          {
+            title: "Test Event 3",
+            start: new Date(2024, 8, 14, 10, 0), // Sept 14, 2024, 10:00
+            end: new Date(2024, 8, 14, 11, 0), // Sept 14, 2024, 11:00
+            location: "WCH",
+            allDay: false,
+            summary: "pain",
+            source: "cnn.com",
+          },
+          {
+            title: "Test Event 4",
+            start: new Date(2024, 8, 14, 10, 0), // Sept 14, 2024, 10:00
+            end: new Date(2024, 8, 14, 11, 0), // Sept 14, 2024, 11:00
+            location: "WCH",
+            allDay: false,
+            summary: "pain",
+            source: "cnn.com",
+          },
+          {
+            title: "Test Event 5",
+            start: new Date(2024, 8, 14, 10, 0), // Sept 14, 2024, 10:00
+            end: new Date(2024, 8, 14, 11, 0), // Sept 14, 2024, 11:00
+            location: "WCH",
+            allDay: false,
+            summary: "pain",
+            source: "cnn.com",
           },
         ];
 
