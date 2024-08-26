@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { Calendar, momentLocalizer } from "react-big-calendar";
-import CalendarTitle from "./CalendarTitle";
 import moment from "moment";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+import { Calendar, momentLocalizer } from "react-big-calendar";
 import CustomToolbar from "./CustomToolbar";
 import CustomEvent from "./CustomEvent";
 import Modal from "./Modal";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./index.css";
+
 const localizer = momentLocalizer(moment);
 
 const CalendarEvents = ({ events }) => {
@@ -16,24 +16,23 @@ const CalendarEvents = ({ events }) => {
 
   return (
     <div>
-      <CalendarTitle />
       <div className="h-[50vh] md:h-screen flex justify-center">
         <div className="w-[90%] md:w-[85%] font-marcellus-sc mb-[5%]">
           <Calendar
             className="text-3xl"
-            localizer={localizer}
             date={date}
             onNavigate={(newDate) => {
               setDate(newDate);
             }}
             events={events}
+            localizer={localizer}
             defaultView="month"
             views={["month"]}
-            onSelectEvent={(event) => setSelectedEvent(event)}
             components={{
               toolbar: CustomToolbar,
               event: CustomEvent,
             }}
+            onSelectEvent={(event) => setSelectedEvent(event)}
             eventPropGetter={() => {
               return {
                 className: "!p-0 !bg-transparent",
@@ -56,8 +55,16 @@ const CalendarEvents = ({ events }) => {
           />
         </div>
         {selectedEvent && (
-          <Modal event={selectedEvent} setEvent={setSelectedEvent} />
+          <Modal
+            setEvents={setSelectedEvent}
+            title={setSelectedEvent.summary}
+            description={selectedEvent.description}
+            location={selectedEvent.location}
+            startTime={selectedEvent.start}
+            endTime={selectedEvent.end}
+          />
         )}
+        {console.log(selectedEvent)}
       </div>
     </div>
   );

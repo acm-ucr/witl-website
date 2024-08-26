@@ -2,7 +2,7 @@ const EventDescription = ({ event }) => {
   return (
     <div className="flex relative justify-end max-w-[60%] min-w-[60%]">
       <div className="absolute left-0 top-[50%]">
-        <p className="text-7xl">{event.summary}</p>
+        <p className="text-7xl">{event.title}</p>
         <p className="text-5xl ml-16">{event.location}</p>
       </div>
       <div className="w-80">

@@ -1,6 +1,13 @@
 import { AiOutlinePlus } from "react-icons/ai";
 
-const Modal = ({ event, setEvent }) => {
+const Modal = ({
+  title = "Event Title",
+  startTime,
+  endTime,
+  location = "No Location Specified",
+  description = "No Description Specified",
+  setEvents,
+}) => {
   return (
     <div className="font-playfair fixed top-[56%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75vw] md:w-[50vw] bg-pad-beige z-10 drop-shadow-lg">
       <div className={`flex justify-between items-center ${event.color}`}>
