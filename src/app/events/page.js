@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import EventsHeader from "@/components/events/EventsHeader.jsx";
 import CalendarEvents from "@/components/events/CalendarEvents.jsx";
-import EventDescriptions from "@/components/events/EventDescriptons.jsx";
+import EventDescriptions from "@/components/events/EventDescriptions.jsx";
 import CalendarTitle from "@/components/events/CalendarTitle";
 const Page = () => {
   const [events, setEvents] = useState([]);
@@ -38,29 +38,31 @@ const Page = () => {
         const mockEvents = [
           {
             title: "Test Event 1",
-            start: new Date(2024, 7, 13, 14, 0), // Aug 13, 2024, 14:00
-            end: new Date(2024, 7, 13, 15, 0), // Aug 13, 2024, 15:00
-            location: "WCH",
+            start: new Date(2024, 7, 13, 14, 22),
+            end: new Date(2024, 7, 13, 15, 0),
+            location: "Winston Chung Hall 205/206",
             allDay: true,
-            summary: "pain",
+            summary: "Card Making",
+            description:
+              "Lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum",
+            source: "cnn.com",
           },
           {
             title: "Test Event 2",
-            start: new Date(2024, 7, 14, 10, 0), // Aug 14, 2024, 10:00
-            end: new Date(2024, 7, 14, 11, 0), // Aug 14, 2024, 11:00
-            location: "WCH",
+            start: new Date(2024, 7, 14, 1, 0),
+            end: new Date(2024, 7, 14, 2, 0),
+            location: "Sproul Hall",
             allDay: false,
-            summary: "pain",
-            source: "cnn.com",
+            summary: "General Meeting",
+            description: "No description",
           },
           {
             title: "Test Event 3",
-            start: new Date(2024, 8, 14, 10, 0), // Sept 14, 2024, 10:00
-            end: new Date(2024, 8, 14, 11, 0), // Sept 14, 2024, 11:00
-            location: "WCH",
+            start: new Date(2024, 7, 29, 15, 0),
+            end: new Date(2024, 7, 29, 18, 0),
+            location: "Bourns Hall",
             allDay: false,
-            summary: "pain",
-            source: "cnn.com",
+            summary: "Letters",
           },
           {
             title: "Test Event 4",
@@ -69,7 +71,6 @@ const Page = () => {
             location: "WCH",
             allDay: false,
             summary: "pain",
-            source: "cnn.com",
           },
           {
             title: "Test Event 5",
@@ -78,7 +79,6 @@ const Page = () => {
             location: "WCH",
             allDay: false,
             summary: "pain",
-            source: "cnn.com",
           },
         ];
 
