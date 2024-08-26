@@ -17,7 +17,7 @@ const EventDescriptions = ({ events }) => {
           type: "tween",
           duration: 0.5,
         }}
-        className="ml-[4%] relative mb-[18vh]"
+        className="ml-[4%] relative mb-[8vh] md:mb-[18vh]"
       >
         <div className="aspect-[3/1] md:aspect-[4/1] bg-witl-purple-600 w-[42%]"></div>
         <p className="absolute top-[45%] left-[25%] text-7xl lg:text-9xl">

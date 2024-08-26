@@ -35,7 +35,7 @@ const CalendarEvents = ({ events }) => {
             onSelectEvent={(event) => setSelectedEvent(event)}
             eventPropGetter={() => {
               return {
-                className: "!p-1 !bg-transparent",
+                className: " !bg-witl-purple-200",
               };
             }}
             dayPropGetter={(event) => {

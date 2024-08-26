@@ -43,18 +43,15 @@ const Page = () => {
             location: "Winston Chung Hall 205/206",
             allDay: true,
             summary: "Card Making",
-            description:
-              "Lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum",
+            description: "This is just a test",
             source: "cnn.com",
           },
           {
             title: "Test Event 2",
             start: new Date(2024, 7, 14, 1, 0),
             end: new Date(2024, 7, 14, 2, 0),
-            location: "Sproul Hall",
             allDay: false,
             summary: "General Meeting",
-            description: "No description",
           },
           {
             title: "Test Event 3",
@@ -64,24 +61,7 @@ const Page = () => {
             allDay: false,
             summary: "Letters",
           },
-          {
-            title: "Test Event 4",
-            start: new Date(2024, 8, 14, 10, 0), // Sept 14, 2024, 10:00
-            end: new Date(2024, 8, 14, 11, 0), // Sept 14, 2024, 11:00
-            location: "WCH",
-            allDay: false,
-            summary: "pain",
-          },
-          {
-            title: "Test Event 5",
-            start: new Date(2024, 8, 14, 10, 0), // Sept 14, 2024, 10:00
-            end: new Date(2024, 8, 14, 11, 0), // Sept 14, 2024, 11:00
-            location: "WCH",
-            allDay: false,
-            summary: "pain",
-          },
         ];
-
         setEvents(mockEvents);
       } catch (error) {
         console.error("Error fetching data: ", error);
