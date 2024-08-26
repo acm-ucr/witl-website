@@ -18,7 +18,7 @@ const monthNames = [
 const CustomToolbar = (event) => {
   return (
     <>
-      <div className="flex justify-center md:justify-between  mb-[1%] font-junge">
+      <div className="flex justify-center md:justify-between mb-[1%] leading-none font-junge">
         <div className="flex items-center">
           <FaArrowLeftLong
             onClick={() => {

@@ -38,17 +38,19 @@ const Page = () => {
         const mockEvents = [
           {
             title: "Test Event 1",
-            start: new Date(2024, 8, 13, 14, 0), // Aug 13, 2024, 14:00
-            end: new Date(2024, 8, 13, 15, 0), // Aug 13, 2024, 15:00
+            start: new Date(2024, 7, 13, 14, 0), // Aug 13, 2024, 14:00
+            end: new Date(2024, 7, 13, 15, 0), // Aug 13, 2024, 15:00
             location: "WCH",
             allDay: true,
+            summary: "pain",
           },
           {
             title: "Test Event 2",
-            start: new Date(2024, 8, 14, 10, 0), // Aug 14, 2024, 10:00
-            end: new Date(2024, 8, 14, 11, 0), // Aug 14, 2024, 11:00
+            start: new Date(2024, 7, 14, 10, 0), // Aug 14, 2024, 10:00
+            end: new Date(2024, 7, 14, 11, 0), // Aug 14, 2024, 11:00
             location: "WCH",
             allDay: false,
+            summary: "pain",
           },
         ];
 

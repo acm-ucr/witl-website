@@ -4,7 +4,7 @@ const EventDescriptions = ({ events }) => {
   return (
     <div className="mt-[5%]">
       <div className="ml-[4%] relative mb-[6%]">
-        <div className="bg-witl-purple-600 w-[42%] h-[160px]"></div>
+        <div className="aspect-[1/1] md:aspect-[4/1] bg-witl-purple-600 w-[42%]"></div>
         <p className="absolute top-[45%] left-[25%] text-7xl lg:text-9xl">
           Month
         </p>
@@ -18,7 +18,7 @@ const EventDescriptions = ({ events }) => {
           <p>No Upcoming Events</p>
         )}
       </div>
-      <div className="bg-witl-purple-600 w-[42%] h-[160px] mt-[10%] ml-[55%]"></div>
+      <div className="aspect-[1/1] md:aspect-[4/1] bg-witl-purple-600 w-[42%] mt-[10%] ml-[55%]"></div>
     </div>
   );
 };

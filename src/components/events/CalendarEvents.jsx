@@ -16,10 +16,10 @@ const CalendarEvents = ({ events }) => {
 
   return (
     <div>
-      <div className="h-[50vh] md:h-screen flex justify-center">
-        <div className="w-[90%] md:w-[85%] font-marcellus-sc mb-[5%]">
+      <div className="h-[60vh] md:h-[125vh] flex justify-center">
+        <div className="w-[90%] md:w-[75%] h-[55vh] md:h-[100vh] font-marcellus-sc mb-[10vh]">
           <Calendar
-            className="text-3xl"
+            className="text-[4vw] md:text-[2vw]"
             date={date}
             onNavigate={(newDate) => {
               setDate(newDate);
@@ -35,7 +35,7 @@ const CalendarEvents = ({ events }) => {
             onSelectEvent={(event) => setSelectedEvent(event)}
             eventPropGetter={() => {
               return {
-                className: "!p-0 !bg-transparent",
+                className: "!p-1 !bg-transparent",
               };
             }}
             dayPropGetter={(event) => {
@@ -43,7 +43,7 @@ const CalendarEvents = ({ events }) => {
                 className: `${
                   new Date(event).toLocaleDateString() ===
                   new Date().toLocaleDateString()
-                    ? "!bg-witl-purple-200"
+                    ? "!bg-witl-purple-300"
                     : "!bg-transparent"
                 }`,
                 style: {
@@ -55,16 +55,8 @@ const CalendarEvents = ({ events }) => {
           />
         </div>
         {selectedEvent && (
-          <Modal
-            setEvents={setSelectedEvent}
-            title={setSelectedEvent.summary}
-            description={selectedEvent.description}
-            location={selectedEvent.location}
-            startTime={selectedEvent.start}
-            endTime={selectedEvent.end}
-          />
+          <Modal event={selectedEvent} setEvent={setSelectedEvent} />
         )}
-        {console.log(selectedEvent)}
       </div>
     </div>
   );
