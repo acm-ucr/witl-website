@@ -1,41 +1,41 @@
 "use client";
 import React, { useState } from "react";
-import { Calendar, momentLocalizer } from "react-big-calendar";
-import CalendarTitle from "./CalendarTitle";
 import moment from "moment";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+import { Calendar, momentLocalizer } from "react-big-calendar";
 import CustomToolbar from "./CustomToolbar";
 import CustomEvent from "./CustomEvent";
+import Modal from "./Modal";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./index.css";
+
 const localizer = momentLocalizer(moment);
 
 const CalendarEvents = ({ events }) => {
   const [date, setDate] = useState(new Date());
-  // const [selectedEvent, setSelectedEvent] = useState(null);
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   return (
     <div>
-      <CalendarTitle />
-      <div className="h-screen flex justify-center">
-        <div className="w-[85%] font-marcellus-sc mb-[5%]">
+      <div className="h-[60vh] md:h-[175vh] flex justify-center">
+        <div className="w-[90%] md:w-[75%] h-[55vh] md:h-[150vh] font-marcellus-sc mb-[10vh]">
           <Calendar
-            className="text-3xl"
-            localizer={localizer}
+            className="text-[4vw] md:text-[2vw]"
             date={date}
             onNavigate={(newDate) => {
               setDate(newDate);
             }}
             events={events}
+            localizer={localizer}
             defaultView="month"
             views={["month"]}
-            // onSelectEvent={(event) => setSelectedEvent(event)}
             components={{
               toolbar: CustomToolbar,
               event: CustomEvent,
             }}
+            onSelectEvent={(event) => setSelectedEvent(event)}
             eventPropGetter={() => {
               return {
-                className: "!p-0 !bg-transparent",
+                className: "!bg-witl-purple-200",
               };
             }}
             dayPropGetter={(event) => {
@@ -43,7 +43,7 @@ const CalendarEvents = ({ events }) => {
                 className: `${
                   new Date(event).toLocaleDateString() ===
                   new Date().toLocaleDateString()
-                    ? "!bg-witl-purple-200"
+                    ? "!bg-witl-purple-300"
                     : "!bg-transparent"
                 }`,
                 style: {
@@ -54,6 +54,9 @@ const CalendarEvents = ({ events }) => {
             }}
           />
         </div>
+        {selectedEvent && (
+          <Modal event={selectedEvent} setEvent={setSelectedEvent} />
+        )}
       </div>
     </div>
   );
