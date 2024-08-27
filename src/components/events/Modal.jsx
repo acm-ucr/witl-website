@@ -17,9 +17,7 @@ const Modal = ({ event, setEvent }) => {
         />
       </div>
       <div className="p-3 bg-witl-purple-100 text-sm md:text-lg">
-        <p className="m-0 pl-2 ">
-          {event.location ? event.location : "No Location Specified"}
-        </p>
+        <p className="m-0 pl-2 ">{event.location ? event.location : ""}</p>
         {event.allDay ? (
           <p className="p-2">{event.start.toLocaleDateString()}</p>
         ) : (
@@ -34,7 +32,7 @@ const Modal = ({ event, setEvent }) => {
           </p>
         )}
         <div className="text-sm md:text-lg pl-2">
-          {event.description ? event.description : "No Description Specified"}
+          {event.description ? event.description : ""}
         </div>
       </div>
     </div>

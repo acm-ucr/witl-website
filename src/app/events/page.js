@@ -8,15 +8,15 @@ const Page = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    /* const startDate = new Date(
+    const startDate = new Date(
       new Date().getTime() - 60 * 60 * 24 * 7 * 10 * 1000
     ).toISOString();
     const endDate = new Date(
       new Date().getTime() + 60 * 60 * 24 * 7 * 10 * 1000
-    ).toISOString(); */
+    ).toISOString();
     const fetchData = async () => {
       try {
-        /* const response = await fetch(
+        const response = await fetch(
           `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL}/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}
           &singleEvents=true&orderBy=startTime&timeMin=${startDate}&timeMax=${endDate}`
         );
@@ -34,35 +34,7 @@ const Page = () => {
             (item.hidden = false);
           return item;
         });
-        setEvents(items); */
-        const mockEvents = [
-          {
-            title: "Test Event 1",
-            start: new Date(2024, 7, 13, 14, 22),
-            end: new Date(2024, 7, 13, 15, 0),
-            location: "Winston Chung Hall 205/206",
-            allDay: true,
-            summary: "Card Making",
-            description: "This is just a test",
-            source: "cnn.com",
-          },
-          {
-            title: "Test Event 2",
-            start: new Date(2024, 7, 14, 1, 0),
-            end: new Date(2024, 7, 14, 2, 0),
-            allDay: false,
-            summary: "General Meeting",
-          },
-          {
-            title: "Test Event 3",
-            start: new Date(2024, 7, 29, 15, 0),
-            end: new Date(2024, 7, 29, 18, 0),
-            location: "Bourns Hall",
-            allDay: false,
-            summary: "Letters",
-          },
-        ];
-        setEvents(mockEvents);
+        setEvents(items);
       } catch (error) {
         console.error("Error fetching data: ", error);
       }

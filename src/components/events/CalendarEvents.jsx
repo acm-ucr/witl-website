@@ -16,8 +16,8 @@ const CalendarEvents = ({ events }) => {
 
   return (
     <div>
-      <div className="h-[60vh] md:h-[125vh] flex justify-center">
-        <div className="w-[90%] md:w-[75%] h-[55vh] md:h-[100vh] font-marcellus-sc mb-[10vh]">
+      <div className="h-[60vh] md:h-[175vh] flex justify-center">
+        <div className="w-[90%] md:w-[75%] h-[55vh] md:h-[150vh] font-marcellus-sc mb-[10vh]">
           <Calendar
             className="text-[4vw] md:text-[2vw]"
             date={date}
@@ -35,7 +35,7 @@ const CalendarEvents = ({ events }) => {
             onSelectEvent={(event) => setSelectedEvent(event)}
             eventPropGetter={() => {
               return {
-                className: " !bg-witl-purple-200",
+                className: "!bg-witl-purple-200",
               };
             }}
             dayPropGetter={(event) => {

@@ -42,7 +42,17 @@ const EventDescriptions = ({ events }) => {
             </motion.div>
           ))
         ) : (
-          <p>No Upcoming Events</p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "tween",
+              duration: 0.5,
+            }}
+            className="text-[7vw] text-black text-end w-[90vw] bg-witl-purple-100 pr-[5%]"
+          >
+            No Upcoming Events
+          </motion.div>
         )}
       </div>
       <motion.div
