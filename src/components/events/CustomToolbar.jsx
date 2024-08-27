@@ -26,7 +26,7 @@ const CustomToolbar = (event) => {
             }}
             className="hover:cursor-pointer hover:scale-125 duration-300 transition ease-in-ou mr-[4%] text-4xl md:text-7xl"
           />
-          <div className="flex justify-center">
+          <div className="flex justify-center w-[35vw]">
             <p className="text-5xl md:text-8xl mr-4">
               {monthNames[event.date.getMonth()]}
             </p>
