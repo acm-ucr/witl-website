@@ -18,7 +18,7 @@ const Sponsors = () => {
     <div className="relative bg-witl-purple-300 w-[100%]">
       <div className="text-witl-purple-200 pl-[15%] md:pl-[10%] flex flex-col items-start leading-tight pt-4 md:pt-0">
         <motion.div
-          className="lg:text-[8rem] mt-[10%] text-3xl md:text-6xl"
+          className="text-[10vw]"
           variants={animations}
           initial="start"
           whileInView="end"
@@ -27,7 +27,7 @@ const Sponsors = () => {
           OUR
         </motion.div>
         <motion.div
-          className="lg:text-10xl text-5xl md:text-7xl"
+          className="text-[13vw]"
           variants={animations}
           initial="start"
           whileInView="end"
@@ -36,9 +36,9 @@ const Sponsors = () => {
           &nbsp;&nbsp;SPONSORS
         </motion.div>
       </div>
-      <div className="absolute top-[15%] md:top-[20%] right-[0%] bg-witl-purple-300 text-witl-white-100 font-libre-caslon-text font-bold text-[49.37px] w-[55%]">
+      <div className="absolute top-[15%] right-[0%] bg-witl-purple-300 text-witl-white-100 font-libre-caslon-text font-bold w-[55%]">
         <motion.div
-          className="pl-[3%] py-1 md:py-3 bg-witl-purple-400 text-sm lg:text-5xl md:text-2xl"
+          className="pl-[3%] py-1 md:py-3 bg-witl-purple-400 text-[2vw]"
           variants={animations}
           initial="start"
           whileInView="end"
@@ -47,9 +47,9 @@ const Sponsors = () => {
           BLUEPRINT TEST PREP
         </motion.div>
       </div>
-      <div className="flex flex-col bg-witl-purple-300 text-[49.37px] text-white font-bold">
+      <div className="flex flex-col bg-witl-purple-300 text-white font-bold">
         <motion.div
-          className="w-1/2 bg-witl-purple-400 mb-6 mt-4 py-1 md:py-3 font-libre-caslon-text text-right pr-[2%] md:pr-5 text-sm lg:text-5xl md:text-2xl"
+          className="w-1/2 bg-witl-purple-400 mb-6 mt-4 py-1 md:py-3 font-libre-caslon-text text-right pr-[2%] md:pr-5 text-[2vw]"
           variants={animations}
           initial="start"
           whileInView="end"
@@ -59,7 +59,7 @@ const Sponsors = () => {
         </motion.div>
         <div className="flex justify-end">
           <motion.div
-            className="w-1/3 bg-witl-purple-400 py-1 md:py-3 font-libre-caslon-text pl-[2%] text-left text-sm lg:text-5xl md:text-2xl mt-[-3%] md:mt-[0]"
+            className="w-1/3 bg-witl-purple-400 py-1 md:py-3 font-libre-caslon-text pl-[2%] text-left text-[2vw] mt-[-3%] md:mt-[0]"
             variants={animations}
             initial="start"
             whileInView="end"
