@@ -3,7 +3,7 @@ import Logo from "@/public/witllogo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { items } from "@/data/Nav.js";
+import { items } from "@/data/Nav";
 import { FaBars } from "react-icons/fa";
 
 const Navigation = () => {

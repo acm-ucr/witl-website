@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import BoardIMG from "@/public/board/boardheaderpic.webp";
+import boardheader from "@/public/board/boardheader.webp";
 import { motion } from "framer-motion";
 
 const animation = {
@@ -25,7 +25,7 @@ const BoardHeader = () => {
       >
         <Image
           className="object-cover h-auto w-[60%] mt-[20%] sm:mt-[15%] md:mt-[13%] lg:mt-[8%] 2xl:mt-[5%]"
-          src={BoardIMG}
+          src={boardheader}
           alt="Board"
         />
       </motion.div>
