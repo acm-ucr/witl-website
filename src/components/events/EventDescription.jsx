@@ -18,9 +18,11 @@ const EventDescription = ({ event }) => {
                 ? "0" + (event.start.getMonth() + 1)
                 : event.start.getMonth() + 1}
             </p>
-            <div className="ml-7 md:ml-[4.25rem] border-t-[2px] md:border-t-[4px] w-[7vw] md:w-[5vw] -rotate-[20deg] md:-rotate-[60deg] border-witl-white-200 -translate-y-1 -translate-x-2 md:translate-x-2"></div>
+            <div className="ml-7 md:ml-[4.25rem] border-t-[2px] md:border-t-[4px] w-[7vw] md:w-[5vw] -rotate-[20deg] md:-rotate-[60deg] border-witl-white-200 -translate-y-1 -translate-x-2 md:translate-x-0"></div>
             <p className="-translate-x-4 translate-y-2 md:translate-x-2 md:-translate-y-0">
-              {event.start.getDate()}
+              {event.start.getDate() < 10
+                ? "0" + event.start.getDate()
+                : event.start.getDate()}
             </p>
           </div>
           <div className="absolute -rotate-90 -right-4 md:-right-8 text-md md:text-3xl 2xl:text-4xl text-witl-purple-500">
