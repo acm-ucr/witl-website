@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import logo from "@/public/assets/logo.webp";
 import Link from "next/link";
-import { links } from "@/data/Footer";
+import { links } from "@/data/footer";
 
 const Footer = () => {
   return (
