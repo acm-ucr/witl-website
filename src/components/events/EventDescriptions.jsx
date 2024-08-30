@@ -18,7 +18,7 @@ const EventDescriptions = ({ events }) => {
           Upcoming Events
         </p>
       </motion.div>
-      <div className="">
+      <div className="pt-[6vh]">
         {events.length > 0 ? (
           events.slice(0, 3).map((event, index) => (
             <motion.div
