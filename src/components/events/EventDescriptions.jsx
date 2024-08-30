@@ -2,12 +2,6 @@
 import { motion } from "framer-motion";
 import EventDescription from "./EventDescription";
 const EventDescriptions = ({ events }) => {
-  const currentMonth = new Date().toLocaleString("default", { month: "long" });
-  const filteredEvents = events.filter(
-    (event) =>
-      new Date(event.start).toLocaleString("default", { month: "long" }) ===
-      currentMonth
-  );
   return (
     <div className="mt-[5%]">
       <motion.div
@@ -20,13 +14,13 @@ const EventDescriptions = ({ events }) => {
         className="ml-[4%] relative mb-[8vh] md:mb-[18vh]"
       >
         <div className="aspect-[3/1] md:aspect-[4/1] bg-witl-purple-600 w-[42%]"></div>
-        <p className="absolute top-[45%] left-[25%] text-7xl lg:text-9xl">
-          {currentMonth}
+        <p className="absolute top-[45%] left-[25%] text-5xl md:text-[7rem]">
+          Upcoming Events
         </p>
       </motion.div>
       <div className="">
-        {filteredEvents.length > 0 ? (
-          filteredEvents.slice(0, 3).map((event, index) => (
+        {events.length > 0 ? (
+          events.slice(0, 3).map((event, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}

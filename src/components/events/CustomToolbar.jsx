@@ -24,13 +24,13 @@ const CustomToolbar = (event) => {
             onClick={() => {
               event.onNavigate("PREV");
             }}
-            className="hover:cursor-pointer hover:scale-125 duration-300 transition ease-in-ou mr-[4%] text-4xl md:text-7xl"
+            className="hover:cursor-pointer hover:scale-125 duration-300 transition ease-in-ou mr-[4%] text-3xl md:text-7xl"
           />
           <div className="flex justify-center">
-            <p className="text-5xl md:text-8xl mr-4">
+            <p className="text-4xl md:text-[8rem] mr-4">
               {monthNames[event.date.getMonth()]}
             </p>
-            <p className="show md:hidden text-5xl">
+            <p className="show md:hidden text-4xl md:text-5xl">
               {event.date.getFullYear()}
             </p>
           </div>
@@ -38,7 +38,7 @@ const CustomToolbar = (event) => {
             onClick={() => {
               event.onNavigate("NEXT");
             }}
-            className="hover:cursor-pointer hover:scale-125 duration-300 transition ease-in-out ml-[4%] text-4xl md:text-7xl"
+            className="hover:cursor-pointer hover:scale-125 duration-300 transition ease-in-out ml-[4%] text-3xl md:text-7xl"
           />
         </div>
         <div className=" items-center text-8xl md:flex hidden">
