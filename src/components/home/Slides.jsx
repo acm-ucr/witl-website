@@ -1,7 +1,7 @@
 "use client";
 import SlideCard from "@/components/home/SlideCard";
 import { motion, useAnimate } from "framer-motion";
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 import { SlideItems } from "@/data/eventslides";
 
 const shiftVariant = {
@@ -45,6 +45,15 @@ const Slides = () => {
   const [card6, animate6] = useAnimate();
   const [card7, animate7] = useAnimate();
   const [card8, animate8] = useAnimate();
+
+  useLayoutEffect(() => {
+    const hasReloaded = localStorage.getItem("hasReloaded");
+
+    if (!hasReloaded) {
+      localStorage.setItem("hasReloaded", "true");
+      window.location.reload();
+    }
+  }, []);
 
   const animSet1 = () => {
     animate1(card1.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
