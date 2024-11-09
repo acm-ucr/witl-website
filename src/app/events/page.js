@@ -4,16 +4,17 @@ import EventsHeader from "@/components/events/EventsHeader.jsx";
 import CalendarEvents from "@/components/events/CalendarEvents.jsx";
 import EventDescriptions from "@/components/events/EventDescriptions.jsx";
 import CalendarTitle from "@/components/events/CalendarTitle";
+
 const Page = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    const startDate = new Date(
-      new Date().getTime() - 60 * 60 * 24 * 7 * 10 * 1000
-    ).toISOString();
+    const startDate = new Date().toISOString();
+
     const endDate = new Date(
       new Date().getTime() + 60 * 60 * 24 * 7 * 10 * 1000
     ).toISOString();
+
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -25,13 +26,13 @@ const Page = () => {
         const data = await response.json();
         const items = data.items.map((item) => {
           item.allDay = !item.start.dateTime;
-          (item.start = item.start.dateTime
+          item.start = item.start.dateTime
             ? new Date(item.start.dateTime)
-            : new Date(new Date(item.start.date).getTime() + offset)),
-            (item.end = new Date(
-              item.end.dateTime || new Date(item.end.date).getTime() + offset
-            )),
-            (item.hidden = false);
+            : new Date(new Date(item.start.date).getTime() + offset);
+          item.end = new Date(
+            item.end.dateTime || new Date(item.end.date).getTime() + offset
+          );
+          item.hidden = false;
           return item;
         });
         setEvents(items);
@@ -52,4 +53,5 @@ const Page = () => {
     </div>
   );
 };
+
 export default Page;
