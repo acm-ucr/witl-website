@@ -1,7 +1,7 @@
 "use client";
 import SlideCard from "@/components/home/SlideCard";
 import { motion, useAnimate } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SlideItems } from "@/data/eventslides";
 
 const shiftVariant = {
@@ -36,6 +36,8 @@ const Slides = () => {
   const [currInd, setCurrInd] = useState(0);
   const [leftInd, setleftInd] = useState(SlideItems.length - 1);
   const [rightInd, setRightInd] = useState(currInd + 1);
+  const [isMounted, setIsMounted] = useState(false);
+
   const [card0, animate0] = useAnimate();
   const [card1, animate1] = useAnimate();
   const [card2, animate2] = useAnimate();
@@ -46,74 +48,82 @@ const Slides = () => {
   const [card7, animate7] = useAnimate();
   const [card8, animate8] = useAnimate();
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const animSet1 = () => {
-    animate1(card1.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
-    animate2(
-      card2.current,
-      { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate3(
-      card3.current,
-      { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate4(
-      card4.current,
-      { x: ["-98%", "0%"], y: ["28%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate5(
-      card5.current,
-      { x: ["-98%", "0%"], y: ["-28%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate6(
-      card6.current,
-      { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate7(
-      card7.current,
-      { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate8(card8.current, { opacity: [0.72, 0] }, { duration: 0.5 });
+    if (isMounted) {
+      animate1(card1.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
+      animate2(
+        card2.current,
+        { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate3(
+        card3.current,
+        { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate4(
+        card4.current,
+        { x: ["-98%", "0%"], y: ["28%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate5(
+        card5.current,
+        { x: ["-98%", "0%"], y: ["-28%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate6(
+        card6.current,
+        { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate7(
+        card7.current,
+        { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate8(card8.current, { opacity: [0.72, 0] }, { duration: 0.5 });
+    }
   };
 
   const animSet2 = () => {
-    animate0(card0.current, { opacity: [0.72, 0] }, { duration: 0.5 });
-    animate1(
-      card1.current,
-      { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate2(
-      card2.current,
-      { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate3(
-      card3.current,
-      { x: ["98%", "0%"], y: ["-28%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate4(
-      card4.current,
-      { x: ["98%", "0%"], y: ["28%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate5(
-      card5.current,
-      { x: ["13%", "0%"], y: ["11.4%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate6(
-      card6.current,
-      { x: ["13%", "0%"], y: ["11.4%", "0%"] },
-      { duration: 0.5 }
-    );
-    animate7(card7.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
+    if (isMounted) {
+      animate0(card0.current, { opacity: [0.72, 0] }, { duration: 0.5 });
+      animate1(
+        card1.current,
+        { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate2(
+        card2.current,
+        { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate3(
+        card3.current,
+        { x: ["98%", "0%"], y: ["-28%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate4(
+        card4.current,
+        { x: ["98%", "0%"], y: ["28%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate5(
+        card5.current,
+        { x: ["13%", "0%"], y: ["11.4%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate6(
+        card6.current,
+        { x: ["13%", "0%"], y: ["11.4%", "0%"] },
+        { duration: 0.5 }
+      );
+      animate7(card7.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
+    }
   };
 
   const prevSlide = () => {
@@ -157,6 +167,8 @@ const Slides = () => {
       animSet1();
     }
   };
+
+  if (!isMounted) return null;
 
   return (
     <div className="w-[100%] aspect-[3/2] flex relative mb-[3%] overflow-clip">
