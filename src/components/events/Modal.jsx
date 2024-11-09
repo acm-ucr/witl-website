@@ -1,6 +1,15 @@
+import { useEffect } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 
 const Modal = ({ event, setEvent }) => {
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setEvent({ ...event });
+    }, 60000);
+
+    return () => clearInterval(interval);
+  }, [event, setEvent]);
+
   return (
     <div className="fixed left-[14vw] md:left-[25vw] top-[50vh] w-[75vw] md:w-[50vw] z-10 drop-shadow-lg">
       <div className={`flex justify-between items-center bg-witl-purple-200`}>
