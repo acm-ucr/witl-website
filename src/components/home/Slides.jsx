@@ -52,79 +52,88 @@ const Slides = () => {
     setIsMounted(true);
   }, []);
 
-  const animSet1 = () => {
-    if (isMounted) {
-      animate1(card1.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
-      animate2(
-        card2.current,
-        { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate3(
-        card3.current,
-        { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate4(
-        card4.current,
-        { x: ["-98%", "0%"], y: ["28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate5(
-        card5.current,
-        { x: ["-98%", "0%"], y: ["-28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate6(
-        card6.current,
-        { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate7(
-        card7.current,
-        { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate8(card8.current, { opacity: [0.72, 0] }, { duration: 0.5 });
-    }
+  const animationMap = {
+    animSet1: [
+      { animate: animate1, target: card1, props: { opacity: [0.72, 0, 0.72] } },
+      {
+        animate: animate2,
+        target: card2,
+        props: { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
+      },
+      {
+        animate: animate3,
+        target: card3,
+        props: { x: ["-13%", "0%"], y: ["11.4%", "0%"] },
+      },
+      {
+        animate: animate4,
+        target: card4,
+        props: { x: ["-98%", "0%"], y: ["28%", "0%"] },
+      },
+      {
+        animate: animate5,
+        target: card5,
+        props: { x: ["-98%", "0%"], y: ["-28%", "0%"] },
+      },
+      {
+        animate: animate6,
+        target: card6,
+        props: { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
+      },
+      {
+        animate: animate7,
+        target: card7,
+        props: { x: ["-13%", "0%"], y: ["-11.4%", "0%"] },
+      },
+      { animate: animate8, target: card8, props: { opacity: [0.72, 0] } },
+    ],
+    animSet2: [
+      { animate: animate0, target: card0, props: { opacity: [0.72, 0] } },
+      {
+        animate: animate1,
+        target: card1,
+        props: { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
+      },
+      {
+        animate: animate2,
+        target: card2,
+        props: { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
+      },
+      {
+        animate: animate3,
+        target: card3,
+        props: { x: ["98%", "0%"], y: ["-28%", "0%"] },
+      },
+      {
+        animate: animate4,
+        target: card4,
+        props: { x: ["98%", "0%"], y: ["28%", "0%"] },
+      },
+      {
+        animate: animate5,
+        target: card5,
+        props: { x: ["13%", "0%"], y: ["11.4%", "0%"] },
+      },
+      {
+        animate: animate6,
+        target: card6,
+        props: { x: ["13%", "0%"], y: ["11.4%", "0%"] },
+      },
+      { animate: animate7, target: card7, props: { opacity: [0.72, 0, 0.72] } },
+    ],
   };
 
-  const animSet2 = () => {
-    if (isMounted) {
-      animate0(card0.current, { opacity: [0.72, 0] }, { duration: 0.5 });
-      animate1(
-        card1.current,
-        { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate2(
-        card2.current,
-        { x: ["13%", "0%"], y: ["-11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate3(
-        card3.current,
-        { x: ["98%", "0%"], y: ["-28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate4(
-        card4.current,
-        { x: ["98%", "0%"], y: ["28%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate5(
-        card5.current,
-        { x: ["13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate6(
-        card6.current,
-        { x: ["13%", "0%"], y: ["11.4%", "0%"] },
-        { duration: 0.5 }
-      );
-      animate7(card7.current, { opacity: [0.72, 0, 0.72] }, { duration: 0.5 });
-    }
+  const runAnimations = (animationKey) => {
+    if (!isMounted) return;
+    animationMap[animationKey]?.forEach(({ animate, target, props }) => {
+      if (target.current) {
+        animate(target.current, props, { duration: 0.5 });
+      }
+    });
   };
+
+  const animSet1 = () => runAnimations("animSet1");
+  const animSet2 = () => runAnimations("animSet2");
 
   const prevSlide = () => {
     const isFirstSlide = currInd === 0;
