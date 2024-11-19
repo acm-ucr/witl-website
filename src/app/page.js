@@ -9,13 +9,20 @@ import Slides from "@/components/home/Slides";
 const Home = () => {
   useEffect(() => {
     if (!sessionStorage.getItem("reloaded")) {
-      const reloadTimeout = setTimeout(() => {
+      const handleGlobalErrors = (message, source, lineno, colno, error) => {
+        console.error("Error detected:", message, source, lineno, colno, error);
+
         sessionStorage.setItem("reloaded", "true");
-        window.location.reload();
-      }, 100);
+        setTimeout(() => {
+          window.location.reload();
+        }, 500);
+        return true;
+      };
+
+      window.onerror = handleGlobalErrors;
 
       return () => {
-        clearTimeout(reloadTimeout);
+        window.onerror = null;
       };
     }
   }, []);
