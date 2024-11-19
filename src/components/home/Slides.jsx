@@ -159,7 +159,7 @@ const Slides = () => {
 
     if (prevInd === slideIdx) {
     } else if (
-      Math.abs(prevInd + (Slides.length - slideIdx - 1)) >
+      Math.abs(prevInd + (SlideItems.length - slideIdx - 1)) >
       Math.abs(slideIdx - prevInd)
     ) {
       animSet2();
@@ -171,7 +171,10 @@ const Slides = () => {
   if (!isMounted) return null;
 
   return (
-    <div className="w-[100%] aspect-[3/2] flex relative mb-[3%] overflow-clip">
+    <div
+      className="w-[100%] aspect-[3/2] flex relative mb-[3%] overflow-clip"
+      suppressHydrationWarning
+    >
       <div
         ref={card0}
         className="bg-witl-purple-300 opacity-[0%] w-[26%] md:w-[23%] aspect-[9/10] rounded-xl md:rounded-3xl absolute bottom-[31%] md:bottom-[26%] left-[10%]"
