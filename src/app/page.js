@@ -8,35 +8,16 @@ import Slides from "@/components/home/Slides";
 
 const Home = () => {
   useEffect(() => {
-    const handleGlobalErrors = (event) => {
-      const { message, error } = event;
-
-      const errorConditions = [
-        "Cannot destructure property 'parallelRouterKey' of 'e' as it is null",
-        "Minified React error #423",
-      ];
-
-      if (
-        errorConditions.some((condition) => message?.includes(condition)) ||
-        errorConditions.some((condition) => error?.message?.includes(condition))
-      ) {
-        console.error("Critical error detected, reloading the page:", message);
+    if (!sessionStorage.getItem("reloaded")) {
+      const reloadTimeout = setTimeout(() => {
+        sessionStorage.setItem("reloaded", "true");
         window.location.reload();
-      }
-    };
+      }, 100);
 
-    window.addEventListener("error", handleGlobalErrors);
-    window.addEventListener("unhandledrejection", (event) =>
-      handleGlobalErrors({
-        message: event.reason?.message,
-        error: event.reason,
-      })
-    );
-
-    return () => {
-      window.removeEventListener("error", handleGlobalErrors);
-      window.removeEventListener("unhandledrejection", handleGlobalErrors);
-    };
+      return () => {
+        clearTimeout(reloadTimeout);
+      };
+    }
   }, []);
 
   return (
