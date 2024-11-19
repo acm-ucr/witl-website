@@ -6,7 +6,7 @@ import Slides from "@/components/home/Slides";
 
 const Home = () => {
   return (
-    <div>
+    <div suppressHydrationWarning>
       <Header />
       <Blurb />
       <Sponsors />
