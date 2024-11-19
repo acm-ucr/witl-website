@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect } from "react";
 import Header from "@/components/home/Header.jsx";
 import Blurb from "@/components/home/Blurb.jsx";
