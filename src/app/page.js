@@ -15,7 +15,7 @@ const Home = () => {
         sessionStorage.setItem("reloaded", "true");
         setTimeout(() => {
           window.location.reload();
-        }, 500);
+        }, 100);
         return true;
       };
 
