@@ -34,7 +34,7 @@ const horShiftVariant = {
 
 const Slides = () => {
   const [currInd, setCurrInd] = useState(0);
-  const [leftInd, setleftInd] = useState(SlideItems.length - 1);
+  const [leftInd, setleftInd] = useState(SlideItems?.length - 1 || 0);
   const [rightInd, setRightInd] = useState(currInd + 1);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -126,7 +126,7 @@ const Slides = () => {
   const runAnimations = (animationKey) => {
     if (!isMounted) return;
     animationMap[animationKey]?.forEach(({ animate, target, props }) => {
-      if (target.current) {
+      if (target?.current) {
         animate(target.current, props, { duration: 0.5 });
       }
     });
@@ -137,9 +137,9 @@ const Slides = () => {
 
   const prevSlide = () => {
     const isFirstSlide = currInd === 0;
-    const newInd = isFirstSlide ? SlideItems.length - 1 : currInd - 1;
-    const newLeftInd = newInd - 1 === -1 ? SlideItems.length - 1 : newInd - 1;
-    const newRightInd = newInd + 1 === SlideItems.length ? 0 : newInd + 1;
+    const newInd = isFirstSlide ? SlideItems?.length - 1 : currInd - 1;
+    const newLeftInd = newInd - 1 === -1 ? SlideItems?.length - 1 : newInd - 1;
+    const newRightInd = newInd + 1 === SlideItems?.length ? 0 : newInd + 1;
     setCurrInd(newInd);
     setleftInd(newLeftInd);
     setRightInd(newRightInd);
@@ -147,10 +147,10 @@ const Slides = () => {
   };
 
   const nextSlide = () => {
-    const isLastSlide = currInd === SlideItems.length - 1;
+    const isLastSlide = currInd === SlideItems?.length - 1;
     const newInd = isLastSlide ? 0 : currInd + 1;
-    const newLeftInd = newInd - 1 === -1 ? SlideItems.length - 1 : newInd - 1;
-    const newRightInd = newInd + 1 === SlideItems.length ? 0 : newInd + 1;
+    const newLeftInd = newInd - 1 === -1 ? SlideItems?.length - 1 : newInd - 1;
+    const newRightInd = newInd + 1 === SlideItems?.length ? 0 : newInd + 1;
     setCurrInd(newInd);
     setleftInd(newLeftInd);
     setRightInd(newRightInd);
@@ -159,8 +159,8 @@ const Slides = () => {
 
   const goToSlide = (slideIdx) => {
     const newLeftInd =
-      slideIdx - 1 === -1 ? SlideItems.length - 1 : slideIdx - 1;
-    const newRightInd = slideIdx + 1 === SlideItems.length ? 0 : slideIdx + 1;
+      slideIdx - 1 === -1 ? SlideItems?.length - 1 : slideIdx - 1;
+    const newRightInd = slideIdx + 1 === SlideItems?.length ? 0 : slideIdx + 1;
     const prevInd = currInd;
     setCurrInd(slideIdx);
     setleftInd(newLeftInd);
@@ -168,7 +168,7 @@ const Slides = () => {
 
     if (prevInd === slideIdx) {
     } else if (
-      Math.abs(prevInd + (SlideItems.length - slideIdx - 1)) >
+      Math.abs(prevInd + (SlideItems?.length - slideIdx - 1)) >
       Math.abs(slideIdx - prevInd)
     ) {
       animSet2();
@@ -177,7 +177,7 @@ const Slides = () => {
     }
   };
 
-  if (!isMounted) return null;
+  if (!isMounted || !SlideItems) return null;
 
   return (
     <div
