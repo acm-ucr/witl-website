@@ -16,6 +16,7 @@ const Home = () => {
         setTimeout(() => {
           window.location.reload();
         }, 100);
+
         return true;
       };
 
