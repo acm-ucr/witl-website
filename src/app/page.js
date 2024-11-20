@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import Header from "@/components/home/Header.jsx";
 import Blurb from "@/components/home/Blurb.jsx";
 import Sponsors from "@/components/home/Sponsors";
 import Slides from "@/components/home/Slides";
 
 const Home = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!sessionStorage.getItem("reloaded")) {
       const handleGlobalErrors = (message, source, lineno, colno, error) => {
         console.error("Error detected:", message, source, lineno, colno, error);
