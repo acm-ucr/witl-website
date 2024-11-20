@@ -1,32 +1,16 @@
 "use client";
 
-import { useLayoutEffect } from "react";
 import Header from "@/components/home/Header.jsx";
 import Blurb from "@/components/home/Blurb.jsx";
 import Sponsors from "@/components/home/Sponsors";
 import Slides from "@/components/home/Slides";
 
+if (typeof window !== "undefined" && !sessionStorage.getItem("reloaded")) {
+  sessionStorage.setItem("reloaded", "true");
+  window.location.reload();
+}
+
 const Home = () => {
-  useLayoutEffect(() => {
-    if (!sessionStorage.getItem("reloaded")) {
-      const handleGlobalErrors = (message, source, lineno, colno, error) => {
-        console.error("Error detected:", message, source, lineno, colno, error);
-
-        sessionStorage.setItem("reloaded", "true");
-        setTimeout(() => {
-          window.location.reload();
-        }, 100);
-        return true;
-      };
-
-      window.onerror = handleGlobalErrors;
-
-      return () => {
-        window.onerror = null;
-      };
-    }
-  }, []);
-
   return (
     <div suppressHydrationWarning>
       <Header />
